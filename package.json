@@ -1,0 +1,44 @@
+{
+  "name": "hanse-kim.dev",
+  "version": "1.0.0",
+  "private": true,
+  "description": "hanse-kim.dev",
+  "author": "Hanse Kim",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "dev": "gatsby develop",
+    "build": "yarn pull-posts && gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "typecheck": "tsc --noEmit",
+    "pull-posts": "rm -rf .posts && git clone https://github.com/hanse-kim/hanse-kim.github.io-posts .posts && rm -rf .posts/.git",
+    "deploy": "gatsby build && touch public/.nojekyll && gh-pages -d public -b deploy --dotfiles"
+  },
+  "dependencies": {
+    "@mdx-js/react": "^3.0.1",
+    "autoprefixer": "^10.4.20",
+    "gatsby": "^5.13.5",
+    "gatsby-plugin-google-gtag": "^5.13.1",
+    "gatsby-plugin-image": "^3.13.1",
+    "gatsby-plugin-manifest": "^5.13.1",
+    "gatsby-plugin-mdx": "^5.13.1",
+    "gatsby-plugin-postcss": "^6.13.1",
+    "gatsby-plugin-sharp": "^5.13.1",
+    "gatsby-plugin-sitemap": "^6.13.1",
+    "gatsby-source-filesystem": "^5.13.1",
+    "gatsby-transformer-sharp": "^5.13.1",
+    "postcss": "^8.4.41",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.4.10"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.19",
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "tw-colors": "^3.3.1",
+    "typescript": "^5.3.3"
+  }
+}
