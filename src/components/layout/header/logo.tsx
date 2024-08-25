@@ -9,7 +9,7 @@ export const Logo = ({}: LogoProps) => {
   const { title } = useSiteMetadata();
 
   return (
-    <Link className="text-20-800 text-slate-900" to={routes.blog}>
+    <Link className="text-24-800 text-text" to={routes.blog}>
       {title}
     </Link>
   );

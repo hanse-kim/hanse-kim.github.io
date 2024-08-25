@@ -15,4 +15,9 @@
   * {
     font-family: 'Pretendard', sans-serif;
   }
+
+  html {
+    color: hsl(var(--twc-text));
+    background-color: hsl(var(--twc-bg));
+  }
 }

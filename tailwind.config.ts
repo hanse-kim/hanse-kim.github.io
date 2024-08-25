@@ -4,6 +4,8 @@ import { fontSize } from './.tailwind/font-size';
 import { spacing } from './.tailwind/spacing';
 import { dropShadow } from './.tailwind/drop-shadow';
 import { transitionProperty } from './.tailwind/transition';
+import { createThemes } from 'tw-colors';
+import { dark, light } from './.tailwind/colors';
 
 const tailwindConfig = {
   content: [
@@ -19,7 +21,17 @@ const tailwindConfig = {
       transitionProperty,
     },
   },
-  plugins: [],
+  plugins: [
+    createThemes(
+      { light, dark },
+      {
+        defaultTheme: {
+          light: 'light',
+          dark: 'dark',
+        },
+      }
+    ),
+  ],
 } satisfies Config;
 
 export default tailwindConfig;

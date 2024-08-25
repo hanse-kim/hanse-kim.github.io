@@ -6,6 +6,6 @@ export const spacing: ThemeConfig['spacing'] = () => {
 
   return Object.fromEntries([
     ...sizes.map((size) => [size, convertToRem(size)]),
-    ['header-height', convertToRem(64)],
+    ['header-height', convertToRem(72)],
   ]);
 };
