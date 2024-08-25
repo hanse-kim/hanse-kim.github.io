@@ -4,7 +4,7 @@ export const onRenderBody = ({ setHeadComponents }) => {
   setHeadComponents([
     <link
       rel="preload"
-      href="/fonts/PretendardVariable.woff2.woff2"
+      href="/fonts/PretendardVariable.woff2"
       as="font"
       type="font/woff2"
       crossOrigin="anonymous"

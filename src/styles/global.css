@@ -20,4 +20,10 @@
     color: hsl(var(--twc-text));
     background-color: hsl(var(--twc-bg));
   }
+
+  @property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }
 }

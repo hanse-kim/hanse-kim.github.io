@@ -7,7 +7,7 @@ type HeaderProps = {};
 
 export const Header = ({}: HeaderProps) => {
   return (
-    <header className="flex items-center justify-between px-20 border-solid h-header-height bg-bg border-b-1 border-border">
+    <header className="sticky top-0 left-0 right-0 z-10 flex items-center justify-between px-32 border-solid h-header-height bg-bg border-b-1 border-border">
       <Logo />
       <nav className="flex items-center gap-20">
         <NavButton to={routes.blog}>Blog</NavButton>
