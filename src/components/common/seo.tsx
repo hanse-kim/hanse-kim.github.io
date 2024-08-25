@@ -1,6 +1,6 @@
-import { HeadProps, PageProps } from 'gatsby';
-import { useSiteMetadata } from '../../hooks/use-site-metadata';
+import { HeadProps } from 'gatsby';
 import React from 'react';
+import { useSiteMetadata } from 'src/hooks/use-site-metadata';
 
 type SeoProps = HeadProps & {
   title?: string;
@@ -10,7 +10,7 @@ export const Seo = ({ title, location }: SeoProps) => {
   const siteMetadata = useSiteMetadata();
 
   const pageTitle = `${title ? `${title} | ` : ''}${siteMetadata.title}`;
-  const pageUrl = `${siteMetadata.blogUrl}${location.pathname || ''}`;
+  const pageUrl = `${siteMetadata.siteUrl}${location.pathname || ''}`;
 
   return (
     <>

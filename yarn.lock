@@ -5840,6 +5840,11 @@ gatsby-plugin-postcss@^6.13.1:
     "@babel/runtime" "^7.20.13"
     postcss-loader "^7.3.3"
 
+gatsby-plugin-root-import@^2.0.9:
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-root-import/-/gatsby-plugin-root-import-2.0.9.tgz#a511c0927164e3fd66052426fcfd5895d8c0045c"
+  integrity sha512-Cj6zBQW/XirHyLGyXtyhvhMwLUZDjFHSJwCI7mF9yAuX1PFoOVqUVWKp9jvtoKm8nKvly3IU/OPRXzlmYjeEkA==
+
 gatsby-plugin-sharp@^5.13.1:
   version "5.13.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-5.13.1.tgz#051da57ddef3ad75a52152d3b78e3ed07589cff9"

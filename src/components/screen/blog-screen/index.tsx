@@ -1,5 +1,5 @@
+import { Layout } from 'src/components/layout';
 import React from 'react';
-import { Layout } from '../../layout';
 
 type BlogScreenProps = {};
 
