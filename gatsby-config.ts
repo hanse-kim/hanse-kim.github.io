@@ -8,7 +8,7 @@ const config: GatsbyConfig = {
     email: 'hansekim.dev@gmail.com',
     githubUrl: 'https://github.com/hanse-kim',
     githubName: 'hanse-kim',
-    blogUrl: 'https://hanse-kim.github.io',
+    siteUrl: 'https://hanse-kim.github.io',
     publishYear: `2022-${new Date().getFullYear()}`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
@@ -32,7 +32,6 @@ const config: GatsbyConfig = {
         icon: 'src/images/icon.png',
       },
     },
-    'gatsby-plugin-mdx',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
@@ -50,6 +49,38 @@ const config: GatsbyConfig = {
         path: './src/pages/',
       },
       __key: 'pages',
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `./.posts/`,
+      },
+      __key: 'posts',
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 720,
+              withWebp: true,
+              quality: 80,
+            },
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: 'language-',
+              showLineNumbers: false,
+              noInlineHighlight: true,
+            },
+          },
+        ],
+      },
     },
   ],
 };
