@@ -8,6 +8,7 @@ import { createThemes } from 'tw-colors';
 import { dark, light } from './.tailwind/colors';
 import { borderRadius } from './.tailwind/border-radius';
 import { animation, keyframes } from './.tailwind/animation';
+import { screens } from './.tailwind/screens';
 
 const tailwindConfig = {
   content: [
@@ -20,6 +21,7 @@ const tailwindConfig = {
     borderWidth,
     dropShadow,
     borderRadius,
+    screens,
     extend: {
       transitionProperty,
       animation,
