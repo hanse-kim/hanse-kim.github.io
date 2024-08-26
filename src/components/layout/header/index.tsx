@@ -2,6 +2,7 @@ import React from 'react';
 import { Logo } from './logo';
 import { NavButton } from './nav-button';
 import { routes } from 'src/_libs/constants/routes';
+import { DarkModeButton } from './dark-mode-button';
 
 type HeaderProps = {};
 
@@ -12,6 +13,7 @@ export const Header = ({}: HeaderProps) => {
       <nav className="flex items-center gap-20">
         <NavButton to={routes.blog}>Blog</NavButton>
         <NavButton to={routes.tags}>Tags</NavButton>
+        <DarkModeButton />
       </nav>
     </header>
   );

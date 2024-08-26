@@ -28,17 +28,7 @@ const tailwindConfig = {
       keyframes,
     },
   },
-  plugins: [
-    createThemes(
-      { light, dark },
-      {
-        defaultTheme: {
-          light: 'light',
-          dark: 'dark',
-        },
-      }
-    ),
-  ],
+  plugins: [createThemes({ light, dark })],
 } satisfies Config;
 
 export default tailwindConfig;
