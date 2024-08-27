@@ -9,7 +9,7 @@ export type MdxNode = Node & {
   tableOfContents: TocItem[];
   excerpt: string;
   fields: {
-    slug?: string;
+    slug: string;
   };
 };
 
