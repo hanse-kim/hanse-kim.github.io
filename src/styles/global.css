@@ -17,9 +17,13 @@
   }
 
   html {
-    color: hsl(var(--twc-text));
-    background-color: hsl(var(--twc-bg));
+    @apply text-text bg-bg;
     font-size: 16px;
+  }
+
+  html[data-transition='true'],
+  html[data-transition='true'] * {
+    @apply transition-colors !important;
   }
 
   @media (max-width: 1080px) {

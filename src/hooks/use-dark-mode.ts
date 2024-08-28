@@ -7,7 +7,7 @@ export const useDarkMode = () => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 
   const toggleDarkMode = () => {
-    document.body.dataset.transition = 'true';
+    document.documentElement.dataset.transition = 'true';
     setIsDarkMode((prev) => !prev);
     LocalStorageUtils.set(isDarkModeStorageKey, !isDarkMode);
   };
@@ -37,9 +37,9 @@ export const useDarkMode = () => {
 
   useEffect(() => {
     const handleTransitionEnd = () => {
-      document.body.dataset.transition = 'false';
+      document.documentElement.dataset.transition = 'false';
     };
-    document.body.addEventListener('transitionend', () =>
+    document.documentElement.addEventListener('transitionend', () =>
       handleTransitionEnd()
     );
 

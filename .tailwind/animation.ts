@@ -1,9 +1,33 @@
 import { ThemeConfig } from 'tailwindcss/types/config';
 
 export const animation: ThemeConfig['animation'] = () => {
-  return {};
+  return {
+    'dark-mode-icon-in': 'dark-mode-icon-in 0.4s ease-in forwards',
+    'dark-mode-icon-out': 'dark-mode-icon-out 0.4s ease-in forwards',
+  };
 };
 
 export const keyframes: ThemeConfig['keyframes'] = () => {
-  return {};
+  return {
+    'dark-mode-icon-in': {
+      from: {
+        transform: 'scale(0) rotate(270deg)',
+        opacity: '0',
+      },
+      to: {
+        transform: 'scale(1) rotate(0deg)',
+        opacity: '1',
+      },
+    },
+    'dark-mode-icon-out': {
+      from: {
+        transform: 'scale(1) rotate(0deg)',
+        opacity: '1',
+      },
+      to: {
+        transform: 'scale(0) rotate(-270deg)',
+        opacity: '0',
+      },
+    },
+  };
 };

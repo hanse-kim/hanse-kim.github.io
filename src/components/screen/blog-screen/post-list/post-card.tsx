@@ -22,7 +22,7 @@ export const PostCard = React.memo(
         <div
           className={`px-20 py-32 overflow-hidden transition-all group rounded-16 bg-bg outline outline-transparent outline-1 hover:outline-blur hover:drop-shadow-post tablet:outline-border`}
         >
-          <h2 className="break-all text-32-700 line-clamp-2">
+          <h2 className="break-all text-32-700 line-clamp-2 text-text">
             {post.frontmatter.title}
           </h2>
           <div className="flex gap-12 mt-12">

@@ -17,8 +17,8 @@ export const NavButton = ({ children, to }: NavButtonProps) => {
       to={to}
       data-active={to === path}
     >
-      <span>{children}</span>
-      <div className="w-full h-1 mx-auto transition-transform scale-x-0 bg-current group-hover:scale-x-100 group-data-[active=true]:scale-x-100" />
+      <span className="text-text">{children}</span>
+      <div className="w-full h-1 mx-auto transition-transform scale-x-0 bg-text group-hover:scale-x-100 group-data-[active=true]:scale-x-100" />
     </Link>
   );
 };
