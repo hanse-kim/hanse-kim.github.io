@@ -16,6 +16,10 @@ const tailwindConfig = {
     `./src/components/**/*.{js,jsx,ts,tsx}`,
   ],
   theme: {
+    colors: {
+      transparent: 'transparent',
+      currentColor: 'currentColor',
+    },
     fontSize,
     spacing,
     borderWidth,
