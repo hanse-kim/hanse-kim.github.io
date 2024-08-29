@@ -1,9 +1,7 @@
-import React from 'react';
+import React, { HTMLProps } from 'react';
 import { IconName, icons } from './assets';
 
-export type IconProps = {
-  className?: string;
-  color?: string;
+export type IconProps = HTMLProps<HTMLSpanElement> & {
   size?: number;
   iconName: IconName;
 };
