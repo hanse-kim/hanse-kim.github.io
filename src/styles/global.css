@@ -26,6 +26,10 @@
     @apply transition-colors !important;
   }
 
+  hr {
+    @apply border-border;
+  }
+
   @media (max-width: 1080px) {
     html {
       font-size: 14px;
