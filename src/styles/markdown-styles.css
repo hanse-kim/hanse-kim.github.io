@@ -2,6 +2,11 @@
   @apply text-text;
 }
 
+.md p:empty,
+.md div:empty {
+  display: none;
+}
+
 .md h1,
 .md h2 {
   @apply mt-[0.5em] border-b-1 border-solid border-border;
