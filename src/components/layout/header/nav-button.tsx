@@ -13,12 +13,12 @@ export const NavButton = ({ children, to }: NavButtonProps) => {
 
   return (
     <Link
-      className="cursor-pointer w-fit text-18-300 text-text-footer drop-shadow-transparent transition-shadow disabled:cursor-default hover:drop-shadow-text hover:text-text data-[active=true]:drop-shadow-text data-[active=true]:text-text group"
+      className="cursor-pointer w-fit text-18-300 text-text-footer drop-shadow-transparent transition-shadow disabled:cursor-default desktop:hover:drop-shadow-text desktop:hover:text-text data-[active=true]:drop-shadow-text data-[active=true]:text-text group"
       to={to}
       data-active={to === path}
     >
       <span className="text-text">{children}</span>
-      <div className="w-full h-1 mx-auto transition-transform scale-x-0 bg-text group-hover:scale-x-100 group-data-[active=true]:scale-x-100" />
+      <div className="w-full h-1 mx-auto transition-transform scale-x-0 bg-text group-desktop:hover:scale-x-100 group-data-[active=true]:scale-x-100" />
     </Link>
   );
 };

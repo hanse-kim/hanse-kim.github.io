@@ -20,7 +20,7 @@ export const PostCard = React.memo(
         data-id={post.fields.slug}
       >
         <div
-          className={`px-20 py-32 overflow-hidden transition-all group rounded-16 bg-bg outline outline-transparent outline-1 hover:outline-blur hover:drop-shadow-post tablet:outline-border`}
+          className={`px-20 py-32 overflow-hidden transition-all group rounded-16 bg-bg outline outline-transparent outline-1 desktop:hover:outline-blur desktop:hover:drop-shadow-post tablet:outline-border`}
         >
           {post.frontmatter.thumbnail?.publicURL && (
             <CustomImage
