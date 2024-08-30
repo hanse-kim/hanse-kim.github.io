@@ -11,7 +11,7 @@ export const Markdown = ({ html }: MarkdownProps) => {
     <>
       <style>{prismTheme}</style>
       <div
-        className="flex flex-col gap-16 px-24 md text-20-400"
+        className="flex flex-col gap-24 px-24 pb-48 md text-20-400"
         dangerouslySetInnerHTML={{ __html: html }}
       />
     </>
