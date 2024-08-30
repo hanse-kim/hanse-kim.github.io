@@ -13,6 +13,35 @@ export function onCreateNode({ node, getNode, actions }) {
   }
 }
 
+export function createResolvers({ createResolvers }) {
+  createResolvers({
+    MarkdownRemarkFrontmatter: {
+      tags: {
+        type: '[String]',
+        resolve(source) {
+          return source.tags || [];
+        },
+      },
+      hide: {
+        type: 'Boolean',
+        resolve(source) {
+          return source.hide !== undefined ? source.hide : false;
+        },
+      },
+      thumbnail: {
+        type: 'File',
+        resolve(source, args, context, info) {
+          if (source.thumbnail) {
+            return context.nodeModel.getNodeById({ id: source.thumbnail });
+          } else {
+            return null;
+          }
+        },
+      },
+    },
+  });
+}
+
 export async function createPages({ graphql, actions }) {
   const { createPage } = actions;
 
