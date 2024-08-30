@@ -22,7 +22,7 @@ export const CustomImage = ({
       {!!src && (
         <img
           className={`peer ${
-            !!ratio ? 'absolute inset-0' : 'w-full'
+            !!ratio ? 'absolute inset-0 h-full w-full' : 'w-full'
           } object-cover opacity-100 transition-opacity data-[loaded=false]:absolute data-[loaded=false]:pointer-events-none data-[loaded=false]:opacity-0`}
           src={src}
           {...props}

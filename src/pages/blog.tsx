@@ -15,6 +15,9 @@ export const pageQuery = graphql`
           date(formatString: "YYYY-MM-DD")
           tags
           hide
+          thumbnail {
+            publicURL
+          }
         }
         excerpt(pruneLength: 200)
         fields {

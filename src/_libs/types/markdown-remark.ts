@@ -3,7 +3,10 @@ export type MarkdownRemark = Node & {
     title: string;
     date: string;
     tags: string[];
-    hide: boolean;
+    hide?: boolean;
+    thumbnail?: {
+      publicURL: string;
+    };
   };
   html: string;
   body: string;
