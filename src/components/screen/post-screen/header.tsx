@@ -1,11 +1,11 @@
 import React from 'react';
 import { routes } from 'src/_libs/constants/routes';
-import { MdxNode } from 'src/_libs/types/mdx-node';
+import { MarkdownRemark } from 'src/_libs/types/markdown-remark';
 import { Heading } from 'src/components/common/heading';
 import { TagButton } from 'src/components/common/tag-button';
 import { NavButton } from 'src/components/layout/header/nav-button';
 
-type PostScreenHeaderProps = MdxNode['frontmatter'] & {};
+type PostScreenHeaderProps = MarkdownRemark['frontmatter'] & {};
 
 export const PostScreenHeader = ({
   title,

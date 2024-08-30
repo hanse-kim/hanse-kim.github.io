@@ -1,0 +1,83 @@
+.md * {
+  @apply text-text;
+}
+
+.md h1,
+.md h2 {
+  @apply mt-[0.5em] border-b-1 border-solid border-border;
+}
+
+.md h1 {
+  @apply text-36-700;
+}
+
+.md h2 {
+  @apply text-28-700;
+}
+
+.md h3 {
+  @apply text-24-700;
+}
+
+.md h4 {
+  @apply text-20-700;
+}
+
+.md ol,
+.md ul {
+  @apply pl-32;
+}
+
+.md ol {
+  @apply list-decimal;
+}
+
+.md ul {
+  @apply list-disc;
+}
+
+.md li:not(:first-of-type) {
+  @apply mt-14;
+}
+
+.md blockquote {
+  @apply flex flex-col p-16 border-l-4 border-dashed gap-14 border-1 border-border text-text-quote;
+}
+
+.md a {
+  @apply inline-block underline text-main visited:text-[mediumpurple] after:content-['🔗'] after:text-[0.9em];
+}
+
+.md img {
+  @apply block mx-auto my-0;
+}
+
+.md table {
+  @apply overflow-hidden border-collapse rounded-2;
+}
+
+.md th,
+.md td {
+  @apply px-8 py-4 border-solid border-1 border-border;
+}
+
+.md th {
+  @apply bg-bg-footer;
+}
+
+.md tr:nth-child(even) {
+  @apply bg-blur bg-opacity-40;
+}
+
+.md code {
+  @apply px-4 mx-2 border-solid w-fit border-1 border-border rounded-4 bg-bg-footer text-main;
+}
+
+.md code,
+.md code * {
+  @apply font-[Consolas,Monaco,monospace];
+}
+
+.md .caption {
+  @apply w-full justify-center flex -mb-[1rem] -translate-y-[0.6rem] text-text-footer italic whitespace-pre-wrap;
+}

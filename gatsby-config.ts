@@ -60,10 +60,10 @@ const config: GatsbyConfig = {
       __key: 'posts',
     },
     {
-      resolve: `gatsby-plugin-mdx`,
+      resolve: `gatsby-transformer-remark`,
       options: {
-        extensions: [`.mdx`, `.md`],
-        gatsbyRemarkPlugins: [
+        gfm: true,
+        plugins: [
           {
             resolve: `gatsby-remark-images`,
             options: {

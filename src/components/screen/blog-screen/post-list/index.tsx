@@ -1,9 +1,9 @@
 import React, { useCallback, useState } from 'react';
-import { MdxNode } from 'src/_libs/types/mdx-node';
+import { MarkdownRemark } from 'src/_libs/types/markdown-remark';
 import { PostCard } from './post-card';
 
 type PostListProps = {
-  posts: MdxNode[];
+  posts: MarkdownRemark[];
 };
 
 export const PostList = ({ posts }: PostListProps) => {

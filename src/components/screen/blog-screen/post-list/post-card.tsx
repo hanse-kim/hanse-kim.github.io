@@ -1,11 +1,10 @@
 import { Link } from 'gatsby';
-import React, { useEffect } from 'react';
-import { MdxNode } from 'src/_libs/types/mdx-node';
-import { Ratio } from 'src/components/common/ratio';
+import React from 'react';
+import { MarkdownRemark } from 'src/_libs/types/markdown-remark';
 import { TagButton } from 'src/components/common/tag-button';
 
 type PostCardProps = {
-  post: MdxNode;
+  post: MarkdownRemark;
   onHover: (postId: string) => void;
   onBlur: (postId: string) => void;
 };

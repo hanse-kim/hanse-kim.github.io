@@ -1,11 +1,11 @@
 import React from 'react';
-import { MdxNode } from 'src/_libs/types/mdx-node';
+import { MarkdownRemark } from 'src/_libs/types/markdown-remark';
 import { Heading } from 'src/components/common/heading';
 import { Layout } from 'src/components/layout';
 import { PostList } from './post-list';
 
 type BlogScreenProps = {
-  posts: MdxNode[];
+  posts: MarkdownRemark[];
 };
 
 export const BlogScreen = ({ posts }: BlogScreenProps) => {

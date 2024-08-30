@@ -17,13 +17,11 @@
     "deploy": "gatsby build && touch public/.nojekyll && gh-pages -d public -b deploy --dotfiles"
   },
   "dependencies": {
-    "@mdx-js/react": "^3.0.1",
     "autoprefixer": "^10.4.20",
     "gatsby": "^5.13.5",
     "gatsby-plugin-google-gtag": "^5.13.1",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-manifest": "^5.13.1",
-    "gatsby-plugin-mdx": "^5.13.1",
     "gatsby-plugin-postcss": "^6.13.1",
     "gatsby-plugin-root-import": "^2.0.9",
     "gatsby-plugin-sharp": "^5.13.1",
@@ -31,6 +29,7 @@
     "gatsby-remark-images": "^7.13.1",
     "gatsby-remark-prismjs": "^7.13.1",
     "gatsby-source-filesystem": "^5.13.1",
+    "gatsby-transformer-remark": "^6.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
     "postcss": "^8.4.41",
     "prismjs": "^1.29.0",

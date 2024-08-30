@@ -68,6 +68,8 @@ green     #859900
     word-break: normal;
     word-wrap: normal;
 
+    border: none;
+
     line-height: 1.2;
     -o-tab-size: 4;
     tab-size: 4;

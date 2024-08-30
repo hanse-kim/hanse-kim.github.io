@@ -1,19 +1,19 @@
-import { MDXProvider } from '@mdx-js/react';
 import React from 'react';
 import { prismTheme } from 'src/styles/prism-theme';
-import { markdownComponents } from './markdown-components';
+import 'src/styles/markdown-styles.css';
 
 type MarkdownProps = {
-  children?: React.ReactNode;
+  html: string;
 };
 
-export const Markdown = ({ children }: MarkdownProps) => {
+export const Markdown = ({ html }: MarkdownProps) => {
   return (
     <>
       <style>{prismTheme}</style>
-      <div className="flex flex-col gap-16 px-24 text-20-400">
-        <MDXProvider components={markdownComponents}>{children}</MDXProvider>
-      </div>
+      <div
+        className="flex flex-col gap-16 px-24 md text-20-400"
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
     </>
   );
 };

@@ -1,18 +1,18 @@
-import { MDXProvider } from '@mdx-js/react';
 import { graphql, HeadFC, type PageProps } from 'gatsby';
 import React from 'react';
-import { MdxNode } from 'src/_libs/types/mdx-node';
+import { MarkdownRemark } from 'src/_libs/types/markdown-remark';
 import { Seo } from 'src/components/common/seo';
 import { PostScreen } from 'src/components/screen/post-screen';
 import { PageProvider } from 'src/contexts/page-context';
 
 interface DataType {
-  mdx: MdxNode;
+  markdownRemark: MarkdownRemark;
 }
 
 export const pageQuery = graphql`
   query ($id: String) {
-    mdx(id: { eq: $id }) {
+    markdownRemark(id: { eq: $id }) {
+      html
       frontmatter {
         title
         date(formatString: "YYYY-MM-DD")
@@ -23,16 +23,17 @@ export const pageQuery = graphql`
 `;
 
 export const Head: HeadFC<DataType> = (pageProps) => (
-  <Seo title={pageProps.data.mdx.frontmatter.title} {...pageProps} />
+  <Seo title={pageProps.data.markdownRemark.frontmatter.title} {...pageProps} />
 );
 
 const PostTemplate = ({
   children,
   ...pageProps
 }: PageProps<DataType, object, { referrer: string }>) => {
+  console.log({ children });
   return (
     <PageProvider {...pageProps}>
-      <PostScreen post={pageProps.data.mdx}>{children}</PostScreen>
+      <PostScreen post={pageProps.data.markdownRemark} />
     </PageProvider>
   );
 };

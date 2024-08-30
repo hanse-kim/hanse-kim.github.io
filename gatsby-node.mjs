@@ -3,7 +3,7 @@ import { resolve } from 'path';
 
 export function onCreateNode({ node, getNode, actions }) {
   const { createNodeField } = actions;
-  if (node.internal.type === `Mdx`) {
+  if (node.internal.type === `MarkdownRemark`) {
     const slug = createFilePath({ node, getNode });
     createNodeField({
       node,
@@ -13,12 +13,12 @@ export function onCreateNode({ node, getNode, actions }) {
   }
 }
 
-export async function createPages({ graphql, actions, reporter }) {
+export async function createPages({ graphql, actions }) {
   const { createPage } = actions;
 
   const postsQuery = await graphql(`
     query {
-      allMdx {
+      allMarkdownRemark {
         nodes {
           id
           frontmatter {
@@ -35,7 +35,7 @@ export async function createPages({ graphql, actions, reporter }) {
     }
   `);
 
-  const posts = postsQuery.data.allMdx.nodes;
+  const posts = postsQuery.data.allMarkdownRemark.nodes;
   const postTemplate = resolve(`./src/templates/{post}.tsx`);
 
   posts.forEach((post) => {
