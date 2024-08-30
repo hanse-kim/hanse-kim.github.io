@@ -11,7 +11,7 @@ type PostScreenProps = {
 
 export const PostScreen = ({ post }: PostScreenProps) => {
   return (
-    <Layout>
+    <Layout hasScrollProgress>
       <PostScreenHeader {...post.frontmatter} />
       {post.frontmatter.thumbnail && (
         <CustomImage

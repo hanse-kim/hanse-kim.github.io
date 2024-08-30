@@ -3,10 +3,13 @@ import { Logo } from './logo';
 import { NavButton } from './nav-button';
 import { routes } from 'src/_libs/constants/routes';
 import { DarkModeButton } from './dark-mode-button';
+import { ScrollProgress } from './scroll-progress';
 
-type HeaderProps = {};
+type HeaderProps = {
+  hasScrollProgress?: boolean;
+};
 
-export const Header = ({}: HeaderProps) => {
+export const Header = ({ hasScrollProgress }: HeaderProps) => {
   return (
     <header className="sticky top-0 left-0 right-0 z-10 flex items-center justify-between px-32 border-solid h-header-height bg-bg border-b-1 border-border">
       <Logo />
@@ -15,6 +18,9 @@ export const Header = ({}: HeaderProps) => {
         <NavButton to={routes.tags}>Tags</NavButton>
         <DarkModeButton />
       </nav>
+      {hasScrollProgress && (
+        <ScrollProgress className="absolute left-0 right-0 w-full h-2 -bottom-2" />
+      )}
     </header>
   );
 };
