@@ -3,7 +3,6 @@ import React from 'react';
 import { MarkdownRemark } from 'src/_libs/types/markdown-remark';
 import { Seo } from 'src/components/common/seo';
 import { PostScreen } from 'src/components/screen/post-screen';
-import { PageProvider } from 'src/contexts/page-context';
 
 interface DataType {
   markdownRemark: MarkdownRemark;
@@ -30,15 +29,9 @@ export const Head: HeadFC<DataType> = (pageProps) => (
 );
 
 const PostTemplate = ({
-  children,
-  ...pageProps
+  data,
 }: PageProps<DataType, object, { referrer: string }>) => {
-  console.log({ children });
-  return (
-    <PageProvider {...pageProps}>
-      <PostScreen post={pageProps.data.markdownRemark} />
-    </PageProvider>
-  );
+  return <PostScreen post={data.markdownRemark} />;
 };
 
 export default PostTemplate;

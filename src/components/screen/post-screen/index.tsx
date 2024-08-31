@@ -1,9 +1,8 @@
 import React from 'react';
 import { MarkdownRemark } from 'src/_libs/types/markdown-remark';
-import { Layout } from 'src/components/layout';
+import { CustomImage } from 'src/components/common/custom-image';
 import { PostScreenHeader } from './header';
 import { Markdown } from './markdown';
-import { CustomImage } from 'src/components/common/custom-image';
 
 type PostScreenProps = {
   post: MarkdownRemark;
@@ -11,7 +10,7 @@ type PostScreenProps = {
 
 export const PostScreen = ({ post }: PostScreenProps) => {
   return (
-    <Layout hasScrollProgress>
+    <>
       <PostScreenHeader {...post.frontmatter} />
       {post.frontmatter.thumbnail && (
         <CustomImage
@@ -22,6 +21,6 @@ export const PostScreen = ({ post }: PostScreenProps) => {
         />
       )}
       <Markdown html={post.html} />
-    </Layout>
+    </>
   );
 };

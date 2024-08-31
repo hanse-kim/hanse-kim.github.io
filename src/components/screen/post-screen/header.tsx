@@ -15,7 +15,7 @@ export const PostScreenHeader = ({
   return (
     <header>
       <div className="ml-24 -mb-24 mt-36 w-fit">
-        <NavButton to={routes.blog}>{'< 이전 페이지로'}</NavButton>
+        <NavButton toBack>{'< 이전 페이지로'}</NavButton>
       </div>
       <Heading>{title}</Heading>
       <div className="pl-24 -mt-24 mb-36">

@@ -8,4 +8,8 @@ export class RouterUtils {
   static replace(url: string) {
     return navigate(url, { replace: true });
   }
+
+  static back() {
+    return navigate(-1);
+  }
 }

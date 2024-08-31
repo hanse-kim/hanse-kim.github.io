@@ -3,7 +3,6 @@ import React from 'react';
 import { Tag } from 'src/_libs/types/tag';
 import { Seo } from 'src/components/common/seo';
 import { TagsScreen } from 'src/components/screen/tags-screen';
-import { PageProvider } from 'src/contexts/page-context';
 
 interface DataType {
   tagsGroup: {
@@ -24,10 +23,7 @@ export const pageQuery = graphql`
 
 export const Head = (props: PageProps) => <Seo title="Tags" {...props} />;
 
-const TagsPage = ({ ...pageProps }: PageProps<DataType>) => (
-  <PageProvider {...pageProps}>
-    <TagsScreen tags={pageProps.data.tagsGroup.tags} />
-  </PageProvider>
-);
-
+const TagsPage = ({ data }: PageProps<DataType>) => {
+  return <TagsScreen tags={data.tagsGroup.tags} />;
+};
 export default TagsPage;

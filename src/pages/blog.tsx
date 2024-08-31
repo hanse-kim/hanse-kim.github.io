@@ -1,7 +1,6 @@
 import { graphql, HeadFC, PageProps } from 'gatsby';
 import React from 'react';
 import { MarkdownRemark } from 'src/_libs/types/markdown-remark';
-import { PageProvider } from 'src/contexts/page-context';
 import { Seo } from '../components/common/seo';
 import { BlogScreen } from '../components/screen/blog-screen';
 
@@ -36,12 +35,8 @@ type DataType = {
 
 export const Head: HeadFC = (pageProps) => <Seo {...pageProps} />;
 
-const BlogPage = ({ ...pageProps }: PageProps<DataType>) => {
-  return (
-    <PageProvider {...pageProps}>
-      <BlogScreen posts={pageProps.data.allMarkdownRemark.nodes} />
-    </PageProvider>
-  );
+const BlogPage = ({ data }: PageProps<DataType>) => {
+  return <BlogScreen posts={data.allMarkdownRemark.nodes} />;
 };
 
 export default BlogPage;
