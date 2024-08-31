@@ -7253,6 +7253,11 @@ jsonfile@^6.0.1:
     object.assign "^4.1.4"
     object.values "^1.1.6"
 
+kebab-case@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/kebab-case/-/kebab-case-2.0.1.tgz#3c981060455673403a60ebd580ebce06bef62097"
+  integrity sha512-vwwEnpFH5hwkoK2pGnPmGUoRjpE1NRjvdWY6BLlqucF7zPBPwKNxv5bPbW3/Cq1S+nmnL4kLcArGYdKDD3w2Xw==
+
 keyv@^4.0.0, keyv@^4.5.3:
   version "4.5.4"
   resolved "https://registry.yarnpkg.com/keyv/-/keyv-4.5.4.tgz#a879a99e29452f942439f2a405e3af8b31d4de93"

@@ -1,5 +1,8 @@
 import { Link } from 'gatsby';
+import kebabCase from 'kebab-case';
 import React, { useMemo } from 'react';
+import { linkStates } from 'src/_libs/constants/link-states';
+import { routes } from 'src/_libs/constants/routes';
 import { Tag } from 'src/_libs/types/tag';
 
 type TagListSectionProps = {
@@ -22,6 +25,8 @@ export const TagListSection = ({ tags }: TagListSectionProps) => {
     return `${factor}em`;
   };
 
+  console.log(tags);
+
   return (
     <section
       className="px-24 flex flex-wrap justify-center items-center gap-18"
@@ -31,9 +36,10 @@ export const TagListSection = ({ tags }: TagListSectionProps) => {
         .toSorted((a, b) => b.totalCount - a.totalCount)
         .map((tag) => (
           <Link
-            to={tag.value}
-            className="text-18-400 underline underline-offset-4"
+            to={routes.tag(tag.value)}
+            className="text-18-400 underline underline-offset-[0.2em]"
             style={{ fontSize: getRelativeFontSize(tag.totalCount) }}
+            state={linkStates.toLower}
           >
             {`${tag.value} (${tag.totalCount})`}
           </Link>

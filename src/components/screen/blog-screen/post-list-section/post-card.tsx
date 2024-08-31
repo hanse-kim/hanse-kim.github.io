@@ -1,5 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
+import { linkStates } from 'src/_libs/constants/link-states';
 import { MarkdownRemark } from 'src/_libs/types/markdown-remark';
 import { CustomImage } from 'src/components/common/custom-image';
 import { TagButton } from 'src/components/common/tag-button';
@@ -18,7 +19,7 @@ export const PostCard = React.memo(
         onMouseEnter={() => onHover(post.fields.slug)}
         onMouseLeave={() => onBlur(post.fields.slug)}
         data-id={post.fields.slug}
-        state={{ toLower: true }}
+        state={linkStates.toLower}
       >
         <div
           className={`px-20 py-32 overflow-hidden transition-all group rounded-16 bg-bg outline outline-transparent outline-1 desktop:hover:outline-blur desktop:hover:drop-shadow-post tablet:outline-border`}
@@ -38,7 +39,7 @@ export const PostCard = React.memo(
               <TagButton key={tag} tag={tag} />
             ))}
           </div>
-          <p className="w-full mt-16-footer text-18-300 line-clamp-2">
+          <p className="w-full mt-16 text-text-footer text-18-300 line-clamp-2">
             {post.excerpt}
           </p>
         </div>

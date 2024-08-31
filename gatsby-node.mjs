@@ -1,5 +1,7 @@
 import { createFilePath } from 'gatsby-source-filesystem';
+import kebabCase from 'kebab-case';
 import { resolve } from 'path';
+import { routes } from './src/_libs/constants/routes';
 
 export function onCreateNode({ node, getNode, actions }) {
   const { createNodeField } = actions;
@@ -76,6 +78,33 @@ export async function createPages({ graphql, actions }) {
       path: `${post.fields.slug}`,
       component: `${postTemplate}?__contentFilePath=${post.internal.contentFilePath}`,
       context: { id: post.id },
+    });
+  });
+
+  const tagsQuery = await graphql(`
+    query {
+      tagsGroup: allMarkdownRemark(limit: 2000) {
+        tags: group(field: { frontmatter: { tags: SELECT } }) {
+          value: fieldValue
+          totalCount
+        }
+      }
+    }
+  `);
+
+  if (tagsQuery.errors) {
+    reporter.panicOnBuild(`Error while creating tags pages.`);
+    return;
+  }
+
+  const tags = tagsQuery.data.tagsGroup.tags;
+  tags.forEach((tag) => {
+    createPage({
+      path: routes.tag(tag),
+      component: resolve('src/templates/{tag}.tsx'),
+      context: {
+        tag: tag.value,
+      },
     });
   });
 }
