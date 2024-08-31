@@ -3,7 +3,7 @@ import { Footer } from './footer';
 import { Header } from './header';
 import { Main } from './main';
 
-type LayoutProps = { children: React.ReactNode; hasScrollProgress?: boolean };
+type LayoutProps = { children?: React.ReactNode; hasScrollProgress?: boolean };
 
 export const Layout = ({ children, hasScrollProgress }: LayoutProps) => {
   return (

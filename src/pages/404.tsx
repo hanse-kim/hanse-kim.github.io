@@ -1,49 +1,17 @@
-import * as React from "react"
-import { Link, HeadFC, PageProps } from "gatsby"
+import { HeadFC, Link, PageProps } from 'gatsby';
+import * as React from 'react';
+import { Seo } from 'src/components/common/seo';
+import { NotFoundScreen } from 'src/components/screen/404-screen';
+import { PageProvider } from 'src/contexts/page-context';
 
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
+export const Head: HeadFC = (pageProps) => <Seo {...pageProps} />;
 
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-
-const NotFoundPage: React.FC<PageProps> = () => {
+const NotFoundPage: React.FC<PageProps> = ({ ...pageProps }) => {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
-  )
-}
+    <PageProvider {...pageProps}>
+      <NotFoundScreen />
+    </PageProvider>
+  );
+};
 
-export default NotFoundPage
-
-export const Head: HeadFC = () => <title>Not found</title>
+export default NotFoundPage;
