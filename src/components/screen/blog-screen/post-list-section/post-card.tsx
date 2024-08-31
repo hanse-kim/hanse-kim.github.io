@@ -18,6 +18,7 @@ export const PostCard = React.memo(
         onMouseEnter={() => onHover(post.fields.slug)}
         onMouseLeave={() => onBlur(post.fields.slug)}
         data-id={post.fields.slug}
+        state={{ toLower: true }}
       >
         <div
           className={`px-20 py-32 overflow-hidden transition-all group rounded-16 bg-bg outline outline-transparent outline-1 desktop:hover:outline-blur desktop:hover:drop-shadow-post tablet:outline-border`}
