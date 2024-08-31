@@ -29,7 +29,7 @@ export const PostCard = React.memo(
               className="border-solid rounded-8 border-1 border-border mb-18"
             />
           )}
-          <h2 className="break-all text-32-700 line-clamp-2 text-text">
+          <h2 className="break-all text-32-700 line-clamp-2">
             {post.frontmatter.title}
           </h2>
           <div className="flex gap-12 mt-12">
@@ -37,7 +37,7 @@ export const PostCard = React.memo(
               <TagButton key={tag} tag={tag} />
             ))}
           </div>
-          <p className="w-full mt-16 text-text-footer text-18-300 line-clamp-2">
+          <p className="w-full mt-16-footer text-18-300 line-clamp-2">
             {post.excerpt}
           </p>
         </div>

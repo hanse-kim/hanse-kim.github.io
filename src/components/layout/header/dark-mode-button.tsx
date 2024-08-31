@@ -17,13 +17,13 @@ export const DarkModeButton = ({}: DarkModeButtonProps) => {
     >
       <span className="relative w-[24px] h-[24px]">
         <Icon
-          className="absolute top-0 left-0 text-text opacity-0 data-[in=true]:opacity-100 group-data-[animating=true]:data-[in=true]:animate-dark-mode-icon-in group-data-[animating=true]:data-[in=false]:animate-dark-mode-icon-out"
+          className="absolute top-0 left-0 opacity-0 data-[in=true]:opacity-100 group-data-[animating=true]:data-[in=true]:animate-dark-mode-icon-in group-data-[animating=true]:data-[in=false]:animate-dark-mode-icon-out"
           size={24}
           data-in={isDarkMode}
           iconName={'dark_mode'}
         />
         <Icon
-          className="absolute top-0 left-0 text-text opacity-0 data-[in=true]:opacity-100 group-data-[animating=true]:data-[in=true]:animate-dark-mode-icon-in group-data-[animating=true]:data-[in=false]:animate-dark-mode-icon-out"
+          className="absolute top-0 left-0 opacity-0 data-[in=true]:opacity-100 group-data-[animating=true]:data-[in=true]:animate-dark-mode-icon-in group-data-[animating=true]:data-[in=false]:animate-dark-mode-icon-out"
           size={24}
           data-in={!isDarkMode}
           iconName={'light_mode'}
