@@ -1,7 +1,6 @@
 import { createFilePath } from 'gatsby-source-filesystem';
 import kebabCase from 'kebab-case';
 import { resolve } from 'path';
-import { routes } from './src/_libs/constants/routes';
 
 export function onCreateNode({ node, getNode, actions }) {
   const { createNodeField } = actions;
@@ -92,15 +91,11 @@ export async function createPages({ graphql, actions }) {
     }
   `);
 
-  if (tagsQuery.errors) {
-    reporter.panicOnBuild(`Error while creating tags pages.`);
-    return;
-  }
-
   const tags = tagsQuery.data.tagsGroup.tags;
+
   tags.forEach((tag) => {
     createPage({
-      path: routes.tag(tag),
+      path: `/tags/${kebabCase(tag.value, false)}/`,
       component: resolve('src/templates/{tag}.tsx'),
       context: {
         tag: tag.value,
