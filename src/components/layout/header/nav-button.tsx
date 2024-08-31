@@ -9,7 +9,7 @@ type NavButtonProps = {
 } & (
   | {
       to: Route;
-      toBack: false;
+      toBack?: false;
     }
   | { to?: ''; toBack: true }
 );
