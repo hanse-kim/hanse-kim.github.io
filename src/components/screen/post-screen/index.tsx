@@ -1,7 +1,7 @@
 import React from 'react';
 import { MarkdownRemark } from 'src/_libs/types/markdown-remark';
 import { CustomImage } from 'src/components/common/custom-image';
-import { PostScreenHeader } from './header';
+import { PostHeader } from './post-header';
 import { Markdown } from './markdown';
 
 type PostScreenProps = {
@@ -10,8 +10,8 @@ type PostScreenProps = {
 
 export const PostScreen = ({ post }: PostScreenProps) => {
   return (
-    <>
-      <PostScreenHeader {...post.frontmatter} />
+    <article>
+      <PostHeader {...post.frontmatter} timeToRead={post.timeToRead} />
       {post.frontmatter.thumbnail && (
         <CustomImage
           className="border border-solid mb-36 - 1 border-border"
@@ -21,6 +21,6 @@ export const PostScreen = ({ post }: PostScreenProps) => {
         />
       )}
       <Markdown html={post.html} />
-    </>
+    </article>
   );
 };

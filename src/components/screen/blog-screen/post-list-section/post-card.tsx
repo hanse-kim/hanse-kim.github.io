@@ -34,6 +34,7 @@ export const PostCard = React.memo(
           <h2 className="break-all text-32-700 line-clamp-2">
             {post.frontmatter.title}
           </h2>
+          <div className="mt-8 text-text-quote">{`${post.frontmatter.date} · ${post.timeToRead} min read`}</div>
           <div className="flex gap-12 mt-12">
             {post.frontmatter.tags.map((tag) => (
               <TagButton key={tag} tag={tag} />

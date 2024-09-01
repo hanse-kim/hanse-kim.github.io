@@ -10,6 +10,7 @@ export type MarkdownRemark = Node & {
   };
   html: string;
   body: string;
+  timeToRead: number;
   tableOfContents: TocItem[];
   excerpt: string;
   fields: {

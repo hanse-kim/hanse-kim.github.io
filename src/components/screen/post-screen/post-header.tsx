@@ -1,24 +1,25 @@
 import React from 'react';
-import { routes } from 'src/_libs/constants/routes';
 import { MarkdownRemark } from 'src/_libs/types/markdown-remark';
 import { BackButton } from 'src/components/common/back-button';
 import { Heading } from 'src/components/common/heading';
 import { TagButton } from 'src/components/common/tag-button';
-import { NavButton } from 'src/components/layout/header/nav-button';
 
-type PostScreenHeaderProps = MarkdownRemark['frontmatter'] & {};
+type PostHeaderProps = MarkdownRemark['frontmatter'] & {
+  timeToRead: number;
+};
 
-export const PostScreenHeader = ({
+export const PostHeader = ({
   title,
   date,
   tags,
-}: PostScreenHeaderProps) => {
+  timeToRead,
+}: PostHeaderProps) => {
   return (
     <header>
       <BackButton />
       <Heading>{title}</Heading>
       <div className="pl-24 -mt-24 mb-36">
-        <div className="text-18-400 text-text-footer">{`작성일: ${date}`}</div>
+        <div className="text-18-400 text-text-footer">{`${date} · ${timeToRead} min read`}</div>
         <div className="flex gap-12 mt-12">
           {tags.map((tag) => (
             <TagButton key={tag} tag={tag} />

@@ -5,7 +5,7 @@ import { Seo } from '../components/common/seo';
 import { BlogScreen } from '../components/screen/blog-screen';
 
 export const pageQuery = graphql`
-  {
+  query {
     allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       nodes {
         id
@@ -18,6 +18,7 @@ export const pageQuery = graphql`
             publicURL
           }
         }
+        timeToRead
         excerpt(pruneLength: 200)
         fields {
           slug
