@@ -13,7 +13,7 @@
 }
 
 .md h2 {
-  @apply text-28-700;
+  @apply text-30-700;
 }
 
 .md h3 {
@@ -42,7 +42,8 @@
 }
 
 .md blockquote {
-  @apply flex flex-col p-16 border-l-4 border-dashed gap-14 border-1 border-border text-text-quote;
+  @apply flex flex-col p-16 border-l-4 border-dashed gap-14 border-1 border-border text-text-quote border-l-main;
+  border-left-style: solid;
 }
 
 .md a {

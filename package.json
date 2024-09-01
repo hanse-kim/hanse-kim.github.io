@@ -13,7 +13,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
-    "pull-posts": "rm -rf .posts && git clone https://github.com/hanse-kim/hanse-kim.github.io-posts .posts && rm -rf .posts/.git && sh .scripts/mdx-to-md.sh .posts",
+    "pull-posts": "rm -rf .posts && git clone https://github.com/hanse-kim/hanse-kim.github.io-posts .posts",
     "remove-hided": "sh .scripts/remove-hided.sh .posts",
     "deploy": "gatsby build && touch public/.nojekyll && gh-pages -d public -b deploy --dotfiles"
   },
