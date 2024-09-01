@@ -4,7 +4,6 @@ import { MarkdownRemark } from 'src/_libs/types/markdown-remark';
 import { BackButton } from 'src/components/common/back-button';
 import { Heading } from 'src/components/common/heading';
 import { Seo } from 'src/components/common/seo';
-import { NavButton } from 'src/components/layout/header/nav-button';
 import { PostListSection } from 'src/components/screen/blog-screen/post-list-section';
 
 type PageContextType = {

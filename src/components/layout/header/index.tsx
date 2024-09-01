@@ -9,8 +9,8 @@ import { usePage } from 'src/contexts/page-context';
 type HeaderProps = {};
 
 export const Header = ({}: HeaderProps) => {
-  const { location } = usePage();
-  const hasScrollProgress = location.pathname.startsWith('/20');
+  const { path } = usePage();
+  const hasScrollProgress = path.startsWith('/20');
 
   return (
     <header className="sticky top-0 left-0 right-0 z-10 flex items-center justify-between px-32 border-solid h-header-height bg-bg border-b-1 border-border">

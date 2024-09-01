@@ -29,7 +29,7 @@ export const NavButton = ({ children, to, toBack }: NavButtonProps) => {
   }
 
   return (
-    <Link className={styles} to={to} data-active={to === path}>
+    <Link className={styles} to={`${to}`} data-active={to === path}>
       {children}
     </Link>
   );

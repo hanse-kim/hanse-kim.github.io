@@ -69,10 +69,6 @@ export async function createPages({ graphql, actions }) {
   const postTemplate = resolve(`./src/templates/{post}.tsx`);
 
   posts.forEach((post) => {
-    if (process.env.NODE_ENV === 'production' && post.frontmatter.hide) {
-      return;
-    }
-
     createPage({
       path: `${post.fields.slug}`,
       component: `${postTemplate}?__contentFilePath=${post.internal.contentFilePath}`,

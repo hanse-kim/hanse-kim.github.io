@@ -1,7 +1,8 @@
-import { PageProps } from 'gatsby';
 import React, { createContext, useContext } from 'react';
 
-type PageContextValue = Omit<PageProps, 'children'> & {};
+type PageContextValue = {
+  path: string;
+};
 
 const PageContext = createContext<PageContextValue | null>(null);
 
@@ -17,7 +18,7 @@ export const usePage = () => {
   const value = useContext(PageContext);
 
   if (value === null) {
-    throw new Error(`Cannot found PageProvider.`);
+    return { path: '' };
   }
 
   return value;

@@ -1,16 +1,37 @@
-import { ShouldUpdateScrollArgs, WrapPageElementBrowserArgs } from 'gatsby';
+import {
+  ShouldUpdateScrollArgs,
+  WrapPageElementBrowserArgs,
+  WrapRootElementBrowserArgs,
+} from 'gatsby';
 import React from 'react';
+import { storageKeys } from './src/_libs/constants/storage-keys';
 import { SessionStorageUtils } from './src/_libs/utils/storage.utils';
 import { Layout } from './src/components/layout';
-import './src/styles/global.css';
-import { storageKeys } from './src/_libs/constants/storage-keys';
 import { pageTransitionDuration } from './src/components/layout/page-transition';
+import { PageProvider } from './src/contexts/page-context';
+import './src/styles/global.css';
 
 export const wrapPageElement = ({
   element,
   props,
 }: WrapPageElementBrowserArgs) => {
   return <Layout {...props}>{element}</Layout>;
+};
+
+export const wrapRootElement = ({
+  props,
+  element,
+}: WrapRootElementBrowserArgs) => {
+  if (
+    props instanceof Object &&
+    props !== null &&
+    'path' in props &&
+    typeof props['path'] === 'string'
+  ) {
+    return <PageProvider path={props.path}>{element}</PageProvider>;
+  }
+
+  return element;
 };
 
 export const onRouteUpdate = ({ prevLocation }) => {
