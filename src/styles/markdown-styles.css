@@ -76,7 +76,7 @@
 
 .md code,
 .md code * {
-  @apply font-[Consolas,Monaco,monospace];
+  @apply font-[Consolas,Monaco,monospace] text-18-400;
 }
 
 .md .caption {
