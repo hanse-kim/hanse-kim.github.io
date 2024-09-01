@@ -1,4 +1,7 @@
+import { configDotenv } from 'dotenv';
 import type { GatsbyConfig } from 'gatsby';
+
+configDotenv();
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -20,13 +23,13 @@ const config: GatsbyConfig = {
     'gatsby-plugin-image',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-root-import',
-    // {
-    //   resolve: `gatsby-plugin-gtag`,
-    //   options: {
-    //     trackingId: process.env.GA_TRACKING_ID || '',
-    //     head: true,
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingId: process.env.GA_TRACKING_ID,
+        head: true,
+      },
+    },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
