@@ -1,0 +1,476 @@
+<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 5.13.7"/><meta property="og:locale" content="ko_KR" data-gatsby-head="true"/><meta property="og:site_name" content="hanse-kim.dev" data-gatsby-head="true"/><meta property="og:type" content="article" data-gatsby-head="true"/><meta property="og:title" content="CSR에서 동적 OG 적용하기 | hanse-kim.dev" data-gatsby-head="true"/><meta property="og:description" content="개발 과정에서 겪은 문제와 그것을 어떻게 해결했는지를 기록하기 위한 블로그입니다." data-gatsby-head="true"/><meta property="og:url" content="https://hanse-kim.github.io/2024/07-23-csr-open-graph/" data-gatsby-head="true"/><style data-href="/styles.4464af729e8ddfbbb55d.css" data-identity="gatsby-global-css">/*
+! tailwindcss v3.4.10 | MIT License | https://tailwindcss.com
+*/*,:after,:before{border:0 solid;box-sizing:border-box}:after,:before{--tw-content:""}:host,html{-webkit-text-size-adjust:100%;font-feature-settings:normal;-webkit-tap-highlight-color:transparent;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-variation-settings:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4}body{line-height:inherit;margin:0}hr{border-top-width:1px;color:inherit;height:0}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-feature-settings:normal;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-size:1em;font-variation-settings:normal}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{border-collapse:collapse;border-color:inherit;text-indent:0}button,input,optgroup,select,textarea{font-feature-settings:inherit;color:inherit;font-family:inherit;font-size:100%;font-variation-settings:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{color:#9ca3af;opacity:1}input::placeholder,textarea::placeholder{color:#9ca3af;opacity:1}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{height:auto;max-width:100%}[hidden]{display:none}@font-face{font-named-instance:"Regular";font-display:swap;font-family:Pretendard;font-style:normal;font-weight:100 900;src:url(/fonts/PretendardVariable.woff2) format("woff2")}*{font-family:Pretendard,sans-serif}html{--tw-bg-opacity:1;background-color:hsl(var(--twc-bg)/var(--twc-bg-opacity,var(--tw-bg-opacity)));font-size:16px}html[data-transition=true],html[data-transition=true] *{transition-duration:.15s!important;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke!important;transition-timing-function:cubic-bezier(.4,0,.2,1)!important}hr{--tw-border-opacity:1;border-color:hsl(var(--twc-border)/var(--twc-border-opacity,var(--tw-border-opacity)))}@media (max-width:1080px){html{font-size:14px}}@media (max-width:640px){html{font-size:12px}}@property --angle{syntax:"<angle>";initial-value:0deg;inherits:false}*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0}.-bottom-2{bottom:-.125rem}.left-0{left:0}.left-1\/2{left:50%}.right-0{right:0}.top-0{top:0}.top-1\/2{top:50%}.z-10{z-index:10}.mx-auto{margin-left:auto;margin-right:auto}.-mb-24{margin-bottom:-1.5rem}.-mt-24{margin-top:-1.5rem}.mb-18{margin-bottom:1.125rem}.mb-24{margin-bottom:1.5rem}.mb-36{margin-bottom:2.25rem}.ml-24{margin-left:1.5rem}.mt-12{margin-top:.75rem}.mt-16{margin-top:1rem}.mt-36{margin-top:2.25rem}.mt-48{margin-top:3rem}.mt-8{margin-top:.5rem}.line-clamp-2{-webkit-box-orient:vertical;-webkit-line-clamp:2;display:-webkit-box;overflow:hidden}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-2{height:.125rem}.h-36{height:2.25rem}.h-\[24px\]{height:24px}.h-footer-height{height:6.75rem}.h-full{height:100%}.h-header-height{height:4.5rem}.min-h-\[100vh\]{min-height:100vh}.w-36{width:2.25rem}.w-\[24px\]{width:24px}.w-fit{width:-moz-fit-content;width:fit-content}.w-full{width:100%}.max-w-screen-width{max-width:67.5rem}.flex-shrink-0{flex-shrink:0}.-translate-x-1\/2{--tw-translate-x:-50%}.-translate-x-1\/2,.-translate-y-1\/2{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-1\/2{--tw-translate-y:-50%}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}.cursor-pointer{cursor:pointer}.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.items-stretch{align-items:stretch}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.justify-around{justify-content:space-around}.gap-12{gap:.75rem}.gap-18{gap:1.125rem}.gap-20{gap:1.25rem}.gap-24{gap:1.5rem}.gap-4{gap:.25rem}.gap-x-20{-moz-column-gap:1.25rem;column-gap:1.25rem}.gap-y-32{row-gap:2rem}.overflow-hidden{overflow:hidden}.break-all{word-break:break-all}.rounded-16{border-radius:16px}.rounded-4{border-radius:4px}.rounded-8{border-radius:8px}.rounded-full{border-radius:9999px}.border-1{border-width:1px}.border-b-1{border-bottom-width:1px}.border-solid{border-style:solid}.border-border{--tw-border-opacity:1;border-color:hsl(var(--twc-border)/var(--twc-border-opacity,var(--tw-border-opacity)))}.bg-bg{--tw-bg-opacity:1;background-color:hsl(var(--twc-bg)/var(--twc-bg-opacity,var(--tw-bg-opacity)))}.bg-bg-footer{--tw-bg-opacity:1;background-color:hsl(var(--twc-bg-footer)/var(--twc-bg-footer-opacity,var(--tw-bg-opacity)))}.bg-border{--tw-bg-opacity:1;background-color:hsl(var(--twc-border)/var(--twc-border-opacity,var(--tw-bg-opacity)))}.bg-main{--tw-bg-opacity:1;background-color:hsl(var(--twc-main)/var(--twc-main-opacity,var(--tw-bg-opacity)))}.object-cover{-o-object-fit:cover;object-fit:cover}.p-24{padding:1.5rem}.px-20{padding-left:1.25rem;padding-right:1.25rem}.px-24{padding-left:1.5rem;padding-right:1.5rem}.px-32{padding-left:2rem;padding-right:2rem}.px-8{padding-left:.5rem;padding-right:.5rem}.py-32{padding-bottom:2rem;padding-top:2rem}.pb-16{padding-bottom:1rem}.pb-4{padding-bottom:.25rem}.pb-48{padding-bottom:3rem}.pl-24{padding-left:1.5rem}.pt-3{padding-top:.1875rem}.text-14-400{font-size:.875rem;font-weight:400}.text-16-300{font-size:1rem;font-weight:300}.text-16-400{font-size:1rem;font-weight:400}.text-18-300{font-size:1.125rem;font-weight:300}.text-18-400{font-size:1.125rem;font-weight:400}.text-20-400{font-size:1.25rem;font-weight:400}.text-24-400{font-size:1.5rem;font-weight:400}.text-24-800{font-size:1.5rem;font-weight:800}.text-32-700{font-size:2rem;font-weight:700}.text-36-700{font-size:2.25rem;font-weight:700}.text-96-700{font-size:6rem;font-weight:700}.text-main{--tw-text-opacity:1;color:hsl(var(--twc-main)/var(--twc-main-opacity,var(--tw-text-opacity)))}.text-text-footer{--tw-text-opacity:1;color:hsl(var(--twc-text-footer)/var(--twc-text-footer-opacity,var(--tw-text-opacity)))}.text-text-quote{--tw-text-opacity:1;color:hsl(var(--twc-text-quote)/var(--twc-text-quote-opacity,var(--tw-text-opacity)))}.underline{text-decoration-line:underline}.underline-offset-\[0\.2em\]{text-underline-offset:.2em}.opacity-0{opacity:0}.opacity-100{opacity:1}.outline{outline-style:solid}.outline-1{outline-width:1px}.outline-transparent{outline-color:transparent}.drop-shadow-transparent{--tw-drop-shadow:drop-shadow(0 0 0px transparent);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1)}.transition-colors{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1)}.transition-opacity{transition-duration:.15s;transition-property:opacity;transition-timing-function:cubic-bezier(.4,0,.2,1)}.transition-shadow{transition-duration:.15s;transition-property:box-shadow,filter;transition-timing-function:cubic-bezier(.4,0,.2,1)}.duration-75{transition-duration:75ms}.light,[data-theme=light]{--twc-main:207.5 100% 42.7%;--twc-text:205.70000000000005 11.9% 11.6%;--twc-text-footer:204.70000000000005 11.9% 28%;--twc-text-quote:206.70000000000005 12% 44.1%;--twc-bg:0 0% 100%;--twc-blur:210 10% 96.1%;--twc-bg-footer:210 10% 96.1%;--twc-border:210 8.7% 91%}.dark,[data-theme=dark]{--twc-main:207.5 81.9% 54.5%;--twc-text:205.70000000000005 28% 95.1%;--twc-text-footer:204.5 23.9% 82%;--twc-text-quote:205.70000000000005 24.5% 72%;--twc-bg:205.70000000000005 11.9% 11.6%;--twc-blur:210 28.9% 17.6%;--twc-bg-footer:210 28.9% 17.6%;--twc-border:210 22.4% 22.7%}html *{--tw-text-opacity:1;color:hsl(var(--twc-text)/var(--twc-text-opacity,var(--tw-text-opacity)))}.after\:block:after{content:var(--tw-content);display:block}.after\:h-\[1px\]:after{content:var(--tw-content);height:1px}.after\:w-full:after{content:var(--tw-content);width:100%}.after\:scale-x-0:after{--tw-scale-x:0;content:var(--tw-content);transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.after\:bg-text:after{--tw-bg-opacity:1;background-color:hsl(var(--twc-text)/var(--twc-text-opacity,var(--tw-bg-opacity)));content:var(--tw-content)}.after\:transition-transform:after{content:var(--tw-content);transition-duration:.15s;transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1)}.disabled\:cursor-default:disabled{cursor:default}.data-\[loaded\=false\]\:pointer-events-none[data-loaded=false]{pointer-events:none}.data-\[loaded\=false\]\:absolute[data-loaded=false]{position:absolute}.data-\[active\=true\]\:text-text[data-active=true]{--tw-text-opacity:1;color:hsl(var(--twc-text)/var(--twc-text-opacity,var(--tw-text-opacity)))}.data-\[in\=true\]\:opacity-100[data-in=true]{opacity:1}.data-\[loaded\=false\]\:opacity-0[data-loaded=false]{opacity:0}.data-\[active\=true\]\:drop-shadow-text[data-active=true]{--tw-drop-shadow:drop-shadow(0 0 0.5px currentColor);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.after\:data-\[active\=true\]\:scale-x-100[data-active=true]:after{--tw-scale-x:1;content:var(--tw-content);transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes dark-mode-icon-out{0%{opacity:1;transform:scale(1) rotate(0deg)}to{opacity:0;transform:scale(0) rotate(-1turn)}}.group[data-animating=true] .group-data-\[animating\=true\]\:data-\[in\=false\]\:animate-dark-mode-icon-out[data-in=false]{animation:dark-mode-icon-out .25s ease-in forwards}@keyframes dark-mode-icon-in{0%{opacity:0;transform:scale(0) rotate(1turn)}to{opacity:1;transform:scale(1) rotate(0deg)}}.group[data-animating=true] .group-data-\[animating\=true\]\:data-\[in\=true\]\:animate-dark-mode-icon-in[data-in=true]{animation:dark-mode-icon-in .25s ease-in forwards}.peer[data-loaded=true]~.peer-data-\[loaded\=true\]\:hidden{display:none}@media (min-width:1081px){@media (min-width:1081px){.desktop\:desktop\:hover\:bg-blur:hover{--tw-bg-opacity:1;background-color:hsl(var(--twc-blur)/var(--twc-blur-opacity,var(--tw-bg-opacity)))}}.desktop\:hover\:bg-main:hover{--tw-bg-opacity:1;background-color:hsl(var(--twc-main)/var(--twc-main-opacity,var(--tw-bg-opacity)))}.desktop\:hover\:text-bg:hover{--tw-text-opacity:1;color:hsl(var(--twc-bg)/var(--twc-bg-opacity,var(--tw-text-opacity)))}.desktop\:hover\:text-text:hover{--tw-text-opacity:1;color:hsl(var(--twc-text)/var(--twc-text-opacity,var(--tw-text-opacity)))}.desktop\:hover\:outline-blur:hover{outline-color:hsl(var(--twc-blur)/var(--twc-blur-opacity,1))}.desktop\:hover\:drop-shadow-post:hover{--tw-drop-shadow:drop-shadow(0 0 2px currentColor)}.desktop\:hover\:drop-shadow-post:hover,.desktop\:hover\:drop-shadow-text:hover{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.desktop\:hover\:drop-shadow-text:hover{--tw-drop-shadow:drop-shadow(0 0 0.5px currentColor)}.desktop\:hover\:after\:scale-x-100:hover:after{--tw-scale-x:1;content:var(--tw-content);transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.desktop\:active\:bg-border:active{--tw-bg-opacity:1;background-color:hsl(var(--twc-border)/var(--twc-border-opacity,var(--tw-bg-opacity)))}}@media (max-width:1080px){.tablet\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.tablet\:outline-border{outline-color:hsl(var(--twc-border)/var(--twc-border-opacity,1))}}@media (max-width:640px){.mobile\:flex{display:flex}.mobile\:hidden{display:none}.mobile\:flex-col{flex-direction:column}.mobile\:items-stretch{align-items:stretch}}.\[\&\>svg\]\:text-text>svg{--tw-text-opacity:1;color:hsl(var(--twc-text)/var(--twc-text-opacity,var(--tw-text-opacity)))}.md div:empty,.md p:empty{display:none}.md h1,.md h2{--tw-border-opacity:1;border-bottom-width:1px;border-color:hsl(var(--twc-border)/var(--twc-border-opacity,var(--tw-border-opacity)));border-style:solid;margin-top:.5em}.md h1{font-size:2.25rem}.md h1,.md h2{font-weight:700}.md h2{font-size:1.875rem}.md h3{font-size:1.5rem}.md h3,.md h4{font-weight:700}.md h4{font-size:1.25rem}.md ol,.md ul{padding-left:2rem}.md ol{list-style-type:decimal}.md ul{list-style-type:disc}.md li:not(:first-of-type){margin-top:.875rem}.md blockquote{--tw-border-opacity:1;border-color:hsl(var(--twc-border)/var(--twc-border-opacity,var(--tw-border-opacity)));border-left-color:hsl(var(--twc-main)/var(--twc-main-opacity,var(--tw-border-opacity)));border-style:dashed dashed dashed solid;border-width:1px 1px 1px 4px;display:flex;flex-direction:column;gap:.875rem;padding:1rem}.md blockquote,.md blockquote *{--tw-text-opacity:1;color:hsl(var(--twc-text-quote)/var(--twc-text-quote-opacity,var(--tw-text-opacity)))}.md a{--tw-text-opacity:1;color:hsl(var(--twc-main)/var(--twc-main-opacity,var(--tw-text-opacity)));display:inline-block;text-decoration-line:underline}.md a:after{--tw-content:"🔗";content:var(--tw-content);font-size:.9em}.md a:visited{color:#9370db}.md img{display:block;margin:0 auto}.md table{border-collapse:collapse;border-radius:2px;overflow:hidden}.md td,.md th{--tw-border-opacity:1;border-color:hsl(var(--twc-border)/var(--twc-border-opacity,var(--tw-border-opacity)));border-style:solid;border-width:1px;padding:.25rem .5rem}.md th{--tw-bg-opacity:1;background-color:hsl(var(--twc-bg-footer)/var(--twc-bg-footer-opacity,var(--tw-bg-opacity)))}.md tr:nth-child(2n){--tw-bg-opacity:0.4;background-color:hsl(var(--twc-blur)/var(--twc-blur-opacity,var(--tw-bg-opacity)))}.md code:not([class*=language-]){--tw-border-opacity:1;--tw-bg-opacity:1;--tw-text-opacity:1;background-color:hsl(var(--twc-bg-footer)/var(--twc-bg-footer-opacity,var(--tw-bg-opacity)));border-color:hsl(var(--twc-border)/var(--twc-border-opacity,var(--tw-border-opacity)));border-radius:4px;border-style:solid;border-width:1px;color:hsl(var(--twc-main)/var(--twc-main-opacity,var(--tw-text-opacity)));margin-left:.125rem;margin-right:.125rem;padding-left:.25rem;padding-right:.25rem;width:-moz-fit-content;width:fit-content}.md code,.md code *{font-family:Consolas,Monaco,monospace;font-size:1.125rem;font-weight:400}.md .caption{--tw-translate-y:-0.6rem;--tw-text-opacity:1;color:hsl(var(--twc-text-footer)/var(--twc-text-footer-opacity,var(--tw-text-opacity)));display:flex;font-style:italic;justify-content:center;margin-bottom:-1rem;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));white-space:pre-wrap;width:100%}</style><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ELYB3E19X0"></script><script>
+    window.GATSBY_GTAG_PLUGIN_GA_TRACKING_ID = (
+      'G-ELYB3E19X0'
+    );
+    window.GATSBY_GTAG_PLUGIN_ANONYMIZE = false;
+
+    var options = {
+      send_page_view: false
+    };
+    if (false) {
+      options.anonymize_ip = true;
+    }
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-ELYB3E19X0', options);
+  </script><link rel="icon" href="/favicon-32x32.png?v=25771371f1974bf11de79dfe5c6f9c53" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=25771371f1974bf11de79dfe5c6f9c53"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=25771371f1974bf11de79dfe5c6f9c53"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=25771371f1974bf11de79dfe5c6f9c53"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=25771371f1974bf11de79dfe5c6f9c53"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=25771371f1974bf11de79dfe5c6f9c53"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=25771371f1974bf11de79dfe5c6f9c53"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=25771371f1974bf11de79dfe5c6f9c53"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=25771371f1974bf11de79dfe5c6f9c53"/><link rel="preload" href="/fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin="anonymous"/><title data-gatsby-head="true">CSR에서 동적 OG 적용하기 | hanse-kim.dev</title></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><article><header><div class="ml-24 -mb-24 mt-36 w-fit"><button class="cursor-pointer w-fit text-18-300-footer drop-shadow-transparent transition-shadow disabled:cursor-default desktop:hover:drop-shadow-text desktop:hover:text-text data-[active=true]:drop-shadow-text data-[active=true]:text-text after:block after:w-full after:h-[1px] after:bg-text after:scale-x-0 desktop:hover:after:scale-x-100 after:transition-transform after:data-[active=true]:scale-x-100">&lt; 이전 페이지로</button></div><h1 class="px-24 mt-48 mb-24 text-36-700">CSR에서 동적 OG 적용하기</h1><div class="pl-24 -mt-24 mb-36"><div class="text-18-400 text-text-footer">2024-07-23 · 3 min read</div><div class="flex gap-12 mt-12"><div><button class="px-8 pt-3 pb-4 transition-colors rounded-4 bg-border text-main text-14-400 desktop:hover:text-bg desktop:hover:bg-main">AWS</button></div><div><button class="px-8 pt-3 pb-4 transition-colors rounded-4 bg-border text-main text-14-400 desktop:hover:text-bg desktop:hover:bg-main">Troubleshooting</button></div></div></div></header><style>
+  /*
+ Solarized Color Schemes originally by Ethan Schoonover
+ http://ethanschoonover.com/solarized
+
+ Ported for PrismJS by Hector Matos
+ Website: https://krakendev.io
+ Twitter Handle: https://twitter.com/allonsykraken)
+*/
+
+  /*
+SOLARIZED HEX
+--------- -------
+base03    #002b36
+base02    #073642
+base01    #586e75
+base00    #657b83
+base0     #839496
+base1     #93a1a1
+base2     #eee8d5
+base3     #fdf6e3
+yellow    #b58900
+orange    #cb4b16
+red       #dc322f
+magenta   #d33682
+violet    #6c71c4
+blue      #268bd2
+cyan      #2aa198
+green     #859900
+*/
+
+pre[class*=&#x27;language-&#x27;] {
+  --base03: #002b36;
+  --base02: #073642;
+  --base01: #586e75;
+  --base00: #657b83;
+  --base0: #839496;
+  --base1: #93a1a1;
+  --base2: #eee8d5;
+  --base3: #fdf6e3;
+  --yellow: #b58900;
+  --orange: #cb4b16;
+  --red: #dc322f;
+  --magenta: #d33682;
+  --violet: #6c71c4;
+  --blue: #268bd2;
+  --cyan: #2aa198;
+  --green: #859900;
+}
+
+.dark pre[class*=&#x27;language-&#x27;] {
+  --base00: #93a1a1;
+  --base1: #657b83;
+}
+
+  code[class*=&#x27;language-&#x27;],
+  pre[class*=&#x27;language-&#x27;] {
+    color: var(--base00); /* base00 */
+    font-family: Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;
+    font-size: 0.95em;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+
+    border: none;
+
+    line-height: 1.2;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*=&#x27;language-&#x27;]::selection,
+  pre[class*=&#x27;language-&#x27;] ::selection,
+  code[class*=&#x27;language-&#x27;]::selection,
+  code[class*=&#x27;language-&#x27;] ::selection {
+    background: #073642; /* base02 */
+  }
+
+  /* Code blocks */
+  pre[class*=&#x27;language-&#x27;] {
+    padding: 1.5em 1em;
+    overflow: auto;
+    border-radius: 0.3em;
+    position: relative;
+    background-color: hsl(var(--twc-bg-footer));
+    border: 1px solid hsl(var(--twc-border));
+  }
+
+  :not(pre) &gt; code[class*=&#x27;language-&#x27;] {
+    background-color: #fdf6e3; /* base3 */
+  }
+
+  .gatsby-highlight pre[class*=&#x27;language-&#x27;]::after {
+    background-color: hsl(var(--twc-main));
+    border-radius: 0px 0px 4px 4px;
+    color: hsl(var(--twc-bg));
+    font-size: 0.75rem;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, &#x27;Liberation Mono&#x27;, &#x27;Courier New&#x27;,
+      monospace;
+    letter-spacing: 0.075em;
+    line-height: 1;
+    padding: 0.25rem 0.5rem;
+    position: absolute;
+    left: 1.5rem;
+    text-align: right;
+    top: 0;
+  }
+
+  
+ .gatsby-highlight pre.language-javascript::after {
+    content: &quot;JavaScript&quot;;
+    
+  }
+
+
+ .gatsby-highlight pre.language-typescript::after {
+    content: &quot;TypeScript&quot;;
+    
+  }
+
+
+ .gatsby-highlight pre.language-jsx::after {
+    content: &quot;JSX&quot;;
+    
+  }
+
+
+ .gatsby-highlight pre.language-tsx::after {
+    content: &quot;TSX&quot;;
+    
+  }
+
+
+ .gatsby-highlight pre.language-shell::after {
+    content: &quot;Shell&quot;;
+    background-color: hsl(var(--twc-text-quote))
+  }
+
+
+ .gatsby-highlight pre.language-text::after {
+    content: &quot;Text&quot;;
+    background-color: hsl(var(--twc-text-quote))
+  }
+
+
+ .gatsby-highlight pre.language-css::after {
+    content: &quot;CSS&quot;;
+    background-color: hsl(var(--twc-text-quote))
+  }
+
+
+ .gatsby-highlight pre.language-html::after {
+    content: &quot;HTML&quot;;
+    background-color: hsl(var(--twc-text-quote))
+  }
+
+
+ .gatsby-highlight pre.language-markdown::after {
+    content: &quot;Markdown&quot;;
+    background-color: hsl(var(--twc-text-quote))
+  }
+
+
+ .gatsby-highlight pre.language-java::after {
+    content: &quot;Java&quot;;
+    
+  }
+;
+
+  /* Inline code */
+  :not(pre) &gt; code[class*=&#x27;language-&#x27;] {
+    padding: 0.1em;
+    border-radius: 0.3em;
+  }
+
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: var(--base1); /* base1 */
+  }
+
+  .token.punctuation {
+    color: #586e75; /* base01 */
+  }
+
+  .token.namespace {
+    opacity: 0.7;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.deleted {
+    color: #268bd2; /* blue */
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.url,
+  .token.inserted {
+    color: #2aa198; /* cyan */
+  }
+
+  .token.entity {
+    color: var(--base00); /* base00 */
+    background: #eee8d5; /* base2 */
+  }
+
+  .token.atrule,
+  .token.attr-value,
+  .token.keyword {
+    color: #859900; /* green */
+  }
+
+  .token.function,
+  .token.class-name {
+    color: #b58900; /* yellow */
+  }
+
+  .token.regex,
+  .token.important,
+  .token.variable {
+    color: #cb4b16; /* orange */
+  }
+
+  .token.important,
+  .token.bold {
+    font-weight: bold;
+  }
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.entity {
+    cursor: help;
+  }
+
+  pre[class*=&#x27;language-&#x27;].line-numbers {
+    position: relative;
+    padding-left: 3.5em;
+    counter-reset: linenumber;
+  }
+
+  pre[class*=&#x27;language-&#x27;].line-numbers &gt; code {
+    position: relative;
+    white-space: inherit;
+  }
+
+  .line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    padding: 1.5em 0 1.5em 1em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .line-numbers-rows &gt; span {
+    display: block;
+    counter-increment: linenumber;
+  }
+
+  .line-numbers-rows &gt; span:before {
+    content: counter(linenumber);
+    color: #999;
+    display: block;
+    padding-right: 0.8em;
+    text-align: right;
+  }
+</style><div class="flex flex-col gap-24 px-24 pb-48 md text-20-400"><p>최근 회사에서 가볍고 빠른 성능의 사이트가 필요하다는 요구가 있어 Vite와 Svelte로 SPA를 개발하게 되었습니다. 동적 라우팅이 필요했고, 경로에 따라 백오피스에서 설정한 커스텀 페이지를 보여주는 사이트였습니다.</p>
+<p>문제는 동적 경로에 따라 OG 메타태그를 적용해야 한다는 사실이었습니다. 취업 준비를 하던 시절 "CSR = SEO가 불가능"이라고 거의 공식처럼 암기했기 때문에, 저는 당연히 불가능한 일이라고 생각했습니다.</p>
+<p>하지만 뜻밖에도 <a href="https://techblog.woowahan.com/15469/">이 문제를 해결한 포스팅</a>을 알게 되었고, 이를 참고해 무사히 해결할 수 있었습니다. (감사합니다!) 비슷한 고민이 있는 분들은 해당 포스팅이 큰 도움이 되리라 생각합니다.</p>
+<p>전반적인 해결 방법은 위 포스팅을 통해서도 충분히 얻을 수 있었지만, 그럼에도 겪은 문제들과 이를 통해 알게 된 내용들을 정리했습니다.</p>
+<h2>CSR에서 동적 OG 메타태그를 적용하는 방법</h2>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 545px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/662b513ecb452b1df4d7a26cca47235c/d2d42/cloudfront-events-that-trigger-lambda-functions.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 35.55555555555556%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAIAAACHqfpvAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABgUlEQVR42jVRXUvCYBTeP+q2/9JddBV1EXQRBUU33YZBQVD0QSwvsgL70FkmqWk5E9y71Olw06kscWmuze396tXo4eHAOc95OIdzOEIInYBADw77GFOMxrW/eg+8p5bmusnHse46TCV4LJAJONaBEMSUDk21HD/+qAFJzmUKD+63Sc1S++4kszDTCh11QbT4HFK0ysubUNWLdOLnHMdxXYcl9ZYcFU9jr0dC9jBwPlsReWoUfDVjCbwPHjMv+5HswZN4dna/zkc2JKkoinlOURQAAIu2PSQ/PYIg28q3e0TLmQWB0SoneyCBamlkNdgMH45YDAaDO4EAV5SkSrnct92vUlzenNL5ReNypcnP9xN7/VK6WxAYLTlpnM59bE0b16vGxfJneC31cBMRYtz3YNDptD1EfKujh7frCmhU5XpFslWRalmi54j+xva381fa7W5TU3VFamkKszQNg6P/wAiikQMRgQj7CGPoY7MKtRwj6qrEc9i1Rx50R57r+X+/+AWxlWmomzV4EQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/662b513ecb452b1df4d7a26cca47235c/89b46/cloudfront-events-that-trigger-lambda-functions.webp 180w,
+/static/662b513ecb452b1df4d7a26cca47235c/97ead/cloudfront-events-that-trigger-lambda-functions.webp 360w,
+/static/662b513ecb452b1df4d7a26cca47235c/21895/cloudfront-events-that-trigger-lambda-functions.webp 545w"
+              sizes="(max-width: 545px) 100vw, 545px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/662b513ecb452b1df4d7a26cca47235c/96042/cloudfront-events-that-trigger-lambda-functions.png 180w,
+/static/662b513ecb452b1df4d7a26cca47235c/7a322/cloudfront-events-that-trigger-lambda-functions.png 360w,
+/static/662b513ecb452b1df4d7a26cca47235c/d2d42/cloudfront-events-that-trigger-lambda-functions.png 545w"
+            sizes="(max-width: 545px) 100vw, 545px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/662b513ecb452b1df4d7a26cca47235c/d2d42/cloudfront-events-that-trigger-lambda-functions.png"
+            alt="cloudfront-events-that-trigger-lambda-functions.png"
+            title=""
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>&#x3C;span style={{textAlign: 'center', margin: '0 auto', fontStyle: 'italic', color: 'var(--color-text-footer)'}}>출처: <a href="https://docs.aws.amazon.com/ko_kr/AmazonCloudFront/latest/DeveloperGuide/lambda-cloudfront-trigger-events.html">AWS 공식문서</a></span></p>
+<p>AWS CloudFront에서는 위와 같은 네 구간에 엣지 함수를 설정할 수 있습니다.</p>
+<p>방법을 요약하면 Viewer request 이벤트에 엣지 함수를 설정해서, 요청자가 봇인지 아닌지를 판별해 봇일 경우 <strong>OG 메타태그만을 포함한 HTML</strong>을 생성하여 응답으로 보내는 것입니다.</p>
+<p>즉 봇에 의한 요청일 경우 Viewer request 단계에서 바로 응답을 생성하여 OG 메타태그 HTML을 응답으로 보내고, 그 이외에 실사용자에 의한 요청일 경우 정상적으로 CloudFront 원본(제 경우에는 S3)을 거쳐 응답을 보냅니다.</p>
+<p>주의할 점은 만약 클라이언트 사이드 라우팅 방식이 hash property 기반일 경우에는 위 방식이 불가능하다는 것입니다. hash property는 서버로 전달되지 않기 때문에, 어떤 페이지를 요청하든 CloudFront 측에서는 동일한 페이지로 간주합니다. 이로 인해 페이지별로 적절한 OG 태그를 생성하는 것이 어렵습니다.</p>
+<p>저 역시 위와 같은 이슈로 인해 라우팅 라이브러리를 변경해야 했습니다.</p>
+<h2><strong>CloudFront Functions</strong> vs <strong>Lambda@Edge</strong></h2>
+<p>둘의 차이는 위 포스팅에 잘 요약되어 있고, <a href="https://docs.aws.amazon.com/ko_kr/AmazonCloudFront/latest/DeveloperGuide/edge-functions-choosing.html">공식 문서</a>에서 좀더 상세한 내용을 확인할 수 있습니다.</p>
+<p>제가 고려한 차이점은 다음과 같습니다.</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th>CloudFront Functions</th>
+<th>Lambda@Edge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">특징</td>
+<td>간단한 작업에 적합</td>
+<td>복잡한 작업 가능</td>
+</tr>
+<tr>
+<td align="center">적용 가능한 이벤트</td>
+<td>Viewer request/response</td>
+<td>Viewer request/response,<br/>Origin request/response</td>
+</tr>
+<tr>
+<td align="center">네트워크 통신</td>
+<td>X</td>
+<td>O</td>
+</tr>
+<tr>
+<td align="center">외부 라이브러리 사용</td>
+<td>X</td>
+<td>O</td>
+</tr>
+<tr>
+<td align="center">비용</td>
+<td>요청당 비용 청구</td>
+<td>요청 및 함수 지속 시간당<br/>비용 청구</td>
+</tr>
+</tbody>
+</table>
+<p>제 경우에는 OG 태그 생성을 위해 API 콜이 필수적이었으므로 Lambda@Edge 외엔 선택지가 없었습니다.</p>
+<h2><del>람다 계층 사용</del></h2>
+<p>처음에는 Fetch API를 사용해 API 콜을 하려 했지만, <code>fetch</code> 함수가 존재하지 않는다는 에러를 만났습니다. 람다 함수는 노드 환경이고 Fetch API는 웹 브라우저가 제공하는 API이기 때문입니다.</p>
+<p>저는 그 대안으로서 Aixos를 사용하고자 했습니다. Axios의 기반이 되는 XHR 역시 브라우저 API지만, Axios는 서버 사이드에서도 동작하는 라이브러리인 만큼 노드 환경에 필요한 dependency가 갖춰져 있을 거라 생각했습니다.</p>
+<p>람다 함수에서 외부 라이브러리를 사용하는 방법은 크게 두 가지였습니다.</p>
+<ul>
+<li>
+<p>외부 라이브러리를 포함하는 .zip 파일을 생성해 업로드한다.</p>
+</li>
+<li>
+<p><strong>람다 계층(Lambda layer)</strong> 을 추가한다.</p>
+</li>
+</ul>
+<p>람다 계층이란 람다 함수와 별도로 외부 종속성을 관리하기 위한 기능입니다. 즉 저 두 가지 방식은 라이브러리 코드를 하나의 람다 함수 패키지에 전부 집어넣느냐, 아니면 따로 분리해서 관리하느냐 차이입니다.</p>
+<p>람다 계층을 사용하면 하나의 종속성을 여러 람다 함수에서 재사용 가능하기 때문에, 종속성을 추가할 때 일반적으로 권장하는 방법이었습니다. 따라서 저도 이 방법을 택했습니다.</p>
+<p>계층을 구성하는 방법은 간단한데, 우선 아래와 같은 형태로 구성되도록 .zip 파일을 만든 후 AWS 콘솔에서 람다 계층을 추가할 때 업로드하면 됩니다.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">axios-layer.zip
+└ nodejs
+  └ axios
+    └ ...</code></pre></div>
+<p>람다 함수의 런타임 버전이 계층의 호환 런타임 버전에 포함되어야 한다는 점만 주의하면 계층 생성에서 크게 어려운 점은 없었습니다.</p>
+<p>저는 Axios 종속성을 위한 계층을 생성하고 이를 람다 함수에 추가했습니다. 그리고 <strong>Lambda@Edge에는 계층 사용이 불가능하다</strong>는 사실을 뒤늦게 알게 되었습니다. (<a href="https://docs.aws.amazon.com/ko_kr/AmazonCloudFront/latest/DeveloperGuide/lambda-at-edge-function-restrictions.html#lambda-at-edge-restrictions-features"></a>)</p>
+<h2>네트워크 통신, 그리고 해결</h2>
+<p><a href="https://nodejs.org/api/https.html">노드의 HTTPS 모듈</a>을 사용해 API 콜을 할 수 있었습니다. Lambda@Edge 문서의 함수 예제에는 없는 내용이라 구글링을 하던 중 한 AWS 포스팅에서 해당 내용을 찾게 되었습니다. (<a href="https://aws.amazon.com/ko/blogs/networking-and-content-delivery/leveraging-external-data-in-lambdaedge/"></a>)</p>
+<p>HTTPS 모듈은 사용 방법이 조금 복잡해서, 아래와 같이 한번 래핑해서 사용했습니다.</p>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function">fetchData</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">url</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    https
+      <span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        res<span class="token punctuation">.</span><span class="token function">setEncoding</span><span class="token punctuation">(</span><span class="token string">'utf8'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">let</span> rawData <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+
+        res<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'data'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">chunk</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+          rawData <span class="token operator">+=</span> chunk<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        res<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'end'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            <span class="token keyword">const</span> parsedData <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>rawData<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">resolve</span><span class="token punctuation">(</span>parsedData<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">error</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'error'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">error</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div>
+<p>또한 함수가 잘 동작하는지 확인하기 위해 주기적으로 테스트를 해가며 함수를 작성할 필요가 있었는데, 저는 다음과 같은 과정을 거쳐 테스트 데이터를 구했습니다.</p>
+<ol>
+<li>
+<p><a href="https://docs.aws.amazon.com/ko_kr/AmazonCloudFront/latest/DeveloperGuide/lambda-event-structure.html">Lambda@Edge 이벤트 구조</a> 문서에서 일반적인 Viewer request 이벤트를 구해 테스트하고, 기본적인 함수를 구성합니다.</p>
+</li>
+<li>
+<p><a href="https://docs.aws.amazon.com/ko_kr/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-generated-response-examples">함수 예제</a>를 참고하여 Viewer request에서 바로 응답을 생성하는 함수를 작성합니다. 이때, response body는 <code>handler</code> 함수의 <code>event</code> 파라미터를 <code>JSON.stringify()</code>로 처리한 값을 넣습니다.</p>
+</li>
+<li>
+<p>웹사이트의 CloudFront에 람다 함수를 연결합니다. 웹사이트에 접속하면 실제 Viewer request 이벤트를 본문으로 얻을 수 있습니다.</p>
+</li>
+</ol>
+<p>위와 같은 과정을 거쳐 테스트 데이터를 얻고, 무사히 원하는 기능을 구현할 수 있었습니다.</p>
+<h2>마치며</h2>
+<p>처음에는 당연히 불가능하다고 생각한 일이었고 실제로 프론트엔드 코드 상에서 해결하기는 힘든 이슈였습니다. 그러나 인프라를 통해 해결할 수 있었고, 이러한 경험을 얻은 것을 행운이라 생각합니다.</p>
+<p>문제를 해결하기 위한 시야가 한층 더 넓어진 한편, 좁은 상식을 근거로 불가능하다고 단정지었던 제 자신을 반성할 수 있는 기회였습니다.</p>
+<p>마지막으로 이 문제를 해결하는 데 도움을 준 모든 자료와 포스팅에 감사드리며, 이 글이 비슷한 고민을 하는 분들께 유용한 참고자료가 되기를 바랍니다.</p></div></article></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/2024/07-23-csr-open-graph/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-ac65e676c45669f8e307.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-00ecc633fb4d510e23b2.js\"],\"component---src-pages-about-tsx\":[\"/component---src-pages-about-tsx-8101b3c81ebf79932c28.js\"],\"component---src-pages-blog-tsx\":[\"/component---src-pages-blog-tsx-17904792d719efa64bb6.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-f24288b723b3879e27a6.js\"],\"component---src-pages-tags-tsx\":[\"/component---src-pages-tags-tsx-abdda339c3073a584ac7.js\"],\"component---src-templates-{post}-tsx-content-file-path-null\":[\"/component---src-templates-{post}-tsx-content-file-path-null-3e6f1d284d541a5e8c2a.js\"],\"component---src-templates-{tag}-tsx\":[\"/component---src-templates-{tag}-tsx-24bee62c6b108511ce0e.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="1cdcaa7f72578a3db44c";</script><script src="/webpack-runtime-21a98688ce451a527aed.js" async></script><script src="/framework-9260c5fc4673863b98e8.js" async></script><script src="/app-ac65e676c45669f8e307.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>

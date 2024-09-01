@@ -1,0 +1,500 @@
+<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 5.13.7"/><meta property="og:locale" content="ko_KR" data-gatsby-head="true"/><meta property="og:site_name" content="hanse-kim.dev" data-gatsby-head="true"/><meta property="og:type" content="article" data-gatsby-head="true"/><meta property="og:title" content="SPA 404 이슈 해결 | hanse-kim.dev" data-gatsby-head="true"/><meta property="og:description" content="개발 과정에서 겪은 문제와 그것을 어떻게 해결했는지를 기록하기 위한 블로그입니다." data-gatsby-head="true"/><meta property="og:url" content="https://hanse-kim.github.io/2024/07-19-spa-404/" data-gatsby-head="true"/><style data-href="/styles.4464af729e8ddfbbb55d.css" data-identity="gatsby-global-css">/*
+! tailwindcss v3.4.10 | MIT License | https://tailwindcss.com
+*/*,:after,:before{border:0 solid;box-sizing:border-box}:after,:before{--tw-content:""}:host,html{-webkit-text-size-adjust:100%;font-feature-settings:normal;-webkit-tap-highlight-color:transparent;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-variation-settings:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4}body{line-height:inherit;margin:0}hr{border-top-width:1px;color:inherit;height:0}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-feature-settings:normal;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-size:1em;font-variation-settings:normal}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{border-collapse:collapse;border-color:inherit;text-indent:0}button,input,optgroup,select,textarea{font-feature-settings:inherit;color:inherit;font-family:inherit;font-size:100%;font-variation-settings:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{color:#9ca3af;opacity:1}input::placeholder,textarea::placeholder{color:#9ca3af;opacity:1}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{height:auto;max-width:100%}[hidden]{display:none}@font-face{font-named-instance:"Regular";font-display:swap;font-family:Pretendard;font-style:normal;font-weight:100 900;src:url(/fonts/PretendardVariable.woff2) format("woff2")}*{font-family:Pretendard,sans-serif}html{--tw-bg-opacity:1;background-color:hsl(var(--twc-bg)/var(--twc-bg-opacity,var(--tw-bg-opacity)));font-size:16px}html[data-transition=true],html[data-transition=true] *{transition-duration:.15s!important;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke!important;transition-timing-function:cubic-bezier(.4,0,.2,1)!important}hr{--tw-border-opacity:1;border-color:hsl(var(--twc-border)/var(--twc-border-opacity,var(--tw-border-opacity)))}@media (max-width:1080px){html{font-size:14px}}@media (max-width:640px){html{font-size:12px}}@property --angle{syntax:"<angle>";initial-value:0deg;inherits:false}*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0}.-bottom-2{bottom:-.125rem}.left-0{left:0}.left-1\/2{left:50%}.right-0{right:0}.top-0{top:0}.top-1\/2{top:50%}.z-10{z-index:10}.mx-auto{margin-left:auto;margin-right:auto}.-mb-24{margin-bottom:-1.5rem}.-mt-24{margin-top:-1.5rem}.mb-18{margin-bottom:1.125rem}.mb-24{margin-bottom:1.5rem}.mb-36{margin-bottom:2.25rem}.ml-24{margin-left:1.5rem}.mt-12{margin-top:.75rem}.mt-16{margin-top:1rem}.mt-36{margin-top:2.25rem}.mt-48{margin-top:3rem}.mt-8{margin-top:.5rem}.line-clamp-2{-webkit-box-orient:vertical;-webkit-line-clamp:2;display:-webkit-box;overflow:hidden}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-2{height:.125rem}.h-36{height:2.25rem}.h-\[24px\]{height:24px}.h-footer-height{height:6.75rem}.h-full{height:100%}.h-header-height{height:4.5rem}.min-h-\[100vh\]{min-height:100vh}.w-36{width:2.25rem}.w-\[24px\]{width:24px}.w-fit{width:-moz-fit-content;width:fit-content}.w-full{width:100%}.max-w-screen-width{max-width:67.5rem}.flex-shrink-0{flex-shrink:0}.-translate-x-1\/2{--tw-translate-x:-50%}.-translate-x-1\/2,.-translate-y-1\/2{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-1\/2{--tw-translate-y:-50%}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}.cursor-pointer{cursor:pointer}.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.items-stretch{align-items:stretch}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.justify-around{justify-content:space-around}.gap-12{gap:.75rem}.gap-18{gap:1.125rem}.gap-20{gap:1.25rem}.gap-24{gap:1.5rem}.gap-4{gap:.25rem}.gap-x-20{-moz-column-gap:1.25rem;column-gap:1.25rem}.gap-y-32{row-gap:2rem}.overflow-hidden{overflow:hidden}.break-all{word-break:break-all}.rounded-16{border-radius:16px}.rounded-4{border-radius:4px}.rounded-8{border-radius:8px}.rounded-full{border-radius:9999px}.border-1{border-width:1px}.border-b-1{border-bottom-width:1px}.border-solid{border-style:solid}.border-border{--tw-border-opacity:1;border-color:hsl(var(--twc-border)/var(--twc-border-opacity,var(--tw-border-opacity)))}.bg-bg{--tw-bg-opacity:1;background-color:hsl(var(--twc-bg)/var(--twc-bg-opacity,var(--tw-bg-opacity)))}.bg-bg-footer{--tw-bg-opacity:1;background-color:hsl(var(--twc-bg-footer)/var(--twc-bg-footer-opacity,var(--tw-bg-opacity)))}.bg-border{--tw-bg-opacity:1;background-color:hsl(var(--twc-border)/var(--twc-border-opacity,var(--tw-bg-opacity)))}.bg-main{--tw-bg-opacity:1;background-color:hsl(var(--twc-main)/var(--twc-main-opacity,var(--tw-bg-opacity)))}.object-cover{-o-object-fit:cover;object-fit:cover}.p-24{padding:1.5rem}.px-20{padding-left:1.25rem;padding-right:1.25rem}.px-24{padding-left:1.5rem;padding-right:1.5rem}.px-32{padding-left:2rem;padding-right:2rem}.px-8{padding-left:.5rem;padding-right:.5rem}.py-32{padding-bottom:2rem;padding-top:2rem}.pb-16{padding-bottom:1rem}.pb-4{padding-bottom:.25rem}.pb-48{padding-bottom:3rem}.pl-24{padding-left:1.5rem}.pt-3{padding-top:.1875rem}.text-14-400{font-size:.875rem;font-weight:400}.text-16-300{font-size:1rem;font-weight:300}.text-16-400{font-size:1rem;font-weight:400}.text-18-300{font-size:1.125rem;font-weight:300}.text-18-400{font-size:1.125rem;font-weight:400}.text-20-400{font-size:1.25rem;font-weight:400}.text-24-400{font-size:1.5rem;font-weight:400}.text-24-800{font-size:1.5rem;font-weight:800}.text-32-700{font-size:2rem;font-weight:700}.text-36-700{font-size:2.25rem;font-weight:700}.text-96-700{font-size:6rem;font-weight:700}.text-main{--tw-text-opacity:1;color:hsl(var(--twc-main)/var(--twc-main-opacity,var(--tw-text-opacity)))}.text-text-footer{--tw-text-opacity:1;color:hsl(var(--twc-text-footer)/var(--twc-text-footer-opacity,var(--tw-text-opacity)))}.text-text-quote{--tw-text-opacity:1;color:hsl(var(--twc-text-quote)/var(--twc-text-quote-opacity,var(--tw-text-opacity)))}.underline{text-decoration-line:underline}.underline-offset-\[0\.2em\]{text-underline-offset:.2em}.opacity-0{opacity:0}.opacity-100{opacity:1}.outline{outline-style:solid}.outline-1{outline-width:1px}.outline-transparent{outline-color:transparent}.drop-shadow-transparent{--tw-drop-shadow:drop-shadow(0 0 0px transparent);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1)}.transition-colors{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1)}.transition-opacity{transition-duration:.15s;transition-property:opacity;transition-timing-function:cubic-bezier(.4,0,.2,1)}.transition-shadow{transition-duration:.15s;transition-property:box-shadow,filter;transition-timing-function:cubic-bezier(.4,0,.2,1)}.duration-75{transition-duration:75ms}.light,[data-theme=light]{--twc-main:207.5 100% 42.7%;--twc-text:205.70000000000005 11.9% 11.6%;--twc-text-footer:204.70000000000005 11.9% 28%;--twc-text-quote:206.70000000000005 12% 44.1%;--twc-bg:0 0% 100%;--twc-blur:210 10% 96.1%;--twc-bg-footer:210 10% 96.1%;--twc-border:210 8.7% 91%}.dark,[data-theme=dark]{--twc-main:207.5 81.9% 54.5%;--twc-text:205.70000000000005 28% 95.1%;--twc-text-footer:204.5 23.9% 82%;--twc-text-quote:205.70000000000005 24.5% 72%;--twc-bg:205.70000000000005 11.9% 11.6%;--twc-blur:210 28.9% 17.6%;--twc-bg-footer:210 28.9% 17.6%;--twc-border:210 22.4% 22.7%}html *{--tw-text-opacity:1;color:hsl(var(--twc-text)/var(--twc-text-opacity,var(--tw-text-opacity)))}.after\:block:after{content:var(--tw-content);display:block}.after\:h-\[1px\]:after{content:var(--tw-content);height:1px}.after\:w-full:after{content:var(--tw-content);width:100%}.after\:scale-x-0:after{--tw-scale-x:0;content:var(--tw-content);transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.after\:bg-text:after{--tw-bg-opacity:1;background-color:hsl(var(--twc-text)/var(--twc-text-opacity,var(--tw-bg-opacity)));content:var(--tw-content)}.after\:transition-transform:after{content:var(--tw-content);transition-duration:.15s;transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1)}.disabled\:cursor-default:disabled{cursor:default}.data-\[loaded\=false\]\:pointer-events-none[data-loaded=false]{pointer-events:none}.data-\[loaded\=false\]\:absolute[data-loaded=false]{position:absolute}.data-\[active\=true\]\:text-text[data-active=true]{--tw-text-opacity:1;color:hsl(var(--twc-text)/var(--twc-text-opacity,var(--tw-text-opacity)))}.data-\[in\=true\]\:opacity-100[data-in=true]{opacity:1}.data-\[loaded\=false\]\:opacity-0[data-loaded=false]{opacity:0}.data-\[active\=true\]\:drop-shadow-text[data-active=true]{--tw-drop-shadow:drop-shadow(0 0 0.5px currentColor);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.after\:data-\[active\=true\]\:scale-x-100[data-active=true]:after{--tw-scale-x:1;content:var(--tw-content);transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes dark-mode-icon-out{0%{opacity:1;transform:scale(1) rotate(0deg)}to{opacity:0;transform:scale(0) rotate(-1turn)}}.group[data-animating=true] .group-data-\[animating\=true\]\:data-\[in\=false\]\:animate-dark-mode-icon-out[data-in=false]{animation:dark-mode-icon-out .25s ease-in forwards}@keyframes dark-mode-icon-in{0%{opacity:0;transform:scale(0) rotate(1turn)}to{opacity:1;transform:scale(1) rotate(0deg)}}.group[data-animating=true] .group-data-\[animating\=true\]\:data-\[in\=true\]\:animate-dark-mode-icon-in[data-in=true]{animation:dark-mode-icon-in .25s ease-in forwards}.peer[data-loaded=true]~.peer-data-\[loaded\=true\]\:hidden{display:none}@media (min-width:1081px){@media (min-width:1081px){.desktop\:desktop\:hover\:bg-blur:hover{--tw-bg-opacity:1;background-color:hsl(var(--twc-blur)/var(--twc-blur-opacity,var(--tw-bg-opacity)))}}.desktop\:hover\:bg-main:hover{--tw-bg-opacity:1;background-color:hsl(var(--twc-main)/var(--twc-main-opacity,var(--tw-bg-opacity)))}.desktop\:hover\:text-bg:hover{--tw-text-opacity:1;color:hsl(var(--twc-bg)/var(--twc-bg-opacity,var(--tw-text-opacity)))}.desktop\:hover\:text-text:hover{--tw-text-opacity:1;color:hsl(var(--twc-text)/var(--twc-text-opacity,var(--tw-text-opacity)))}.desktop\:hover\:outline-blur:hover{outline-color:hsl(var(--twc-blur)/var(--twc-blur-opacity,1))}.desktop\:hover\:drop-shadow-post:hover{--tw-drop-shadow:drop-shadow(0 0 2px currentColor)}.desktop\:hover\:drop-shadow-post:hover,.desktop\:hover\:drop-shadow-text:hover{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.desktop\:hover\:drop-shadow-text:hover{--tw-drop-shadow:drop-shadow(0 0 0.5px currentColor)}.desktop\:hover\:after\:scale-x-100:hover:after{--tw-scale-x:1;content:var(--tw-content);transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.desktop\:active\:bg-border:active{--tw-bg-opacity:1;background-color:hsl(var(--twc-border)/var(--twc-border-opacity,var(--tw-bg-opacity)))}}@media (max-width:1080px){.tablet\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.tablet\:outline-border{outline-color:hsl(var(--twc-border)/var(--twc-border-opacity,1))}}@media (max-width:640px){.mobile\:flex{display:flex}.mobile\:hidden{display:none}.mobile\:flex-col{flex-direction:column}.mobile\:items-stretch{align-items:stretch}}.\[\&\>svg\]\:text-text>svg{--tw-text-opacity:1;color:hsl(var(--twc-text)/var(--twc-text-opacity,var(--tw-text-opacity)))}.md div:empty,.md p:empty{display:none}.md h1,.md h2{--tw-border-opacity:1;border-bottom-width:1px;border-color:hsl(var(--twc-border)/var(--twc-border-opacity,var(--tw-border-opacity)));border-style:solid;margin-top:.5em}.md h1{font-size:2.25rem}.md h1,.md h2{font-weight:700}.md h2{font-size:1.875rem}.md h3{font-size:1.5rem}.md h3,.md h4{font-weight:700}.md h4{font-size:1.25rem}.md ol,.md ul{padding-left:2rem}.md ol{list-style-type:decimal}.md ul{list-style-type:disc}.md li:not(:first-of-type){margin-top:.875rem}.md blockquote{--tw-border-opacity:1;border-color:hsl(var(--twc-border)/var(--twc-border-opacity,var(--tw-border-opacity)));border-left-color:hsl(var(--twc-main)/var(--twc-main-opacity,var(--tw-border-opacity)));border-style:dashed dashed dashed solid;border-width:1px 1px 1px 4px;display:flex;flex-direction:column;gap:.875rem;padding:1rem}.md blockquote,.md blockquote *{--tw-text-opacity:1;color:hsl(var(--twc-text-quote)/var(--twc-text-quote-opacity,var(--tw-text-opacity)))}.md a{--tw-text-opacity:1;color:hsl(var(--twc-main)/var(--twc-main-opacity,var(--tw-text-opacity)));display:inline-block;text-decoration-line:underline}.md a:after{--tw-content:"🔗";content:var(--tw-content);font-size:.9em}.md a:visited{color:#9370db}.md img{display:block;margin:0 auto}.md table{border-collapse:collapse;border-radius:2px;overflow:hidden}.md td,.md th{--tw-border-opacity:1;border-color:hsl(var(--twc-border)/var(--twc-border-opacity,var(--tw-border-opacity)));border-style:solid;border-width:1px;padding:.25rem .5rem}.md th{--tw-bg-opacity:1;background-color:hsl(var(--twc-bg-footer)/var(--twc-bg-footer-opacity,var(--tw-bg-opacity)))}.md tr:nth-child(2n){--tw-bg-opacity:0.4;background-color:hsl(var(--twc-blur)/var(--twc-blur-opacity,var(--tw-bg-opacity)))}.md code:not([class*=language-]){--tw-border-opacity:1;--tw-bg-opacity:1;--tw-text-opacity:1;background-color:hsl(var(--twc-bg-footer)/var(--twc-bg-footer-opacity,var(--tw-bg-opacity)));border-color:hsl(var(--twc-border)/var(--twc-border-opacity,var(--tw-border-opacity)));border-radius:4px;border-style:solid;border-width:1px;color:hsl(var(--twc-main)/var(--twc-main-opacity,var(--tw-text-opacity)));margin-left:.125rem;margin-right:.125rem;padding-left:.25rem;padding-right:.25rem;width:-moz-fit-content;width:fit-content}.md code,.md code *{font-family:Consolas,Monaco,monospace;font-size:1.125rem;font-weight:400}.md .caption{--tw-translate-y:-0.6rem;--tw-text-opacity:1;color:hsl(var(--twc-text-footer)/var(--twc-text-footer-opacity,var(--tw-text-opacity)));display:flex;font-style:italic;justify-content:center;margin-bottom:-1rem;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));white-space:pre-wrap;width:100%}</style><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ELYB3E19X0"></script><script>
+    window.GATSBY_GTAG_PLUGIN_GA_TRACKING_ID = (
+      'G-ELYB3E19X0'
+    );
+    window.GATSBY_GTAG_PLUGIN_ANONYMIZE = false;
+
+    var options = {
+      send_page_view: false
+    };
+    if (false) {
+      options.anonymize_ip = true;
+    }
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-ELYB3E19X0', options);
+  </script><link rel="icon" href="/favicon-32x32.png?v=25771371f1974bf11de79dfe5c6f9c53" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=25771371f1974bf11de79dfe5c6f9c53"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=25771371f1974bf11de79dfe5c6f9c53"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=25771371f1974bf11de79dfe5c6f9c53"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=25771371f1974bf11de79dfe5c6f9c53"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=25771371f1974bf11de79dfe5c6f9c53"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=25771371f1974bf11de79dfe5c6f9c53"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=25771371f1974bf11de79dfe5c6f9c53"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=25771371f1974bf11de79dfe5c6f9c53"/><link rel="preload" href="/fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin="anonymous"/><title data-gatsby-head="true">SPA 404 이슈 해결 | hanse-kim.dev</title></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><article><header><div class="ml-24 -mb-24 mt-36 w-fit"><button class="cursor-pointer w-fit text-18-300-footer drop-shadow-transparent transition-shadow disabled:cursor-default desktop:hover:drop-shadow-text desktop:hover:text-text data-[active=true]:drop-shadow-text data-[active=true]:text-text after:block after:w-full after:h-[1px] after:bg-text after:scale-x-0 desktop:hover:after:scale-x-100 after:transition-transform after:data-[active=true]:scale-x-100">&lt; 이전 페이지로</button></div><h1 class="px-24 mt-48 mb-24 text-36-700">SPA 404 이슈 해결</h1><div class="pl-24 -mt-24 mb-36"><div class="text-18-400 text-text-footer">2024-07-19 · 2 min read</div><div class="flex gap-12 mt-12"><div><button class="px-8 pt-3 pb-4 transition-colors rounded-4 bg-border text-main text-14-400 desktop:hover:text-bg desktop:hover:bg-main">AWS</button></div><div><button class="px-8 pt-3 pb-4 transition-colors rounded-4 bg-border text-main text-14-400 desktop:hover:text-bg desktop:hover:bg-main">Troubleshooting</button></div></div></div></header><style>
+  /*
+ Solarized Color Schemes originally by Ethan Schoonover
+ http://ethanschoonover.com/solarized
+
+ Ported for PrismJS by Hector Matos
+ Website: https://krakendev.io
+ Twitter Handle: https://twitter.com/allonsykraken)
+*/
+
+  /*
+SOLARIZED HEX
+--------- -------
+base03    #002b36
+base02    #073642
+base01    #586e75
+base00    #657b83
+base0     #839496
+base1     #93a1a1
+base2     #eee8d5
+base3     #fdf6e3
+yellow    #b58900
+orange    #cb4b16
+red       #dc322f
+magenta   #d33682
+violet    #6c71c4
+blue      #268bd2
+cyan      #2aa198
+green     #859900
+*/
+
+pre[class*=&#x27;language-&#x27;] {
+  --base03: #002b36;
+  --base02: #073642;
+  --base01: #586e75;
+  --base00: #657b83;
+  --base0: #839496;
+  --base1: #93a1a1;
+  --base2: #eee8d5;
+  --base3: #fdf6e3;
+  --yellow: #b58900;
+  --orange: #cb4b16;
+  --red: #dc322f;
+  --magenta: #d33682;
+  --violet: #6c71c4;
+  --blue: #268bd2;
+  --cyan: #2aa198;
+  --green: #859900;
+}
+
+.dark pre[class*=&#x27;language-&#x27;] {
+  --base00: #93a1a1;
+  --base1: #657b83;
+}
+
+  code[class*=&#x27;language-&#x27;],
+  pre[class*=&#x27;language-&#x27;] {
+    color: var(--base00); /* base00 */
+    font-family: Consolas, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace;
+    font-size: 0.95em;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+
+    border: none;
+
+    line-height: 1.2;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*=&#x27;language-&#x27;]::selection,
+  pre[class*=&#x27;language-&#x27;] ::selection,
+  code[class*=&#x27;language-&#x27;]::selection,
+  code[class*=&#x27;language-&#x27;] ::selection {
+    background: #073642; /* base02 */
+  }
+
+  /* Code blocks */
+  pre[class*=&#x27;language-&#x27;] {
+    padding: 1.5em 1em;
+    overflow: auto;
+    border-radius: 0.3em;
+    position: relative;
+    background-color: hsl(var(--twc-bg-footer));
+    border: 1px solid hsl(var(--twc-border));
+  }
+
+  :not(pre) &gt; code[class*=&#x27;language-&#x27;] {
+    background-color: #fdf6e3; /* base3 */
+  }
+
+  .gatsby-highlight pre[class*=&#x27;language-&#x27;]::after {
+    background-color: hsl(var(--twc-main));
+    border-radius: 0px 0px 4px 4px;
+    color: hsl(var(--twc-bg));
+    font-size: 0.75rem;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, &#x27;Liberation Mono&#x27;, &#x27;Courier New&#x27;,
+      monospace;
+    letter-spacing: 0.075em;
+    line-height: 1;
+    padding: 0.25rem 0.5rem;
+    position: absolute;
+    left: 1.5rem;
+    text-align: right;
+    top: 0;
+  }
+
+  
+ .gatsby-highlight pre.language-javascript::after {
+    content: &quot;JavaScript&quot;;
+    
+  }
+
+
+ .gatsby-highlight pre.language-typescript::after {
+    content: &quot;TypeScript&quot;;
+    
+  }
+
+
+ .gatsby-highlight pre.language-jsx::after {
+    content: &quot;JSX&quot;;
+    
+  }
+
+
+ .gatsby-highlight pre.language-tsx::after {
+    content: &quot;TSX&quot;;
+    
+  }
+
+
+ .gatsby-highlight pre.language-shell::after {
+    content: &quot;Shell&quot;;
+    background-color: hsl(var(--twc-text-quote))
+  }
+
+
+ .gatsby-highlight pre.language-text::after {
+    content: &quot;Text&quot;;
+    background-color: hsl(var(--twc-text-quote))
+  }
+
+
+ .gatsby-highlight pre.language-css::after {
+    content: &quot;CSS&quot;;
+    background-color: hsl(var(--twc-text-quote))
+  }
+
+
+ .gatsby-highlight pre.language-html::after {
+    content: &quot;HTML&quot;;
+    background-color: hsl(var(--twc-text-quote))
+  }
+
+
+ .gatsby-highlight pre.language-markdown::after {
+    content: &quot;Markdown&quot;;
+    background-color: hsl(var(--twc-text-quote))
+  }
+
+
+ .gatsby-highlight pre.language-java::after {
+    content: &quot;Java&quot;;
+    
+  }
+;
+
+  /* Inline code */
+  :not(pre) &gt; code[class*=&#x27;language-&#x27;] {
+    padding: 0.1em;
+    border-radius: 0.3em;
+  }
+
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: var(--base1); /* base1 */
+  }
+
+  .token.punctuation {
+    color: #586e75; /* base01 */
+  }
+
+  .token.namespace {
+    opacity: 0.7;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.deleted {
+    color: #268bd2; /* blue */
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.url,
+  .token.inserted {
+    color: #2aa198; /* cyan */
+  }
+
+  .token.entity {
+    color: var(--base00); /* base00 */
+    background: #eee8d5; /* base2 */
+  }
+
+  .token.atrule,
+  .token.attr-value,
+  .token.keyword {
+    color: #859900; /* green */
+  }
+
+  .token.function,
+  .token.class-name {
+    color: #b58900; /* yellow */
+  }
+
+  .token.regex,
+  .token.important,
+  .token.variable {
+    color: #cb4b16; /* orange */
+  }
+
+  .token.important,
+  .token.bold {
+    font-weight: bold;
+  }
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.entity {
+    cursor: help;
+  }
+
+  pre[class*=&#x27;language-&#x27;].line-numbers {
+    position: relative;
+    padding-left: 3.5em;
+    counter-reset: linenumber;
+  }
+
+  pre[class*=&#x27;language-&#x27;].line-numbers &gt; code {
+    position: relative;
+    white-space: inherit;
+  }
+
+  .line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    padding: 1.5em 0 1.5em 1em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .line-numbers-rows &gt; span {
+    display: block;
+    counter-increment: linenumber;
+  }
+
+  .line-numbers-rows &gt; span:before {
+    content: counter(linenumber);
+    color: #999;
+    display: block;
+    padding-right: 0.8em;
+    text-align: right;
+  }
+</style><div class="flex flex-col gap-24 px-24 pb-48 md text-20-400"><p>실무에서 정적 사이트 배포 환경을 구성하며 겪은 이슈입니다.</p>
+<h2>SPA란?</h2>
+<p><strong>Single-page application</strong>의 줄임말로, 말 그대로 단일 문서로 이루어진 웹사이트를 의미합니다. 페이지별로 HTML파일이 존재했던 고전적인 방식의 사이트와 달리 하나의 HTML로 구현되기 때문에, 사이트 내의 컨텐츠는 Javascript를 통해 동적으로 생성합니다.</p>
+<p>Angular를 필두로 React, Vue 등 쟁쟁한 SPA 프레임워크가 등장하며 프론트엔드 개발의 주류로 자리매김합니다.</p>
+<p>단일 문서를 사용하기에 <strong>클라이언트 사이드 라우팅</strong>을 통해 페이지 이동을 구현하며, 새로운 문서를 로드하지 않고 화면이 전환되므로 사용자는 쾌적한 사이트 이용 경험을 얻을 수 있습니다.</p>
+<h2>클라이언트 사이드 라우팅이란?</h2>
+<p>SPA에서 사용자가 링크를 클릭할 때마다 페이지를 새로고침하지 않고 다른 페이지로 이동하기 위한 개념입니다. 크게 다음 두 가지 기능을 포함합니다.</p>
+<ul>
+<li>
+<p>URL 변경을 감지해 그 경로에 매핑된 컴포넌트를 렌더링합니다.</p>
+</li>
+<li>
+<p>새로고침을 유발하지 않고 사용자의 URL을 임의로 조작합니다.</p>
+</li>
+</ul>
+<p>사용자의 URL을 변경하는 방식은 또다시 두 가지로 구분할 수 있습니다.</p>
+<ol>
+<li>
+<p><code>window.history</code> API를 사용:</p>
+<p><code>window.history</code> API의 <code>pushState</code>, <code>replaceState</code> 등의 메서드를 사용하여 새로고침을 유발하지 않고 URL을 변경하는 방식입니다. Svelte의 svelte-routing 라이브러리가 이에 속합니다.</p>
+<p>URL의 실제 경로를 변경하므로 정적 사이트로 배포할 경우, 후술할 404 오류 이슈를 유발합니다.</p>
+</li>
+<li>
+<p>hash property를 사용:</p>
+<p><code>Location</code> 인터페이스의 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Location/hash"><strong>hash property</strong></a>를 사용하는 방식으로 Svelte의 svelte-spa-router 라이브러리가 이에 속합니다.</p>
+<p>hash property란 URL의 뒤에 <code>#</code>과 함께 붙는 값으로, 본래는 현재 페이지 내에서 Hash property를 id로 갖는 엘리먼트 위치로 스크롤하는 역할을 합니다.</p>
+<p><code>#</code> 뒤에 붙는 값은 기본적으로 브라우저 상에서만 인식되고, 서버 측에는 전달되지 않기 때문에 새로운 페이지 로드를 유발하지 않습니다. 이러한 특성으로 클라이언트 사이드 라우팅에 사용되기도 합니다. 한편 SEO에는 불리한 면이 있습니다.</p>
+</li>
+</ol>
+<p>저는 원래 2번 방식 기반의 라이브러리를 사용했기 때문에 큰 문제가 없었지만, 모종의 이유로 1번 방식으로 교체하면서 이슈를 겪게 되었습니다.</p>
+<h2>SPA routing 404 오류 이슈</h2>
+<p>본디 URL이란 사용자가 원하는 리소스를 요청하기 위한 경로를 의미합니다. 즉, <code>https://foo.bar/baz</code>라는 주소로 요청을 한다면, <code>https://foo.bar</code> 웹 서버는 기본적으로 <code>./baz.html</code> 파일을 찾아서 응답으로 전송합니다.</p>
+<p>그러나 SPA는 단일 문서(<code>./index.html</code>)만이 존재하기 때문에, 다른 경로로 이동한 상태에서 새로고침 등으로 새 문서 로드를 유발하면 404 오류가 발생합니다. 그 경로에 해당하는 HTML이 존재하지 않기 때문입니다.</p>
+<p>한편 해시 라우팅을 사용한다면 이 문제는 발생하지 않습니다. 예를 들어, <code>https://foo.bar/#/baz</code>라는 URL에서 <code>#/baz</code>는 Hash property이므로 서버는 이를 인식하지 못합니다. 따라서 <code>https://foo.bar</code> 웹 서버는 <code>./index.html</code>을 응답으로 보냅니다.</p>
+<p>어쨌든 이를 해결하기 위해서는 어떤 경로로 요청을 하든 <code>./index.html</code>을 응답으로 보내도록 처리해야 합니다.</p>
+<h2>AWS S3, CloudFront에서 오류 페이지 핸들링</h2>
+<p>저는 AWS S3와 CloudFront로 배포 환경을 구성했기 때문에 여기서 핸들링을 할 필요가 있었습니다. S3와 CloudFront 둘 다 오류 처리 기능을 제공했기 때문에, 둘 중 하나를 택해야 했습니다.</p>
+<h3>S3에서 오류 처리</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/f528b673a9fa34973bdf4880d06d6709/f8057/s3-static-site-hosting.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 92.22222222222223%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAABYlAAAWJQFJUiTwAAACSElEQVR42qWUDVebMBSG+f8/bJ7N7UztpNgCpZSWUiXhG0KAd/emaqvTzW2c83DT5PYluR+xXN/H12/fMZv9wPXNDLe2Ddt2cEXjTxcXsO+W2IsCefExLCklfBL1PB9RFMFfBUiSBHmeg9fYqWo7KHWi696mrmtYVVXBce5gzx0sFkvMabzd7lCQkBASqRAQMkMsa4RphSRvoPse/Su01qibBlbTtmhpB2wZPQyGnhyenBXRKI2qO9qB1l8zjiPptLD4xUdchxvakaCtK/zro5SCVTYd5usYmzA8zk4nh+mM87nfCvIxJcWIk/C/jxHM6xbu9h5byvB2F2O/Tx5jRzFTA4qWgt0PHxfs6JVSNjnDS9eDS5gslyWSrEEkWxxKhU4Pfzy4EWypflpKRFZWKKsGBVHSrmvOPK3JZsC+7BEXPUb6k2E6MTxZmu+eYhjmGsEhh7+7R5CkxvrxA9woMawSAY/CstgkWEYHzIMd7iiRPPbi1Myv05JKqodVc9k0I25We1w6Aa5XMT7PA1y5ES4XG3yxfVw7HmbLAN7ugEUY49YLMV9F9JEDiSZwggg72ZwEs37CutBYCkV0cKVCkGmyPbz7knYtEFOHSPITaoJ8RHTMaMYP7WjCZI7MmRWpwKC5CzS1UW/ai3+fP9M0vcuLOtxEW3j+yvRsSb3NNhUZsrwwTkd+7d9z2IcTTFk+FnaW0fXzKMBVwb3JvNW378E3zvMOg3VIbEg4x0BCWh8viY+K8cefy6asanM87g4WYvu3cEj4yD8Btxdr55JIWNsAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/f528b673a9fa34973bdf4880d06d6709/89b46/s3-static-site-hosting.webp 180w,
+/static/f528b673a9fa34973bdf4880d06d6709/97ead/s3-static-site-hosting.webp 360w,
+/static/f528b673a9fa34973bdf4880d06d6709/fb07f/s3-static-site-hosting.webp 720w,
+/static/f528b673a9fa34973bdf4880d06d6709/64908/s3-static-site-hosting.webp 1080w,
+/static/f528b673a9fa34973bdf4880d06d6709/ff8d7/s3-static-site-hosting.webp 1440w,
+/static/f528b673a9fa34973bdf4880d06d6709/1c223/s3-static-site-hosting.webp 1472w"
+              sizes="(max-width: 720px) 100vw, 720px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/f528b673a9fa34973bdf4880d06d6709/96042/s3-static-site-hosting.png 180w,
+/static/f528b673a9fa34973bdf4880d06d6709/7a322/s3-static-site-hosting.png 360w,
+/static/f528b673a9fa34973bdf4880d06d6709/16546/s3-static-site-hosting.png 720w,
+/static/f528b673a9fa34973bdf4880d06d6709/6d80e/s3-static-site-hosting.png 1080w,
+/static/f528b673a9fa34973bdf4880d06d6709/843f9/s3-static-site-hosting.png 1440w,
+/static/f528b673a9fa34973bdf4880d06d6709/f8057/s3-static-site-hosting.png 1472w"
+            sizes="(max-width: 720px) 100vw, 720px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/f528b673a9fa34973bdf4880d06d6709/16546/s3-static-site-hosting.png"
+            alt="s3-static-site-hosting.png"
+            title=""
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>S3의 <strong>정적 웹 사이트 호스팅(Static website hosting)</strong> 기능을 사용하면 오류 시 보여줄 문서를 설정할 수 있습니다.</p>
+<ul>
+<li>
+<p>장점:</p>
+<ul>
+<li>
+<p>간편하게 설정할 수 있습니다.</p>
+</li>
+<li>
+<p>S3의 기본 기능을 활용하기 때문에 추가적인 비용이 발생하지 않습니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>단점:</p>
+<ul>
+<li>
+<p>세부적인 오류 처리 설정이 어렵습니다.</p>
+</li>
+<li>
+<p>어디까지나 오류가 발생했을 때 응답으로 전송할 문서를 설정하는 것이기 때문에, 네트워크 상에서는 오류가 발생한 것으로 취급합니다.</p>
+</li>
+<li>
+<p>검색 엔진이 특정 페이지를 없는 페이지로 판단할 수 있기에 SEO에 불리할 수 있습니다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>CloudFront에서 오류 처리</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/f55ac2240ebf695fba5b5f5de08cee30/49d2b/cloudfront-custom-error-response.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 143.33333333333334%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAdCAYAAACqhkzFAAAACXBIWXMAABYlAAAWJQFJUiTwAAADqUlEQVR42p1WyZLbVBTNkg9gE/6N76HYZM+OBZUPgMoqRSioAgIJlXSnO+72bMuTrHmyZQ19uOdKT7aDGYKqjp/ee9J59547yI+SNMVytcLV9TsMRyOMJxP07u5hLRa4u79HfzjU+dyycNvrYTqbge/ESXIRj7jZHwzw7XfPlPTV6z/wy8vfcH1zi59/fYnfX73G8+9f4N3Ne/zw40948/YaSZYhjGNEQnAKJYxkY5/nqOsaZVUqeH84HFAUB+Syx/3dbof9fq9jKoSXoIT8IWm/P8BsNldr+/0+LGuBdZAJGYkLRXNIcRHcI48SpuL2SnTcbGxMJlNMpzMslyvYYabW8eF/Q24I+XN68sPDA6qqwunFNTN+eG/AdzqXd6LNXFyczS11lVamaSbruWqz2+11zEQ/A7OeCWgdSbug0EJrscRwPFbSmaSI7TgaSc/3EUQR/CBAGHIM4YchPJkHMuf7fJbSMPpKSFd9P1ANPc+D43gS0Vxdq+vGnaqqT8bjPffpDZ9XQprJdAjkRJI6cprrejo6ritWhZ1OfJk4zmuFmZ9puFpvsLG3WEh0qSfB+7VYHcVN0tKbJGW+pep+bYJ3Sqgul4VqePu+p7rkh0KFp+gEq8kkL9c5J6gbA0KDVENZ6zTM5GFfAsAAUR/jTqPVBbCyylKhKSejEhoN6bLVusp7Vs1EEpxJXwpB83Kl90VLVLXrRsfGZfk5iLm2bauGjuNKgEIJiAd766gETJUwilVLehSEnEc65z6l4NUGJcYuLzC3fY3s/706C9NUTslyDGypaVm49ODf47wszyrFBIaaccy0tHYfbyEJKSwzfSAde7laS1eeYzQaa9fmOlNDe+J+r2nzYfO4SMgKYISnUsskDKNQRXc9vwsM7xksBoGRPrAPCvK2hXV5SEJe9nYrlbHR4BzaDtLlWjuWhuikD5qeeUbIXGpq2NUEb1LH1fWP11ATtBJXLYzGU9zc9jAYjnE/GEluOurqVg5yXF9alYstDxasN1tdZ3l2eWgsZCnxQVc6DhsAWxJdODaGpE3uBtogZM4Ep8t/IaRro/GkbRChWv1PHyUDvsugNV3cNIc2KH7QVEsip2sUu49QcYJ2rSiRF3JoWSPOpNuYoBh3iNP2FNPVS0jSBqGPJHKRCrLYQxJ6x8+owVGfy38zuDeWD5gb7XB4/jmGX3yC4ZPPcPflpwi+eoz95uqc8L+AH60wlvKcvEDw5mv4V0/hv/0Gyc1TJMEafwLgbq5ePprRbQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/f55ac2240ebf695fba5b5f5de08cee30/89b46/cloudfront-custom-error-response.webp 180w,
+/static/f55ac2240ebf695fba5b5f5de08cee30/97ead/cloudfront-custom-error-response.webp 360w,
+/static/f55ac2240ebf695fba5b5f5de08cee30/fb07f/cloudfront-custom-error-response.webp 720w,
+/static/f55ac2240ebf695fba5b5f5de08cee30/6ded6/cloudfront-custom-error-response.webp 1046w"
+              sizes="(max-width: 720px) 100vw, 720px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/f55ac2240ebf695fba5b5f5de08cee30/96042/cloudfront-custom-error-response.png 180w,
+/static/f55ac2240ebf695fba5b5f5de08cee30/7a322/cloudfront-custom-error-response.png 360w,
+/static/f55ac2240ebf695fba5b5f5de08cee30/16546/cloudfront-custom-error-response.png 720w,
+/static/f55ac2240ebf695fba5b5f5de08cee30/49d2b/cloudfront-custom-error-response.png 1046w"
+            sizes="(max-width: 720px) 100vw, 720px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/f55ac2240ebf695fba5b5f5de08cee30/16546/cloudfront-custom-error-response.png"
+            alt="cloudfront-custom-error-response.png"
+            title=""
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>CloudFront의 <strong>사용자 정의 오류 응답(Custom error response)</strong> 을 사용하면 에러 코드별로 어떻게 처리할지 세세하게 설정할 수 있습니다.</p>
+<ul>
+<li>
+<p>장점:</p>
+<ul>
+<li>
+<p>오류 코드별로 세세한 설정을 할 수 있어 유연성이 높습니다.</p>
+</li>
+<li>
+<p>캐싱 기능을 통해 성능을 높일 수 있습니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>단점:</p>
+<ul>
+<li>CloudFront 사용에 따른 추가 비용이 발생할 수 있습니다.</li>
+</ul>
+</li>
+</ul>
+<p>둘 중 어느 방법을 선택하든 SPA는 정상적으로 동작하게 됩니다. 단, CloudFront에서 처리하는 것이 깔끔하고 SEO 친화적이기 때문에, 저는 CloudFront에서 처리하는 방법을 선택했습니다.</p>
+<h2>마치며</h2>
+<p>저는 프론트엔드 개발을 Next.js로 시작했기 때문에, SPA나 CSR에 대해서는 공부할 때 잠깐 다뤄보기만 했지 실제로 배포까지 진행해본 적은 없었습니다. 그렇기에 이번에 맞딱뜨린 이 이슈는 저로서는 꽤나 생소한 것이었습니다.</p>
+<p>아직 SSR 프레임워크가 유행하기 이전에는 아마 꽤 일반적인 이슈였을 것입니다. 서버 사이드 로직까지 다룰 수 있는 Next.js를 사용하면서 인프라에 대한 중요성을 잊고 있었던 게 아닌가 합니다.</p>
+<p>이번 경험을 통해 프론트엔드 개발자라 할지라도 인프라와 배포 과정에 대한 충분한 이해가 필요함을 다시금 깨달았습니다. 기술이 발전하면서 개발 환경은 점점 더 편리해지고 있지만, 기본적인 원리와 문제 해결 능력은 여전히 중요한 요소일 것입니다.</p></div></article></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/2024/07-19-spa-404/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-ac65e676c45669f8e307.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-00ecc633fb4d510e23b2.js\"],\"component---src-pages-about-tsx\":[\"/component---src-pages-about-tsx-8101b3c81ebf79932c28.js\"],\"component---src-pages-blog-tsx\":[\"/component---src-pages-blog-tsx-17904792d719efa64bb6.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-f24288b723b3879e27a6.js\"],\"component---src-pages-tags-tsx\":[\"/component---src-pages-tags-tsx-abdda339c3073a584ac7.js\"],\"component---src-templates-{post}-tsx-content-file-path-null\":[\"/component---src-templates-{post}-tsx-content-file-path-null-3e6f1d284d541a5e8c2a.js\"],\"component---src-templates-{tag}-tsx\":[\"/component---src-templates-{tag}-tsx-24bee62c6b108511ce0e.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="1cdcaa7f72578a3db44c";</script><script src="/webpack-runtime-21a98688ce451a527aed.js" async></script><script src="/framework-9260c5fc4673863b98e8.js" async></script><script src="/app-ac65e676c45669f8e307.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
