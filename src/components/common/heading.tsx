@@ -5,5 +5,5 @@ type HeadingProps = {
 };
 
 export const Heading = ({ children }: HeadingProps) => {
-  return <h1 className="px-24 mt-48 mb-36 text-36-700">{children}</h1>;
+  return <h1 className="px-24 mt-48 mb-24 text-36-700">{children}</h1>;
 };

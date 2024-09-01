@@ -10,6 +10,7 @@ type TagButtonProps = {
 
 export const TagButton = ({ tag }: TagButtonProps) => {
   const handleClick: MouseEventHandler<HTMLButtonElement> = (e) => {
+    e.preventDefault();
     e.stopPropagation();
     RouterUtils.push(routes.tag(tag), { state: linkStates.toLower });
   };
