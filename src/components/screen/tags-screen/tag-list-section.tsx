@@ -34,16 +34,16 @@ export const TagListSection = ({ tags }: TagListSectionProps) => {
       {tags
         .toSorted((a, b) => b.totalCount - a.totalCount)
         .map((tag) => (
-          <Link
-            to={routes.tag(tag.value)}
-            className="text-18-400 underline underline-offset-[0.2em] drop-shadow-transparent transition-shadow desktop:hover:drop-shadow-text"
-            style={{ fontSize: getRelativeFontSize(tag.totalCount) }}
-            state={linkStates.toLower}
-          >
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-            >{`${tag.value} (${tag.totalCount})`}</motion.div>
-          </Link>
+          <motion.div key={tag.value} whileHover={{ scale: 1.05 }}>
+            <Link
+              to={routes.tag(tag.value)}
+              className="text-18-400 underline underline-offset-[0.2em] drop-shadow-transparent transition-shadow desktop:hover:drop-shadow-text"
+              style={{ fontSize: getRelativeFontSize(tag.totalCount) }}
+              state={linkStates.toLower}
+            >
+              {`${tag.value} (${tag.totalCount})`}
+            </Link>
+          </motion.div>
         ))}
     </section>
   );

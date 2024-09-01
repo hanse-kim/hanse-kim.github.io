@@ -1,7 +1,6 @@
 import React from 'react';
 import { MarkdownRemark } from 'src/_libs/types/markdown-remark';
 import { Heading } from 'src/components/common/heading';
-import { Layout } from 'src/components/layout';
 import { PostListSection } from './post-list-section';
 
 type BlogScreenProps = {

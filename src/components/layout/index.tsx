@@ -1,15 +1,23 @@
 import { PageProps } from 'gatsby';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Footer } from './footer';
 import { Header } from './header';
 import { Main } from './main';
 import { PageTransition } from './page-transition';
+import { usePage } from 'src/contexts/page-context';
 
-type LayoutProps = Omit<PageProps, 'children'> & {
+type LayoutProps = {
+  pageProps: Omit<PageProps, 'children'>;
   children: React.ReactElement;
 };
 
-export const Layout = ({ children, ...pageProps }: LayoutProps) => {
+export const Layout = ({ children, pageProps }: LayoutProps) => {
+  const { setPageProps } = usePage();
+
+  useEffect(() => {
+    setPageProps(pageProps);
+  }, [pageProps]);
+
   return (
     <>
       <Header />

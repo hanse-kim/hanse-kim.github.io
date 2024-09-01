@@ -15,23 +15,11 @@ export const wrapPageElement = ({
   element,
   props,
 }: WrapPageElementBrowserArgs) => {
-  return <Layout {...props}>{element}</Layout>;
+  return <Layout pageProps={props}>{element}</Layout>;
 };
 
-export const wrapRootElement = ({
-  props,
-  element,
-}: WrapRootElementBrowserArgs) => {
-  if (
-    props instanceof Object &&
-    props !== null &&
-    'path' in props &&
-    typeof props['path'] === 'string'
-  ) {
-    return <PageProvider path={props.path}>{element}</PageProvider>;
-  }
-
-  return element;
+export const wrapRootElement = ({ element }: WrapRootElementBrowserArgs) => {
+  return <PageProvider>{element}</PageProvider>;
 };
 
 export const onRouteUpdate = ({ prevLocation }) => {
