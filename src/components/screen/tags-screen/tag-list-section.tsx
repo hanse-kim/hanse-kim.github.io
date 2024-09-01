@@ -29,7 +29,7 @@ export const TagListSection = ({ tags }: TagListSectionProps) => {
   return (
     <section
       className="px-24 flex flex-wrap justify-center items-center gap-18"
-      style={{ fontSize: '18px' }}
+      style={{ fontSize: '16px' }}
     >
       {tags
         .toSorted((a, b) => b.totalCount - a.totalCount)

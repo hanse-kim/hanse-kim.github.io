@@ -15,7 +15,14 @@ export const TagButton = ({ tag }: TagButtonProps) => {
   };
 
   return (
-    <motion.div whileHover={{ scale: 1.15 }}>
+    <motion.div
+      whileHover={{ scale: 1.15 }}
+      transition={{
+        type: 'spring',
+        damping: 20,
+        stiffness: 1500,
+      }}
+    >
       <button
         className="px-8 pt-3 pb-4 transition-colors rounded-4 bg-border text-main text-14-400 desktop:hover:text-bg desktop:hover:bg-main"
         onClick={handleClick}
