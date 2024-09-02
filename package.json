@@ -9,13 +9,13 @@
   ],
   "scripts": {
     "dev": "gatsby develop",
-    "build": "yarn pull-posts && yarn remove-hided && gatsby build",
+    "build": "yarn pull-posts && gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
     "pull-posts": "rm -rf .posts && git clone https://github.com/hanse-kim/hanse-kim.github.io-posts .posts",
     "remove-hided": "sh .scripts/remove-hided.sh .posts",
-    "deploy": "gatsby build && touch public/.nojekyll && gh-pages -d public -b deploy --dotfiles"
+    "deploy": "yarn pull-posts && yarn remove-hided && gatsby build && touch public/.nojekyll && gh-pages -d public -b deploy --dotfiles"
   },
   "dependencies": {
     "autoprefixer": "^10.4.20",
