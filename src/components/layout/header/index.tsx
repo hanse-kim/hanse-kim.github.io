@@ -14,9 +14,9 @@ export const Header = ({}: HeaderProps) => {
 
   const navButtons = (
     <>
-      <NavButton to={routes.about} isActive={pageProps.path === routes.about}>
+      {/* <NavButton to={routes.about} isActive={pageProps.path === routes.about}>
         About
-      </NavButton>
+      </NavButton> */}
       <NavButton to={routes.blog} isActive={pageProps.path === routes.blog}>
         Blog
       </NavButton>
