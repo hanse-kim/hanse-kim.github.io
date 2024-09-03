@@ -1,28 +1,31 @@
 import React from 'react';
+import { routes } from 'src/_libs/constants/routes';
+import { usePage } from 'src/contexts/page-context';
+import { DarkModeButton } from './dark-mode-button';
 import { Logo } from './logo';
 import { NavButton } from './nav-button';
-import { routes } from 'src/_libs/constants/routes';
-import { DarkModeButton } from './dark-mode-button';
 import { ScrollProgress } from './scroll-progress';
-import { usePage } from 'src/contexts/page-context';
 
 type HeaderProps = {};
 
 export const Header = ({}: HeaderProps) => {
   const { pageProps } = usePage();
-  const hasScrollProgress = pageProps.path.startsWith('/20');
+  const hasScrollProgress = pageProps.location.pathname.startsWith('/20');
 
   const navButtons = (
     <>
-      {/* <NavButton to={routes.about} isActive={pageProps.path === routes.about}>
+      {/* <NavButton to={routes.about} isActive={pageProps.location.pathname === routes.about}>
         About
       </NavButton> */}
-      <NavButton to={routes.blog} isActive={pageProps.path === routes.blog}>
+      <NavButton
+        to={routes.blog}
+        isActive={pageProps.location.pathname === routes.blog}
+      >
         Blog
       </NavButton>
       <NavButton
         to={routes.tags}
-        isActive={pageProps.path.startsWith(routes.tags)}
+        isActive={pageProps.location.pathname.startsWith(routes.tags)}
       >
         Tags
       </NavButton>

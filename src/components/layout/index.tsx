@@ -1,10 +1,10 @@
 import { PageProps } from 'gatsby';
-import React, { useEffect } from 'react';
+import React from 'react';
+import { PageProvider } from 'src/contexts/page-context';
 import { Footer } from './footer';
 import { Header } from './header';
 import { Main } from './main';
 import { PageTransition } from './page-transition';
-import { usePage } from 'src/contexts/page-context';
 
 type LayoutProps = {
   pageProps: Omit<PageProps, 'children'>;
@@ -12,14 +12,8 @@ type LayoutProps = {
 };
 
 export const Layout = ({ children, pageProps }: LayoutProps) => {
-  const { setPageProps } = usePage();
-
-  useEffect(() => {
-    setPageProps(pageProps);
-  }, [pageProps]);
-
   return (
-    <>
+    <PageProvider pageProps={pageProps}>
       <Header />
       <Main>
         <PageTransition location={pageProps.location}>
@@ -27,6 +21,6 @@ export const Layout = ({ children, pageProps }: LayoutProps) => {
         </PageTransition>
       </Main>
       <Footer />
-    </>
+    </PageProvider>
   );
 };

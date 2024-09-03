@@ -1,7 +1,6 @@
-import { WrapPageElementBrowserArgs, WrapRootElementBrowserArgs } from 'gatsby';
+import { WrapPageElementBrowserArgs } from 'gatsby';
 import React from 'react';
 import { Layout } from './src/components/layout';
-import { PageProvider } from './src/contexts/page-context';
 import './src/styles/global.css';
 
 export const onRenderBody = ({ setHeadComponents }) => {
@@ -22,8 +21,4 @@ export const wrapPageElement = ({
   props,
 }: WrapPageElementBrowserArgs) => {
   return <Layout pageProps={props}>{element}</Layout>;
-};
-
-export const wrapRootElement = ({ element }: WrapRootElementBrowserArgs) => {
-  return <PageProvider>{element}</PageProvider>;
 };
