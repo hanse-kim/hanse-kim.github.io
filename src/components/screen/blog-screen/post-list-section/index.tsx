@@ -22,7 +22,7 @@ export const PostListSection = ({ posts }: PostListProps) => {
       />
       <section
         id="post-list"
-        className="grid grid-cols-3 p-24 gap-x-20 gap-y-32 tablet:grid-cols-2 mobile:flex mobile:flex-col mobile:items-stretch"
+        className="grid grid-cols-3 p-24 desktop:gap-8 gap-x-20 gap-y-32 tablet:grid-cols-2 mobile:flex mobile:flex-col mobile:items-stretch"
       >
         {posts.map((post) => (
           <PostCard

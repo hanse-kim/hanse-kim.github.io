@@ -3,6 +3,10 @@
   display: none;
 }
 
+.md p {
+  @apply break-all;
+}
+
 .md h1,
 .md h2 {
   @apply mt-[0.5em] border-b-1 border-solid border-border;
