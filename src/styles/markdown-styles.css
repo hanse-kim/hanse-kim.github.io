@@ -84,9 +84,13 @@
   @apply px-4 mx-2 border-solid w-fit border-1 border-border rounded-4 bg-bg-footer text-main;
 }
 
+.md code {
+  @apply text-[0.9em];
+}
+
 .md code,
 .md code * {
-  @apply font-[Consolas,Monaco,monospace] text-18-400;
+  @apply font-[Consolas,Monaco,monospace];
 }
 
 .md .caption {

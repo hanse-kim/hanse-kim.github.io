@@ -56,7 +56,6 @@ code[class*='language-'],
 pre[class*='language-'] {
   color: var(--base00); /* base00 */
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  font-size: 0.95em;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
