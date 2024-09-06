@@ -1,8 +1,9 @@
 import React from 'react';
 import { MarkdownRemark } from 'src/_libs/types/markdown-remark';
 import { CustomImage } from 'src/components/common/custom-image';
-import { PostHeader } from './post-header';
 import { Markdown } from './markdown';
+import { PostHeader } from './post-header';
+import { GiscusComment } from './giscus-commnet';
 
 type PostScreenProps = {
   post: MarkdownRemark;
@@ -21,6 +22,7 @@ export const PostScreen = ({ post }: PostScreenProps) => {
         />
       )}
       <Markdown html={post.html} />
+      <GiscusComment />
     </article>
   );
 };
