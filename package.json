@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "dev": "gatsby develop",
-    "build": "yarn pull-posts && gatsby build",
+    "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",

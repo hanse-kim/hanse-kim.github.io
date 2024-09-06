@@ -15,6 +15,7 @@ const tailwindConfig = {
     `./src/pages/**/*.{js,jsx,ts,tsx}`,
     `./src/components/**/*.{js,jsx,ts,tsx}`,
   ],
+  darkMode: 'selector',
   theme: {
     colors: {
       transparent: 'transparent',

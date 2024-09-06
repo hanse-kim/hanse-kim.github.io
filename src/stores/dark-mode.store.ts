@@ -1,7 +1,7 @@
+import { storageKeys } from 'src/_libs/constants/storage-keys';
+import { EnvUtils } from 'src/_libs/utils/env.utils';
 import { LocalStorageUtils } from 'src/_libs/utils/storage.utils';
 import { create } from 'zustand';
-
-export const isDarkModeStorageKey = 'is-dark-mode';
 
 type StoreValue = {
   isDarkMode: boolean;
@@ -9,10 +9,13 @@ type StoreValue = {
 };
 
 export const useDarkModeStore = create<StoreValue>((set) => {
-  let isDarkMode = getInitialIsDarkMode();
+  let isDarkMode = false;
 
-  setIsDarkMode(isDarkMode);
-  setupTransitionEndHandler();
+  if (EnvUtils.isClient) {
+    isDarkMode = getInitialIsDarkMode();
+    setIsDarkMode(isDarkMode);
+    setupTransitionEndHandler();
+  }
 
   return {
     isDarkMode,
@@ -31,7 +34,7 @@ export const useDarkModeStore = create<StoreValue>((set) => {
 
 function getInitialIsDarkMode() {
   const storedIsDarkMode = LocalStorageUtils.get<boolean | null>(
-    isDarkModeStorageKey
+    storageKeys.isDarkMode
   );
 
   if (storedIsDarkMode !== null) {
@@ -50,7 +53,7 @@ function getInitialIsDarkMode() {
 
 function setIsDarkMode(value: boolean) {
   document.documentElement.dataset.transition = 'true';
-  LocalStorageUtils.set(isDarkModeStorageKey, value);
+  LocalStorageUtils.set(storageKeys.isDarkMode, value);
   updateDocumentTheme(value);
   updateGiscusTheme(value);
 }
@@ -65,13 +68,9 @@ export function updateGiscusTheme(isDarkMode: boolean) {
     'iframe.giscus-frame'
   );
 
-  console.log({ iframe }, '!!!!');
-
   if (!iframe) {
     return;
   }
-
-  console.log(iframe.contentWindow, { setConfig: { isDarkMode } });
 
   iframe.contentWindow?.postMessage(
     { giscus: { setConfig: { theme: isDarkMode ? 'dark' : 'light' } } },

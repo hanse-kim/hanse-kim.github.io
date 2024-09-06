@@ -5,7 +5,7 @@ import { useDarkModeStore } from 'src/stores/dark-mode.store';
 type DarkModeButtonProps = {};
 
 export const DarkModeButton = ({}: DarkModeButtonProps) => {
-  const { isDarkMode, toggleDarkMode } = useDarkModeStore((state) => state);
+  const { toggleDarkMode } = useDarkModeStore((state) => state);
 
   return (
     <button
@@ -17,15 +17,13 @@ export const DarkModeButton = ({}: DarkModeButtonProps) => {
     >
       <span className="relative w-[24px] h-[24px]">
         <Icon
-          className="absolute top-0 left-0 opacity-0 data-[in=true]:opacity-100 group-data-[animating=true]:data-[in=true]:animate-dark-mode-icon-in group-data-[animating=true]:data-[in=false]:animate-dark-mode-icon-out"
+          className="absolute top-0 left-0 opacity-0 dark:opacity-100 dark:group-data-[animating=true]:animate-dark-mode-icon-in light:group-data-[animating=true]:animate-dark-mode-icon-out"
           size={24}
-          data-in={isDarkMode}
           iconName={'dark_mode'}
         />
         <Icon
-          className="absolute top-0 left-0 opacity-0 data-[in=true]:opacity-100 group-data-[animating=true]:data-[in=true]:animate-dark-mode-icon-in group-data-[animating=true]:data-[in=false]:animate-dark-mode-icon-out"
+          className="absolute top-0 left-0 opacity-0 light:opacity-100 light:group-data-[animating=true]:animate-dark-mode-icon-in dark:group-data-[animating=true]:animate-dark-mode-icon-out"
           size={24}
-          data-in={!isDarkMode}
           iconName={'light_mode'}
         />
       </span>
