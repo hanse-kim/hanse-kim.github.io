@@ -1,11 +1,11 @@
 import React from 'react';
 import { Icon } from 'src/components/common/icon';
-import { useDarkMode } from 'src/hooks/use-dark-mode';
+import { useDarkModeStore } from 'src/stores/dark-mode.store';
 
 type DarkModeButtonProps = {};
 
 export const DarkModeButton = ({}: DarkModeButtonProps) => {
-  const { isDarkMode, toggleDarkMode } = useDarkMode();
+  const { isDarkMode, toggleDarkMode } = useDarkModeStore((state) => state);
 
   return (
     <button
