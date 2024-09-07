@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useSiteMetadata } from './use-site-metadata';
-import { SessionStorageUtils } from 'src/_libs/utils/storage.utils';
+import { SessionStorageUtils } from 'src/_libs/utils/storage-utils';
 
 const storageKey = 'github-profile';
 

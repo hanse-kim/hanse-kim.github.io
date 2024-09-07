@@ -1,7 +1,7 @@
 import { ShouldUpdateScrollArgs, WrapPageElementBrowserArgs } from 'gatsby';
 import React from 'react';
 import { storageKeys } from './src/_libs/constants/storage-keys';
-import { SessionStorageUtils } from './src/_libs/utils/storage.utils';
+import { SessionStorageUtils } from './src/_libs/utils/storage-utils';
 import { Layout } from './src/components/layout';
 import { pageTransitionDuration } from './src/components/layout/page-transition';
 import './src/styles/global.css';

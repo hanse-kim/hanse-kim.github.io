@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import { Route } from 'src/_libs/constants/routes';
-import { RouterUtils } from 'src/_libs/utils/router.utils';
+import { RouterUtils } from 'src/_libs/utils/router-utils';
 import { usePage } from 'src/contexts/page-context';
 
 type NavButtonProps = {

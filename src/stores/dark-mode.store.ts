@@ -1,6 +1,6 @@
 import { storageKeys } from 'src/_libs/constants/storage-keys';
-import { EnvUtils } from 'src/_libs/utils/env.utils';
-import { LocalStorageUtils } from 'src/_libs/utils/storage.utils';
+import { EnvUtils } from 'src/_libs/utils/env-utils';
+import { LocalStorageUtils } from 'src/_libs/utils/storage-utils';
 import { create } from 'zustand';
 
 type StoreValue = {

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import React, { MouseEventHandler } from 'react';
 import { linkStates } from 'src/_libs/constants/link-states';
 import { routes } from 'src/_libs/constants/routes';
-import { RouterUtils } from 'src/_libs/utils/router.utils';
+import { RouterUtils } from 'src/_libs/utils/router-utils';
 
 type TagButtonProps = {
   tag: string;
