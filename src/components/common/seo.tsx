@@ -15,7 +15,6 @@ export const Seo = ({ title, location }: SeoProps) => {
   return (
     <>
       {/* SEO */}
-      <html lang="ko" />
       <title>{pageTitle}</title>
       <meta property="og:locale" content="ko_KR" />
       <meta property="og:site_name" content={siteMetadata.title} />

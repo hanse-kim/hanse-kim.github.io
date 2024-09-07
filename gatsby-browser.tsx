@@ -1,17 +1,10 @@
-import { ShouldUpdateScrollArgs, WrapPageElementBrowserArgs } from 'gatsby';
-import React from 'react';
+import { ShouldUpdateScrollArgs } from 'gatsby';
 import { storageKeys } from './src/_libs/constants/storage-keys';
 import { SessionStorageUtils } from './src/_libs/utils/storage-utils';
-import { Layout } from './src/components/layout';
 import { pageTransitionDuration } from './src/components/layout/page-transition';
 import './src/styles/global.css';
 
-export const wrapPageElement = ({
-  element,
-  props,
-}: WrapPageElementBrowserArgs) => {
-  return <Layout pageProps={props}>{element}</Layout>;
-};
+export { wrapPageElement } from './gatsby-shared';
 
 export const onRouteUpdate = ({ prevLocation }) => {
   SessionStorageUtils.set(storageKeys.prevPath, prevLocation?.pathname || null);
