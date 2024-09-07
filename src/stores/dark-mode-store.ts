@@ -5,10 +5,12 @@ import { create } from 'zustand';
 
 type StoreValue = {
   isDarkMode: boolean;
-  toggleDarkMode: () => void;
+  actions: {
+    toggleDarkMode: () => void;
+  };
 };
 
-export const useDarkModeStore = create<StoreValue>((set) => {
+const useDarkModeStore = create<StoreValue>((set) => {
   let isDarkMode = false;
 
   if (EnvUtils.isClient) {
@@ -17,20 +19,30 @@ export const useDarkModeStore = create<StoreValue>((set) => {
     setupTransitionEndHandler();
   }
 
+  const toggleDarkMode = () => {
+    set((state) => {
+      const newIsDarkMode = !state.isDarkMode;
+      setIsDarkMode(newIsDarkMode);
+
+      return {
+        isDarkMode: newIsDarkMode,
+      };
+    });
+  };
+
   return {
     isDarkMode,
-    toggleDarkMode: () => {
-      set((state) => {
-        const newIsDarkMode = !state.isDarkMode;
-        setIsDarkMode(newIsDarkMode);
-
-        return {
-          isDarkMode: newIsDarkMode,
-        };
-      });
+    actions: {
+      toggleDarkMode,
     },
   };
 });
+
+export const useIsDarkMode = () =>
+  useDarkModeStore((state) => state.isDarkMode);
+
+export const useDarkModeActions = () =>
+  useDarkModeStore((state) => state.actions);
 
 function getInitialIsDarkMode() {
   const storedIsDarkMode = LocalStorageUtils.get<boolean | null>(

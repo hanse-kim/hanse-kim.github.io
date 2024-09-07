@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from 'react';
-import { useDarkModeStore } from 'src/stores/dark-mode.store';
+import { useIsDarkMode } from 'src/stores/dark-mode-store';
 
 type GiscusCommentProps = {};
 
 export const GiscusComment = ({}: GiscusCommentProps) => {
   const giscusRef = useRef<HTMLDivElement>(null);
-  const isDarkMode = useDarkModeStore((state) => state.isDarkMode);
+  const isDarkMode = useIsDarkMode();
 
   useEffect(() => {
     const giscusConfig = {
