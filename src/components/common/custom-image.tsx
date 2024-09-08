@@ -35,7 +35,7 @@ export const CustomImage = ({
         />
       )}
       <div
-        className={`flex flex-shrink-0 absolute inset-0 bg-bg-footer animate-pulse peer-data-[loaded=true]:hidden`}
+        className={`flex flex-shrink-0 absolute inset-0 bg-bg-alt animate-pulse peer-data-[loaded=true]:hidden`}
       />
     </div>
   );

@@ -9,7 +9,7 @@ export const DarkModeButton = ({}: DarkModeButtonProps) => {
 
   return (
     <button
-      className="flex items-center justify-center transition-colors rounded-full w-36 h-36 desktop:desktop:hover:bg-blur desktop:active:bg-border group"
+      className="flex items-center justify-center transition-colors rounded-full w-36 h-36 desktop:desktop:hover:bg-bg-alt desktop:active:bg-border group"
       onClick={(e) => {
         e.currentTarget.dataset.animating = 'true';
         toggleDarkMode();

@@ -52,7 +52,7 @@
 
 .md blockquote,
 .md blockquote * {
-  @apply text-text-quote;
+  @apply text-text-muted;
 }
 
 .md a {
@@ -73,15 +73,15 @@
 }
 
 .md th {
-  @apply bg-bg-footer;
+  @apply bg-bg-alt;
 }
 
 .md tr:nth-child(even) {
-  @apply bg-blur bg-opacity-40;
+  @apply bg-bg-alt bg-opacity-40;
 }
 
 .md code:not([class*='language-']) {
-  @apply px-4 mx-2 border-solid w-fit border-1 border-border rounded-4 bg-bg-footer text-main;
+  @apply px-4 mx-2 border-solid w-fit border-1 border-border rounded-4 bg-bg-alt text-main;
 }
 
 .md code {
@@ -94,5 +94,5 @@
 }
 
 .md .caption {
-  @apply w-full justify-center flex -mb-[1rem] -translate-y-[0.6rem] text-text-footer italic whitespace-pre-wrap;
+  @apply w-full justify-center flex -mb-[1rem] -translate-y-[0.6rem] text-text-alt italic whitespace-pre-wrap;
 }

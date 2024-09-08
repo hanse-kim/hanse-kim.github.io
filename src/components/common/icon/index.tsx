@@ -12,7 +12,7 @@ export const Icon = ({
   iconName,
   ...props
 }: IconProps) => {
-  const SvgComponent: React.FC = icons[iconName];
+  const svgElement: React.ReactElement = icons[iconName];
 
   return (
     <span
@@ -23,7 +23,7 @@ export const Icon = ({
       }}
       {...props}
     >
-      <SvgComponent />
+      {svgElement}
     </span>
   );
 };
