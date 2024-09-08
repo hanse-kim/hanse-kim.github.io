@@ -4,6 +4,7 @@ import { CustomImage } from 'src/components/common/custom-image';
 import { Markdown } from './markdown';
 import { PostHeader } from './post-header';
 import { GiscusComment } from './giscus-commnet';
+import { Ad } from './ad';
 
 type PostScreenProps = {
   post: MarkdownRemark;
@@ -22,6 +23,7 @@ export const PostScreen = ({ post }: PostScreenProps) => {
         />
       )}
       <Markdown html={post.html} />
+      <Ad />
       <GiscusComment />
     </article>
   );
