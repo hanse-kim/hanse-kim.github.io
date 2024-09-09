@@ -7,32 +7,11 @@ type PostListProps = {
 };
 
 export const PostListSection = ({ posts }: PostListProps) => {
-  const [hoveredPost, setHoveredPost] = useState<string | null>(null);
-
-  const handleBlurPost = useCallback(() => {
-    setHoveredPost(null);
-  }, []);
-
   return (
-    <>
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `#post-list a>div {opacity: 1; transform: translateY(0px) scale(1); transition: all 0.25s;} @media (min-width:1081px) {#post-list:hover a:not([data-id="${hoveredPost}"])>div {opacity: 0.4; transform: translateY(12px) scale(0.98);}}`,
-        }}
-      />
-      <section
-        id="post-list"
-        className="grid grid-cols-3 p-24 desktop:gap-8 gap-x-20 gap-y-32 tablet:grid-cols-2 mobile:flex mobile:flex-col mobile:items-stretch"
-      >
-        {posts.map((post) => (
-          <PostCard
-            key={post.fields.slug}
-            post={post}
-            onHover={setHoveredPost}
-            onBlur={handleBlurPost}
-          />
-        ))}
-      </section>
-    </>
+    <section className="grid grid-cols-3 p-24 desktop:gap-8 gap-x-20 gap-y-32 tablet:grid-cols-2 mobile:flex mobile:flex-col mobile:items-stretch group/post-list">
+      {posts.map((post) => (
+        <PostCard key={post.fields.slug} post={post} />
+      ))}
+    </section>
   );
 };
