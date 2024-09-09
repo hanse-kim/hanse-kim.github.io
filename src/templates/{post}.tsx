@@ -2,7 +2,7 @@ import { graphql, HeadFC, type PageProps } from 'gatsby';
 import React from 'react';
 import { MarkdownRemark } from 'src/_libs/types/markdown-remark';
 import { Seo } from 'src/components/common/seo';
-import { PostScreen } from 'src/components/screen/post-screen';
+import { PostScreen } from 'src/components/screens/post-screen';
 
 interface DataType {
   markdownRemark: MarkdownRemark;

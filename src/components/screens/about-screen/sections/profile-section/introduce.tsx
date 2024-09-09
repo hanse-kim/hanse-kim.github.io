@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContactLink } from './context-link';
+import { ContactLink } from './contact-link';
 
 type IntroduceProps = {};
 
@@ -7,7 +7,7 @@ export const Introduce = ({}: IntroduceProps) => {
   return (
     <section className="flex flex-col gap-24 tablet:items-center">
       <div className="flex flex-col items-start gap-8 tablet:items-center">
-        <h2 className="text-28-700">Hi, I'm Hanse Kim 🐻</h2>
+        <h2 className="text-28-700">Hi, I'm Hanse 🐻</h2>
         <div className="flex gap-18">
           <ContactLink
             url="mailto:hansekim.dev@gmail.com"

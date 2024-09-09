@@ -1,10 +1,10 @@
 import React from 'react';
 import { MarkdownRemark } from 'src/_libs/types/markdown-remark';
 import { CustomImage } from 'src/components/common/custom-image';
-import { Markdown } from './markdown';
-import { PostHeader } from './post-header';
-import { GiscusComment } from './giscus-commnet';
-import { Ad } from './ad';
+import { ContentMarkdownSection } from './sections/content-markdown-section';
+import { PostHeader } from './sections/post-header';
+import { CommentSection } from './sections/comment-section';
+import { BottomAdSection } from './sections/bottom-ad-section';
 
 type PostScreenProps = {
   post: MarkdownRemark;
@@ -22,9 +22,9 @@ export const PostScreen = ({ post }: PostScreenProps) => {
           ratio={9 / 21}
         />
       )}
-      <Markdown html={post.html} />
-      <Ad />
-      <GiscusComment />
+      <ContentMarkdownSection html={post.html} />
+      <BottomAdSection />
+      <CommentSection />
     </article>
   );
 };

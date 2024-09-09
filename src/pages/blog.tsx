@@ -2,7 +2,7 @@ import { graphql, HeadFC, PageProps } from 'gatsby';
 import React from 'react';
 import { MarkdownRemark } from 'src/_libs/types/markdown-remark';
 import { Seo } from '../components/common/seo';
-import { BlogScreen } from '../components/screen/blog-screen';
+import { BlogScreen } from '../components/screens/blog-screen';
 
 export const pageQuery = graphql`
   query {

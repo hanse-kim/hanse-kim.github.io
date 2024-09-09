@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import { useIsDarkMode } from 'src/stores/dark-mode-store';
 
-type GiscusCommentProps = {};
+type CommentSectionProps = {};
 
-export const GiscusComment = ({}: GiscusCommentProps) => {
+export const CommentSection = ({}: CommentSectionProps) => {
   const giscusRef = useRef<HTMLDivElement>(null);
   const isDarkMode = useIsDarkMode();
 
@@ -38,8 +38,8 @@ export const GiscusComment = ({}: GiscusCommentProps) => {
   }, []);
 
   return (
-    <div className="px-24">
+    <section className="px-24">
       <div className="giscus" ref={giscusRef} />
-    </div>
+    </section>
   );
 };

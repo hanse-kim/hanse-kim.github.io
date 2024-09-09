@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tag } from 'src/_libs/types/tag';
 import { Heading } from 'src/components/common/heading';
-import { TagListSection } from './tag-list-section';
+import { TagListSection } from './sections/tag-list-section';
 
 type TagsScreenProps = {
   tags: Tag[];

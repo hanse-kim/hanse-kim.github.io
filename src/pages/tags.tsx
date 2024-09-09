@@ -2,7 +2,7 @@ import { graphql, type PageProps } from 'gatsby';
 import React from 'react';
 import { Tag } from 'src/_libs/types/tag';
 import { Seo } from 'src/components/common/seo';
-import { TagsScreen } from 'src/components/screen/tags-screen';
+import { TagsScreen } from 'src/components/screens/tags-screen';
 
 interface DataType {
   tagsGroup: {

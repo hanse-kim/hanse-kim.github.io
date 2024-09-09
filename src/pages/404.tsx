@@ -1,7 +1,7 @@
 import { HeadFC, PageProps } from 'gatsby';
 import * as React from 'react';
 import { Seo } from 'src/components/common/seo';
-import { NotFoundScreen } from 'src/components/screen/404-screen';
+import { NotFoundScreen } from 'src/components/screens/404-screen';
 
 export const Head: HeadFC = (pageProps) => <Seo {...pageProps} />;
 
