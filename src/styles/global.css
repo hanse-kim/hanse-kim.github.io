@@ -49,6 +49,6 @@
   }
 }
 
-html * {
+html *:not(svg, svg *) {
   @apply text-text;
 }
