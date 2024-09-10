@@ -11,8 +11,8 @@ type ContactLinkProps = {
 export const ContactLink = ({ label, url, iconName }: ContactLinkProps) => {
   return (
     <a className="flex items-center gap-4" href={url}>
-      <Icon size={20} iconName={iconName} color={'alt'} />
-      <span className="text-text-alt text-16-500">{label}</span>
+      <Icon size={20} iconName={iconName} color={'muted'} />
+      <span className="text-text-muted text-16-500">{label}</span>
     </a>
   );
 };

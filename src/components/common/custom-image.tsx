@@ -23,9 +23,10 @@ export const CustomImage = ({
         <img
           className={`peer ${
             !!ratio ? 'absolute inset-0 h-full w-full' : 'w-full'
-          } object-cover opacity-100 transition-opacity data-[loaded=false]:absolute data-[loaded=false]:pointer-events-none data-[loaded=false]:opacity-0`}
+          } object-cover opacity-100 transition-opacity duration-500 data-[loaded=false]:pointer-events-none data-[loaded=false]:opacity-0`}
           src={src}
           {...props}
+          data-loaded={false}
           onLoad={(e) => {
             e.currentTarget.dataset.loaded = 'true';
           }}

@@ -22,12 +22,15 @@ export const Introduce = ({}: IntroduceProps) => {
         </div>
       </div>
       <div className="text-18-400 hyphens-auto flex flex-col gap-8" lang="en">
-        <p>I'm a Frontend Developer who's working at Startup.</p>
+        <p>I'm a Frontend Developer working at a startup.</p>
         <p>
           This blog shares the challenges faced during development and how they
           were solved 😊
         </p>
       </div>
+      {/* <button className="text-18-500 text-text-alt text-start">
+        {'View More ->'}
+      </button> */}
     </section>
   );
 };

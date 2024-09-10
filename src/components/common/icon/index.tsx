@@ -4,7 +4,7 @@ import { IconName, icons } from './assets';
 export type IconProps = HTMLProps<HTMLSpanElement> & {
   size?: number;
   iconName: IconName;
-  color?: 'default' | 'alt';
+  color?: 'default' | 'alt' | 'muted';
 };
 
 export const Icon = ({
@@ -18,7 +18,7 @@ export const Icon = ({
 
   return (
     <span
-      className={`flex transition-colors duration-75 ${className} text-text data-[color=alt]:text-text-alt`}
+      className={`flex transition-colors duration-75 ${className} text-text data-[color=alt]:text-text-alt data-[color=muted]:text-text-muted`}
       style={{
         width: `${size}px`,
         height: `${size}px`,
