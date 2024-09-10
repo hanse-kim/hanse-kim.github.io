@@ -1,1 +1,0 @@
-{"version":3,"file":"component---src-pages-test-2-tsx-a22e873cf021cff66b60.js","mappings":"uIAMA,UAJiBA,IACRC,EAAAA,cAAAA,EAAAA,SAAA,K","sources":["webpack://hanse-kim.dev/./src/pages/test2.tsx"],"sourcesContent":["import React from 'react';\n\nconst TestPage = () => {\n  return <></>;\n};\n\nexport default TestPage;\n"],"names":["TestPage","React"],"sourceRoot":""}

@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkhanse_kim_dev=self.webpackChunkhanse_kim_dev||[]).push([[245],{2783:function(e,n,t){t.r(n),t.d(n,{Head:function(){return c}});var l=t(6540),u=t(4674),a=t(9790);const c=()=>l.createElement("title",null,"Home Page");n.default=()=>((0,l.useEffect)((()=>{u.t.replace(a.J.blog)}),[]),null)}}]);
-//# sourceMappingURL=component---src-pages-index-tsx-f24288b723b3879e27a6.js.map
