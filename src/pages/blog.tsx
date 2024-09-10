@@ -34,7 +34,7 @@ type DataType = {
   };
 };
 
-export const Head: HeadFC = (pageProps) => <Seo {...pageProps} />;
+export const Head: HeadFC = (pageProps) => <Seo title="Blog" {...pageProps} />;
 
 const BlogPage = ({ data }: PageProps<DataType>) => {
   return <BlogScreen posts={data.allMarkdownRemark.nodes} />;

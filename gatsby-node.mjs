@@ -70,7 +70,7 @@ export async function createPages({ graphql, actions }) {
 
   posts.forEach((post) => {
     createPage({
-      path: `${post.fields.slug}`,
+      path: `/blog${post.fields.slug}`,
       component: `${postTemplate}?__contentFilePath=${post.internal.contentFilePath}`,
       context: { id: post.id },
     });

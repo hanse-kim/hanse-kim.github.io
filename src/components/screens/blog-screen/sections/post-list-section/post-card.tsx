@@ -1,6 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import { linkStates } from 'src/_libs/constants/link-states';
+import { routes } from 'src/_libs/constants/routes';
 import { MarkdownRemark } from 'src/_libs/types/markdown-remark';
 import { CustomImage } from 'src/components/common/custom-image';
 import { TagButton } from 'src/components/common/tag-button';
@@ -11,11 +12,7 @@ type PostCardProps = {
 
 export const PostCard = React.memo(({ post }: PostCardProps) => {
   return (
-    <Link
-      to={post.fields.slug || ''}
-      data-id={post.fields.slug}
-      state={linkStates.toLower}
-    >
+    <Link to={routes.blogPost(post.fields.slug)} state={linkStates.toLower}>
       <div
         className={`px-20 py-32 overflow-hidden group rounded-16 bg-bg outline outline-transparent outline-1 desktop:hover:outline-bg-alt desktop:hover:drop-shadow-post tablet:outline-border hover:!opacity-100 hover:!scale-100 desktop:group-hover/post-list:opacity-40 desktop:group-hover/post-list:scale-95 transition-all duration-[250ms]`}
       >
