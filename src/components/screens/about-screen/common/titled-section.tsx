@@ -16,7 +16,7 @@ export const TitledSection = ({
       <h2 className="text-32-500 text-center border-solid border-b-1 border-border">
         {title}
       </h2>
-      <p className="text-16-500 text-center ">{subtitle}</p>
+      <p className="text-16-500 text-center mt-4">{subtitle}</p>
       {children}
     </section>
   );

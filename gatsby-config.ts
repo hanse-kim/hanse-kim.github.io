@@ -5,7 +5,7 @@ configDotenv();
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `hanse-kim.dev`,
+    title: `Hanse Kim's Dev Blog`,
     description:
       '개발 과정에서 겪은 문제와 그것을 어떻게 해결했는지를 기록하기 위한 블로그입니다.',
     email: 'hansekim.dev@gmail.com',

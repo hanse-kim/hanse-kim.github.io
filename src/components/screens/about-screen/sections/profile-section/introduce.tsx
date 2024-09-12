@@ -25,7 +25,7 @@ export const Introduce = ({}: IntroduceProps) => {
         <p>I'm a Frontend Developer working at a startup.</p>
         <p>
           This blog shares the challenges faced during development and how they
-          were solved 😊
+          were solved 🙂
         </p>
       </div>
       {/* <button className="text-18-500 text-text-alt text-start">

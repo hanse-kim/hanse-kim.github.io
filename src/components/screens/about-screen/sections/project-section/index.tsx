@@ -7,17 +7,15 @@ type ProjectSectionProps = {};
 
 export const ProjectSection = ({}: ProjectSectionProps) => {
   return (
-    <TitledSection title="My works" subtitle="on FreeD Soft">
-      <div className="my-48 flex flex-col items-stretch gap-72">
+    <TitledSection
+      title="My works"
+      subtitle="on FreeD Soft (2022.07 - Present)"
+    >
+      <div className="my-48 flex flex-col items-stretch gap-56">
         <ProjectCard
           title="Orderhop"
-          subtitle="Customizable mobile smart-order solution including DID"
-          descriptions={[
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'Quisque vel urna nec arcu interdum ullamcorper.',
-            'Sed vitae magna consequat, volutpat erat id, pharetra magna.',
-            'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
-          ]}
+          subtitle="Next.js • Svelte • Tanstack Query • TailwindCSS • AWS • k8s"
+          description="Customizable mobile smart-order solution including DID"
           image={
             <StaticImage
               src="../../assets/orderhop.webp"
@@ -31,12 +29,7 @@ export const ProjectSection = ({}: ProjectSectionProps) => {
         <ProjectCard
           title="Harmony"
           subtitle="Customizable mobile smart-order solution including DID"
-          descriptions={[
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'Quisque vel urna nec arcu interdum ullamcorper.',
-            'Sed vitae magna consequat, volutpat erat id, pharetra magna.',
-            'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
-          ]}
+          description="Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
           image={
             <StaticImage
               src="../../assets/harmony.webp"
@@ -51,12 +44,7 @@ export const ProjectSection = ({}: ProjectSectionProps) => {
         <ProjectCard
           title="Uzzim"
           subtitle="Customizable mobile smart-order solution including DID"
-          descriptions={[
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'Quisque vel urna nec arcu interdum ullamcorper.',
-            'Sed vitae magna consequat, volutpat erat id, pharetra magna.',
-            'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
-          ]}
+          description="Sed vitae magna consequat, volutpat erat id, pharetra magna."
           image={
             <StaticImage
               src="../../assets/uzzim.webp"
