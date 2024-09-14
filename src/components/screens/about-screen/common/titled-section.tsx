@@ -17,7 +17,7 @@ export const TitledSection = ({
         {title}
       </h2>
       <p className="text-16-500 text-center mt-4">{subtitle}</p>
-      {children}
+      <div className="py-36">{children}</div>
     </section>
   );
 };

@@ -7,11 +7,8 @@ type ProjectSectionProps = {};
 
 export const ProjectSection = ({}: ProjectSectionProps) => {
   return (
-    <TitledSection
-      title="My works"
-      subtitle="on FreeD Soft (2022.07 - Present)"
-    >
-      <div className="my-48 flex flex-col items-stretch gap-56">
+    <TitledSection title="Works" subtitle="on FreeD Soft (2022.07 - Present)">
+      <div className="flex flex-col items-stretch gap-56">
         <ProjectCard
           title="Orderhop"
           subtitle="Next.js • Svelte • Tanstack Query • TailwindCSS • AWS • k8s"
