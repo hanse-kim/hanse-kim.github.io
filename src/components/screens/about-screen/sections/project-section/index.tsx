@@ -21,7 +21,7 @@ export const ProjectSection = ({}: ProjectSectionProps) => {
               src="../../assets/orderhop.webp"
               alt="Orderhop"
               layout="constrained"
-              width={480}
+              width={640}
               className="max-w-full"
             />
           }
@@ -35,7 +35,7 @@ export const ProjectSection = ({}: ProjectSectionProps) => {
               src="../../assets/harmony.webp"
               alt="Harmony"
               layout="constrained"
-              width={480}
+              width={640}
               className="max-w-full"
             />
           }
@@ -50,7 +50,7 @@ export const ProjectSection = ({}: ProjectSectionProps) => {
               src="../../assets/uzzim.webp"
               alt="Uzzim"
               layout="constrained"
-              width={480}
+              width={640}
               className="max-w-full"
             />
           }

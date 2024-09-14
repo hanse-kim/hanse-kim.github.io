@@ -3,7 +3,7 @@ import React from 'react';
 type TitledSectionProps = {
   children?: React.ReactNode;
   title: string;
-  subtitle: string;
+  subtitle?: string;
 };
 
 export const TitledSection = ({
