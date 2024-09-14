@@ -18,7 +18,7 @@ export const ProjectSection = ({}: ProjectSectionProps) => {
           description="Customizable mobile smart-order solution including DID"
           image={
             <StaticImage
-              src="../../assets/orderhop.webp"
+              src="./assets/orderhop.webp"
               alt="Orderhop"
               layout="constrained"
               width={640}
@@ -32,7 +32,7 @@ export const ProjectSection = ({}: ProjectSectionProps) => {
           description="Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
           image={
             <StaticImage
-              src="../../assets/harmony.webp"
+              src="./assets/harmony.webp"
               alt="Harmony"
               layout="constrained"
               width={640}
@@ -47,7 +47,7 @@ export const ProjectSection = ({}: ProjectSectionProps) => {
           description="Sed vitae magna consequat, volutpat erat id, pharetra magna."
           image={
             <StaticImage
-              src="../../assets/uzzim.webp"
+              src="./assets/uzzim.webp"
               alt="Uzzim"
               layout="constrained"
               width={640}
