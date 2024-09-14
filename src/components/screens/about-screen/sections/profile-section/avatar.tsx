@@ -2,8 +2,8 @@ import React from 'react';
 import { CustomImage } from 'src/components/common/custom-image';
 
 type AvatarProps = {
-  avatarUrl: string;
-  alt: string;
+  avatarUrl?: string;
+  alt?: string;
 };
 
 export const Avatar = ({ avatarUrl, alt }: AvatarProps) => {
