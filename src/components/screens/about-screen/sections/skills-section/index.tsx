@@ -6,30 +6,91 @@ import { CategorizedSkills } from './categorized-skills';
 export type SkillInfo = {
   label: string;
   logo: React.ReactElement;
+  descriptions: string[];
 };
 
 const skills: Record<string, SkillInfo[]> = {
   Language: [
-    { label: 'JavaScript', logo: logos.javascript },
-    { label: 'TypeScript', logo: logos.typescript },
+    {
+      label: 'JavaScript',
+      logo: logos.javascript,
+      descriptions: [
+        'asdafwqgewq wekfgpo sfkgop korek opgkero',
+        'asdafwqgewq wekfgpo sfkgop korek opgkero',
+        'asdafwqgewq wekfgpo sfkgop korek opgkero',
+      ],
+    },
+    {
+      label: 'TypeScript',
+      logo: logos.typescript,
+      descriptions: [],
+    },
   ],
   'Framework & Library': [
-    { label: 'React', logo: logos.react },
-    { label: 'Next.js', logo: logos.nextjs },
-    { label: 'Gatsby', logo: logos.gatsby },
-    { label: 'Svelte', logo: logos.svelte },
-    { label: 'TanStack Query', logo: logos.tanstack },
-    { label: 'Tailwind CSS', logo: logos.tailwindcss },
-    { label: 'Emotion', logo: logos.emotion },
+    {
+      label: 'React',
+      logo: logos.react,
+      descriptions: [],
+    },
+    {
+      label: 'Next.js',
+      logo: logos.nextjs,
+      descriptions: [],
+    },
+    {
+      label: 'Gatsby',
+      logo: logos.gatsby,
+      descriptions: [],
+    },
+    {
+      label: 'Svelte',
+      logo: logos.svelte,
+      descriptions: [],
+    },
+    {
+      label: 'TanStack Query',
+      logo: logos.tanstack,
+      descriptions: [],
+    },
+    {
+      label: 'Tailwind CSS',
+      logo: logos.tailwindcss,
+      descriptions: [],
+    },
+    {
+      label: 'Emotion',
+      logo: logos.emotion,
+      descriptions: [],
+    },
   ],
   Deployment: [
-    { label: 'Azure DevOps', logo: logos.azure },
-    { label: 'Github', logo: logos.github },
-    { label: 'AWS', logo: logos.aws },
+    {
+      label: 'Azure DevOps',
+      logo: logos.azure,
+      descriptions: [],
+    },
+    {
+      label: 'Github',
+      logo: logos.github,
+      descriptions: [],
+    },
+    {
+      label: 'AWS',
+      logo: logos.aws,
+      descriptions: [],
+    },
   ],
   Tools: [
-    { label: 'Figma', logo: logos.figma },
-    { label: 'VS Code', logo: logos.vscode },
+    {
+      label: 'Figma',
+      logo: logos.figma,
+      descriptions: [],
+    },
+    {
+      label: 'VS Code',
+      logo: logos.vscode,
+      descriptions: [],
+    },
   ],
 };
 

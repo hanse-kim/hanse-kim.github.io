@@ -3,13 +3,13 @@ import React from 'react';
 
 export const logos = {
   aws: (
-    <StaticImage src="./aws.svg" alt="aws" width={32} layout="constrained" />
+    <StaticImage src="./aws.svg" alt="aws" width={28} layout="constrained" />
   ),
   azure: (
     <StaticImage
       src="./azure.svg"
       alt="azure"
-      width={32}
+      width={28}
       layout="constrained"
     />
   ),
@@ -17,7 +17,7 @@ export const logos = {
     <StaticImage
       src="./emotion.webp"
       alt="emotion"
-      width={32}
+      width={28}
       layout="constrained"
     />
   ),
@@ -25,7 +25,7 @@ export const logos = {
     <StaticImage
       src="./figma.svg"
       alt="figma"
-      height={32}
+      height={28}
       layout="constrained"
     />
   ),
@@ -33,7 +33,7 @@ export const logos = {
     <StaticImage
       src="./gatsby.svg"
       alt="gatsby"
-      width={32}
+      width={28}
       layout="constrained"
     />
   ),
@@ -41,7 +41,7 @@ export const logos = {
     <StaticImage
       src="./github.svg"
       alt="github"
-      width={32}
+      width={28}
       layout="constrained"
     />
   ),
@@ -49,7 +49,7 @@ export const logos = {
     <StaticImage
       src="./nextjs.svg"
       alt="nextjs"
-      width={32}
+      width={28}
       layout="constrained"
     />
   ),
@@ -57,7 +57,7 @@ export const logos = {
     <StaticImage
       src="./react.svg"
       alt="react"
-      width={32}
+      width={28}
       layout="constrained"
     />
   ),
@@ -65,7 +65,7 @@ export const logos = {
     <StaticImage
       src="./svelte.svg"
       alt="svelte"
-      height={32}
+      height={28}
       layout="constrained"
     />
   ),
@@ -73,7 +73,7 @@ export const logos = {
     <StaticImage
       src="./tailwindcss.svg"
       alt="tailwindcss"
-      width={32}
+      width={28}
       layout="constrained"
     />
   ),
@@ -81,7 +81,7 @@ export const logos = {
     <StaticImage
       src="./tanstack.webp"
       alt="tanstack"
-      width={32}
+      width={28}
       layout="constrained"
     />
   ),
@@ -89,7 +89,7 @@ export const logos = {
     <StaticImage
       src="./typescript.svg"
       alt="typescript"
-      width={32}
+      width={28}
       layout="constrained"
     />
   ),
@@ -97,7 +97,7 @@ export const logos = {
     <StaticImage
       src="./javascript.svg"
       alt="javascript"
-      width={32}
+      width={28}
       layout="constrained"
     />
   ),
@@ -105,7 +105,7 @@ export const logos = {
     <StaticImage
       src="./vscode.svg"
       alt="vscode"
-      width={32}
+      width={28}
       layout="constrained"
     />
   ),
