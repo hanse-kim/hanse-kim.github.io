@@ -14,7 +14,7 @@ export const CategorizedSkills = ({
   return (
     <div className="">
       <h3 className="text-20-700">{title}</h3>
-      <div className="flex flex-wrap gap-y-8 gap-x-12 mt-8">
+      <div className="flex flex-wrap gap-y-8 gap-x-12 mt-8 relative">
         {skills.map((skillInfo, index) => (
           <SkillBadge key={index} {...skillInfo} />
         ))}
