@@ -29,7 +29,7 @@ export const SkillBadge = ({ label, logo, descriptions }: SkillBadgeProps) => {
       </div>
 
       <div
-        className="transition-all -mx-1 max-w-[calc(100%+2px)]"
+        className="-mx-1 transition-all ease-in duration-300"
         style={{
           width: isOpen ? descriptionsClientSize.size[0] : 0,
           height: isOpen ? descriptionsClientSize.size[1] : 0,
@@ -37,12 +37,12 @@ export const SkillBadge = ({ label, logo, descriptions }: SkillBadgeProps) => {
       >
         <ul
           ref={descriptionsClientSize.assignRef}
-          className="pb-16 px-16 group-data-[open=false]:absolute group-data-[open=false]:opacity-0 group-data-[open=false]:pointer-events-none transition-opacity text-left duration-500 group-data-[open=false]:duration-0 list-disc max-w-[calc(calc(min(100vw,67.5rem)-3rem-1em)/2)] mobile:max-w-full"
+          className="pb-16 px-16 group-data-[open=false]:absolute group-data-[open=false]:opacity-0 group-data-[open=false]:pointer-events-none transition-opacity text-left duration-500 group-data-[open=false]:duration-0 list-disc w-full max-w-[calc(calc(min(100vw,67.5rem)-3rem-1em)/2)] mobile:max-w-[calc(100vw-3rem)]"
         >
           {descriptions.map((description, index) => (
             <li
               key={index}
-              className="text-bg dark:text-text text-18-400 ml-24 mt-4"
+              className="text-bg dark:text-text text-18-400 ml-24 mt-8"
             >
               <RichText value={description} />
             </li>
