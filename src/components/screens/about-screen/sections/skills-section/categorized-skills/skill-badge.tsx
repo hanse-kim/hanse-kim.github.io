@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useClientSize } from 'src/hooks/use-client-size';
 import { SkillInfo } from '..';
+import { RichText } from 'src/components/common/rich-text';
 
 type SkillBadgeProps = SkillInfo & {};
 
@@ -17,7 +18,7 @@ export const SkillBadge = ({ label, logo, descriptions }: SkillBadgeProps) => {
     >
       <div className="flex items-center gap-12 px-16 py-8">
         <div
-          className="w-28 h-28 shrink-0 grayscale brightness-125 data-[invert=true]:invert group-hover:invert-0 group-hover:brightness-100 group-hover:grayscale-0 group-data-[open=true]:invert-0 group-data-[open=true]:brightness-100 group-data-[open=true]:grayscale-0 transition-all"
+          className="w-28 max-h-28 flex items-center shrink-0 grayscale brightness-125 data-[invert=true]:invert group-hover:invert-0 group-hover:brightness-100 group-hover:grayscale-0 group-data-[open=true]:invert-0 group-data-[open=true]:brightness-100 group-data-[open=true]:grayscale-0 transition-all"
           data-invert={isInvert}
         >
           {logo}
@@ -36,14 +37,14 @@ export const SkillBadge = ({ label, logo, descriptions }: SkillBadgeProps) => {
       >
         <ul
           ref={descriptionsClientSize.assignRef}
-          className="pb-16 px-16 group-data-[open=false]:absolute group-data-[open=false]:opacity-0 group-data-[open=false]:pointer-events-none transition-opacity text-left duration-500 group-data-[open=false]:duration-0 list-disc desktop:max-w-[30vw] tablet:max-w-[45vw] mobile:max-w-full"
+          className="pb-16 px-16 group-data-[open=false]:absolute group-data-[open=false]:opacity-0 group-data-[open=false]:pointer-events-none transition-opacity text-left duration-500 group-data-[open=false]:duration-0 list-disc max-w-[calc(calc(min(100vw,67.5rem)-3rem-1em)/2)] mobile:max-w-full"
         >
           {descriptions.map((description, index) => (
             <li
               key={index}
               className="text-bg dark:text-text text-18-400 ml-24 mt-4"
             >
-              {description}
+              <RichText value={description} />
             </li>
           ))}
         </ul>
