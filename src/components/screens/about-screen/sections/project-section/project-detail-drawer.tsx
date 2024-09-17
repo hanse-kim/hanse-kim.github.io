@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
+import { useIsMounted } from 'src/hooks/use-is-mounted';
 
 type ProjectDetailDrawerProps = {
   isOpen: boolean;
@@ -13,9 +14,15 @@ export const ProjectDetailDrawer = ({
   onClose,
   children,
 }: ProjectDetailDrawerProps) => {
+  const { isMounted } = useIsMounted();
+
   useEffect(() => {
     document.documentElement.style.overflow = isOpen ? 'hidden' : 'auto';
   }, [isOpen]);
+
+  if (!isMounted) {
+    return null;
+  }
 
   return createPortal(
     <AnimatePresence>
