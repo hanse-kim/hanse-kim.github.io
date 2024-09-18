@@ -1,13 +1,7 @@
+import { Node } from 'gatsby';
+
 export type MarkdownRemark = Node & {
-  frontmatter: {
-    title: string;
-    date: string;
-    tags: string[];
-    hide?: boolean;
-    thumbnail?: {
-      publicURL: string;
-    };
-  };
+  frontmatter: FrontMatter;
   html: string;
   body: string;
   timeToRead: number;
@@ -15,6 +9,16 @@ export type MarkdownRemark = Node & {
   excerpt: string;
   fields: {
     slug: string;
+  };
+};
+
+export type FrontMatter = {
+  title: string;
+  date: string;
+  tags: string[];
+  hide?: boolean;
+  thumbnail?: {
+    publicURL: string;
   };
 };
 
