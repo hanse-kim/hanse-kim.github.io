@@ -6,7 +6,7 @@ import { useIsMounted } from 'src/hooks/use-is-mounted';
 type ProjectDetailDrawerProps = {
   isOpen: boolean;
   onClose: () => void;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 
 export const ProjectDetailDrawer = ({
