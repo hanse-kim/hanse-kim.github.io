@@ -1,9 +1,9 @@
 import React, { useCallback, useState } from 'react';
-import { MarkdownRemark } from 'src/_libs/types/markdown-remark';
+import { PostMarkdown } from 'src/_libs/types/post-markdown';
 import { PostCard } from './post-card';
 
 type PostListProps = {
-  posts: MarkdownRemark[];
+  posts: PostMarkdown[];
 };
 
 export const PostListSection = ({ posts }: PostListProps) => {

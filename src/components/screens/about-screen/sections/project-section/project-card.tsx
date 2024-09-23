@@ -1,17 +1,16 @@
 import React from 'react';
-import { NavButton } from 'src/components/layout/header/nav-button';
+import { ProjectFrontmatter } from 'src/_libs/types/project-markdown';
+import { RouterUtils } from 'src/_libs/utils/router-utils';
 
 const popKey = 'pop';
 
-type ProjectCardProps = {
-  title: string;
-  subtitle: string;
-  description: string;
-  image: React.ReactNode;
-  isReverse?: boolean;
+type ProjectCardProps = ProjectFrontmatter & {
+  id: string;
+  image: React.ReactElement;
 };
 
 export const ProjectCard = ({
+  id,
   title,
   subtitle,
   description,
@@ -28,7 +27,9 @@ export const ProjectCard = ({
         <h3 className="text-28-700">{title}</h3>
         <p className="text-18-40 mt-4">"{description}"</p>
         <p className="text-16-400 text-text-muted mb-12">{subtitle}</p>
-        <NavButton to={`?${popKey}=${title}`}>{'View Details ->'}</NavButton>
+        <button onClick={() => RouterUtils.push(`?${popKey}=${id}`)}>
+          {'View Details ->'}
+        </button>
       </div>
     </div>
   );

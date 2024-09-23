@@ -1,6 +1,6 @@
 import { graphql, type PageProps } from 'gatsby';
 import React from 'react';
-import { MarkdownRemark } from 'src/_libs/types/markdown-remark';
+import { PostMarkdown } from 'src/_libs/types/post-markdown';
 import { BackButton } from 'src/components/common/back-button';
 import { Heading } from 'src/components/common/heading';
 import { Seo } from 'src/components/common/seo';
@@ -12,7 +12,7 @@ type PageContextType = {
 
 type DataType = {
   allMarkdownRemark: {
-    edges: Array<{ node: MarkdownRemark }>;
+    edges: Array<{ node: PostMarkdown }>;
     totalCount: number;
   };
 };
@@ -22,7 +22,10 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       limit: 2000
       sort: { frontmatter: { date: DESC } }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
+      filter: {
+        frontmatter: { tags: { in: [$tag] } }
+        fields: { sourceInstanceName: { eq: "posts" } }
+      }
     ) {
       edges {
         node {

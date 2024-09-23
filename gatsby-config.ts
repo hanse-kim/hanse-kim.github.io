@@ -63,6 +63,14 @@ const config: GatsbyConfig = {
       __key: 'posts',
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `./.projects/`,
+      },
+      __key: 'projects',
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         gfm: true,

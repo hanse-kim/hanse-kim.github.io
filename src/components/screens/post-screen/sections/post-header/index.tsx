@@ -1,10 +1,10 @@
 import React from 'react';
-import { MarkdownRemark } from 'src/_libs/types/markdown-remark';
+import { PostMarkdown } from 'src/_libs/types/post-markdown';
 import { BackButton } from 'src/components/common/back-button';
 import { Heading } from 'src/components/common/heading';
 import { TagButton } from 'src/components/common/tag-button';
 
-type PostHeaderProps = MarkdownRemark['frontmatter'] & {
+type PostHeaderProps = PostMarkdown['frontmatter'] & {
   timeToRead: number;
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { MarkdownRemark } from 'src/_libs/types/markdown-remark';
+import { PostMarkdown } from 'src/_libs/types/post-markdown';
 import { CustomImage } from 'src/components/common/custom-image';
 import { ContentMarkdownSection } from './sections/content-markdown-section';
 import { PostHeader } from './sections/post-header';
@@ -7,7 +7,7 @@ import { CommentSection } from './sections/comment-section';
 import { BottomAdSection } from './sections/bottom-ad-section';
 
 type PostScreenProps = {
-  post: MarkdownRemark;
+  post: PostMarkdown;
 };
 
 export const PostScreen = ({ post }: PostScreenProps) => {

@@ -1,7 +1,7 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 
-export const thumbnails = {
+export const thumbnails: Record<string, React.ReactElement> = {
   harmony: (
     <StaticImage
       src="./harmony.webp"

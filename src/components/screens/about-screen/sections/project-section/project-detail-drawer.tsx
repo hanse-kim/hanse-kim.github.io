@@ -1,18 +1,18 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
+import { ProjectFrontmatter } from 'src/_libs/types/project-markdown';
 import { useIsMounted } from 'src/hooks/use-is-mounted';
 
-type ProjectDetailDrawerProps = {
+type ProjectDetailDrawerProps = ProjectFrontmatter & {
   isOpen: boolean;
   onClose: () => void;
-  children?: React.ReactNode;
 };
 
 export const ProjectDetailDrawer = ({
   isOpen,
   onClose,
-  children,
+  title,
 }: ProjectDetailDrawerProps) => {
   const { isMounted } = useIsMounted();
 
@@ -50,7 +50,8 @@ export const ProjectDetailDrawer = ({
             }}
             transition={{ ease: 'easeOut', duration: 0.25 }}
           >
-            {children}
+            <h1>{title}</h1>
+            <p></p>
           </motion.section>
         </>
       )}

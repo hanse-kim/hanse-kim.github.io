@@ -1,7 +1,7 @@
 import { Node } from 'gatsby';
 
-export type MarkdownRemark = Node & {
-  frontmatter: FrontMatter;
+export type PostMarkdown = Node & {
+  frontmatter: PostFrontmatter;
   html: string;
   body: string;
   timeToRead: number;
@@ -12,7 +12,7 @@ export type MarkdownRemark = Node & {
   };
 };
 
-export type FrontMatter = {
+export type PostFrontmatter = {
   title: string;
   date: string;
   tags: string[];

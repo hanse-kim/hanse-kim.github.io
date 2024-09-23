@@ -12,7 +12,10 @@ interface DataType {
 
 export const pageQuery = graphql`
   query {
-    tagsGroup: allMarkdownRemark(limit: 2000) {
+    tagsGroup: allMarkdownRemark(
+      limit: 2000
+      filter: { fields: { sourceInstanceName: { eq: "posts" } } }
+    ) {
       tags: group(field: { frontmatter: { tags: SELECT } }) {
         value: fieldValue
         totalCount

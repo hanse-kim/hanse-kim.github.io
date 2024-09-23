@@ -11,6 +11,18 @@ export function onCreateNode({ node, getNode, actions }) {
       name: `slug`,
       value: slug,
     });
+
+    const parentNode = getNode(node.parent);
+    createNodeField({
+      node,
+      name: 'sourceInstanceName',
+      value: parentNode.sourceInstanceName,
+    });
+    createNodeField({
+      node,
+      name: 'name',
+      value: parentNode.name,
+    });
   }
 }
 
@@ -48,7 +60,9 @@ export async function createPages({ graphql, actions }) {
 
   const postsQuery = await graphql(`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark(
+        filter: { fields: { sourceInstanceName: { eq: "posts" } } }
+      ) {
         nodes {
           id
           frontmatter {

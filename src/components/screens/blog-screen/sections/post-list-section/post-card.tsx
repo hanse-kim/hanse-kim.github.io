@@ -2,12 +2,12 @@ import { Link } from 'gatsby';
 import React from 'react';
 import { linkStates } from 'src/_libs/constants/link-states';
 import { routes } from 'src/_libs/constants/routes';
-import { MarkdownRemark } from 'src/_libs/types/markdown-remark';
+import { PostMarkdown } from 'src/_libs/types/post-markdown';
 import { CustomImage } from 'src/components/common/custom-image';
 import { TagButton } from 'src/components/common/tag-button';
 
 type PostCardProps = {
-  post: MarkdownRemark;
+  post: PostMarkdown;
 };
 
 export const PostCard = React.memo(({ post }: PostCardProps) => {
