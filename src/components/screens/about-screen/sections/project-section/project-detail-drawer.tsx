@@ -1,18 +1,20 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { ProjectFrontmatter } from 'src/_libs/types/project-markdown';
+import { NavButton } from 'src/components/layout/header/nav-button';
+import { ContentMarkdownSection } from 'src/components/screens/post-screen/sections/content-markdown-section';
 import { useIsMounted } from 'src/hooks/use-is-mounted';
 
-type ProjectDetailDrawerProps = ProjectFrontmatter & {
+type ProjectDetailDrawerProps = {
   isOpen: boolean;
   onClose: () => void;
+  html?: string;
 };
 
 export const ProjectDetailDrawer = ({
   isOpen,
   onClose,
-  title,
+  html = '',
 }: ProjectDetailDrawerProps) => {
   const { isMounted } = useIsMounted();
 
@@ -40,7 +42,7 @@ export const ProjectDetailDrawer = ({
             }}
           />
           <motion.section
-            className="bg-bg w-full max-w-[640px] p-36 fixed right-0 top-0 bottom-0 z-50 drop-shadow-drawer"
+            className="bg-bg w-full max-w-[640px] py-36 fixed right-0 top-0 bottom-0 z-50 drop-shadow-drawer"
             initial={'exit'}
             animate={'enter'}
             exit={'exit'}
@@ -50,8 +52,10 @@ export const ProjectDetailDrawer = ({
             }}
             transition={{ ease: 'easeOut', duration: 0.25 }}
           >
-            <h1>{title}</h1>
-            <p></p>
+            <header className="px-24">
+              <NavButton toBack>{'< 뒤로가기'}</NavButton>
+            </header>
+            <ContentMarkdownSection html={html} />
           </motion.section>
         </>
       )}

@@ -23,22 +23,20 @@ export const ProjectSection = ({}: ProjectSectionProps) => {
   return (
     <TitledSection title="Works" subtitle="on FreeD Soft (2022.07 - Present)">
       <div className="flex flex-col items-stretch gap-56">
-        {Object.entries(projects).map(([id, project], index) => (
+        {projects.map((project, index) => (
           <ProjectCard
             key={index}
             {...project.frontmatter}
             image={thumbnails[project.fields.name]}
-            id={id}
+            id={project.fields.name}
           />
         ))}
       </div>
-      {poppedProject && (
-        <ProjectDetailDrawer
-          isOpen={isDetailDrawerOpen}
-          onClose={RouterUtils.back}
-          {...poppedProject.frontmatter}
-        />
-      )}
+      <ProjectDetailDrawer
+        isOpen={isDetailDrawerOpen}
+        onClose={RouterUtils.back}
+        html={poppedProject?.html}
+      />
     </TitledSection>
   );
 };
