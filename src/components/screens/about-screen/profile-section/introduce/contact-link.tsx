@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon } from 'src/components/common/icon';
-import { IconName } from 'src/components/common/icon/assets';
+import { IconName } from 'src/components/common/icon/_assets';
 
 type ContactLinkProps = {
   label: string;

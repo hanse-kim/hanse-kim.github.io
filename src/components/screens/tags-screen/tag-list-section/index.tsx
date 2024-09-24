@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { Link } from 'gatsby';
-import kebabCase from 'kebab-case';
 import React, { useMemo } from 'react';
 import { linkStates } from 'src/_libs/constants/link-states';
 import { routes } from 'src/_libs/constants/routes';

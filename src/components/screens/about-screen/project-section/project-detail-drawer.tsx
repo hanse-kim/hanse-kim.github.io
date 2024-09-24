@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { NavButton } from 'src/components/layout/header/nav-button';
-import { ContentMarkdownSection } from 'src/components/screens/post-screen/sections/content-markdown-section';
+import { ContentMarkdownSection } from 'src/components/screens/post-screen/content-markdown-section';
 import { useIsMounted } from 'src/hooks/use-is-mounted';
 
 type ProjectDetailDrawerProps = {

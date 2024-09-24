@@ -2,8 +2,8 @@ import React from 'react';
 import { RouterUtils } from 'src/_libs/utils/router-utils';
 import { usePage } from 'src/contexts/page-context';
 import { useProjects } from 'src/hooks/use-projects';
-import { TitledSection } from '../../common/titled-section';
-import { thumbnails } from './assets';
+import { TitledSection } from '../_common/titled-section';
+import { thumbnails } from './_assets';
 import { ProjectCard } from './project-card';
 import { ProjectDetailDrawer } from './project-detail-drawer';
 

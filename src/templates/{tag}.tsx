@@ -4,7 +4,7 @@ import { PostMarkdown } from 'src/_libs/types/post-markdown';
 import { BackButton } from 'src/components/common/back-button';
 import { Heading } from 'src/components/common/heading';
 import { Seo } from 'src/components/common/seo';
-import { PostListSection } from 'src/components/screens/blog-screen/sections/post-list-section';
+import { PostListSection } from 'src/components/screens/blog-screen/post-list-section';
 
 type PageContextType = {
   tag: string;

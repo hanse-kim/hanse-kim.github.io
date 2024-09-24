@@ -1,7 +1,7 @@
 import React from 'react';
 import { PostMarkdown } from 'src/_libs/types/post-markdown';
 import { Heading } from 'src/components/common/heading';
-import { PostListSection } from './sections/post-list-section';
+import { PostListSection } from './post-list-section';
 
 type BlogScreenProps = {
   posts: PostMarkdown[];

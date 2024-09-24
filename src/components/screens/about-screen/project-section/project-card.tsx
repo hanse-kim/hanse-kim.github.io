@@ -1,6 +1,5 @@
 import React from 'react';
 import { ProjectFrontmatter } from 'src/_libs/types/project-markdown';
-import { RouterUtils } from 'src/_libs/utils/router-utils';
 import { NavButton } from 'src/components/layout/header/nav-button';
 
 const popKey = 'pop';

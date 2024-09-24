@@ -1,7 +1,7 @@
 import React from 'react';
-import { ProfileSection } from './sections/profile-section';
-import { ProjectSection } from './sections/project-section';
-import { SkillsSection } from './sections/skills-section';
+import { ProfileSection } from './profile-section';
+import { ProjectSection } from './project-section';
+import { SkillsSection } from './skills-section';
 
 type AboutScreenProps = {};
 

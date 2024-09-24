@@ -1,5 +1,5 @@
 import React, { HTMLProps } from 'react';
-import { IconName, icons } from './assets';
+import { IconName, icons } from './_assets';
 
 export type IconProps = HTMLProps<HTMLSpanElement> & {
   size?: number;

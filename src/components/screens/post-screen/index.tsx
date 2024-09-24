@@ -1,10 +1,10 @@
 import React from 'react';
 import { PostMarkdown } from 'src/_libs/types/post-markdown';
 import { CustomImage } from 'src/components/common/custom-image';
-import { ContentMarkdownSection } from './sections/content-markdown-section';
-import { PostHeader } from './sections/post-header';
-import { CommentSection } from './sections/comment-section';
-import { BottomAdSection } from './sections/bottom-ad-section';
+import { ContentMarkdownSection } from './content-markdown-section';
+import { PostHeader } from './post-header';
+import { CommentSection } from './comment-section';
+import { BottomAdSection } from './bottom-ad-section';
 
 type PostScreenProps = {
   post: PostMarkdown;

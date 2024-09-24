@@ -1,6 +1,6 @@
 import React from 'react';
-import { TitledSection } from '../../common/titled-section';
-import { logos } from './assets';
+import { TitledSection } from '../_common/titled-section';
+import { logos } from './_assets';
 import { CategorizedSkills } from './categorized-skills';
 
 export type SkillInfo = {
