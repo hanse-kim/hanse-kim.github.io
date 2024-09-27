@@ -21,8 +21,8 @@ export const TagListSection = ({ tags }: TagListSectionProps) => {
   }, []);
 
   const getRelativeFontSize = (count: number) => {
-    const factor = (count - minCount) / (maxCount - minCount) + 1;
-    return `${factor}em`;
+    const relativeFontSize = (count - minCount) / (maxCount - minCount) + 1;
+    return `${relativeFontSize}em`;
   };
 
   return (

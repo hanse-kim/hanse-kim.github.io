@@ -14,15 +14,15 @@ const useDarkModeStore = create<StoreValue>((set) => {
   let isDarkMode = false;
 
   if (EnvUtils.isClient) {
-    isDarkMode = getInitialIsDarkMode();
-    setIsDarkMode(isDarkMode);
+    isDarkMode = getInitialIsDarkModeOnBrowser();
+    updateIsDarkMode(isDarkMode);
     setupTransitionEndHandler();
   }
 
   const toggleDarkMode = () => {
     set((state) => {
       const newIsDarkMode = !state.isDarkMode;
-      setIsDarkMode(newIsDarkMode);
+      updateIsDarkMode(newIsDarkMode);
 
       return {
         isDarkMode: newIsDarkMode,
@@ -44,7 +44,7 @@ export const useIsDarkMode = () =>
 export const useDarkModeActions = () =>
   useDarkModeStore((state) => state.actions);
 
-function getInitialIsDarkMode() {
+function getInitialIsDarkModeOnBrowser() {
   const storedIsDarkMode = LocalStorageUtils.get<boolean | null>(
     storageKeys.isDarkMode
   );
@@ -63,7 +63,7 @@ function getInitialIsDarkMode() {
   return false;
 }
 
-function setIsDarkMode(value: boolean) {
+function updateIsDarkMode(value: boolean) {
   document.documentElement.dataset.transition = 'true';
   LocalStorageUtils.set(storageKeys.isDarkMode, value);
   updateDocumentTheme(value);

@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React from 'react';
 import { PostMarkdown } from 'src/_libs/types/post-markdown';
 import { PostCard } from './post-card';
 

@@ -1,12 +1,15 @@
 import React from 'react';
-import { NavButton } from '../layout/header/nav-button';
+import { RouterUtils } from 'src/_libs/utils/router-utils';
+import { NavButton } from './nav-button';
 
-type BackButtonProps = {};
+type BackButtonProps = {
+  label?: string;
+};
 
-export const BackButton = ({}: BackButtonProps) => {
+export const BackButton = ({ label = '이전 페이지로' }: BackButtonProps) => {
   return (
     <div className="ml-24 -mb-24 mt-36 w-fit">
-      <NavButton toBack>{'< 이전 페이지로'}</NavButton>
+      <NavButton onClick={RouterUtils.back}>{`< ${label}`}</NavButton>
     </div>
   );
 };

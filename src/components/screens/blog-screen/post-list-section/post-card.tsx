@@ -4,7 +4,7 @@ import { linkStates } from 'src/_libs/constants/link-states';
 import { routes } from 'src/_libs/constants/routes';
 import { PostMarkdown } from 'src/_libs/types/post-markdown';
 import { CustomImage } from 'src/components/common/custom-image';
-import { TagButton } from 'src/components/common/tag-button';
+import { TagBadgeButton } from 'src/components/common/tag-badge-button';
 
 type PostCardProps = {
   post: PostMarkdown;
@@ -29,7 +29,7 @@ export const PostCard = React.memo(({ post }: PostCardProps) => {
         <div className="mt-8 text-text-muted">{`${post.frontmatter.date} · ${post.timeToRead} min read`}</div>
         <div className="flex gap-12 mt-12">
           {post.frontmatter.tags.map((tag) => (
-            <TagButton key={tag} tag={tag} />
+            <TagBadgeButton key={tag} tag={tag} />
           ))}
         </div>
         <p className="w-full mt-16 text-text-alt text-18-300 line-clamp-2 break-all">

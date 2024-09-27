@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { NavButton } from 'src/components/layout/header/nav-button';
+import { BackButton } from 'src/components/common/back-button';
 import { ContentMarkdownSection } from 'src/components/screens/post-screen/content-markdown-section';
 import { useIsMounted } from 'src/hooks/use-is-mounted';
 
@@ -52,9 +52,7 @@ export const ProjectDetailDrawer = ({
             }}
             transition={{ ease: 'easeOut', duration: 0.25 }}
           >
-            <header className="px-24">
-              <NavButton toBack>{'< 뒤로가기'}</NavButton>
-            </header>
+            <BackButton label="돌아가기" />
             <ContentMarkdownSection html={html} />
           </motion.section>
         </>

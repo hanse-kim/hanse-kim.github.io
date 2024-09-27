@@ -8,7 +8,7 @@ type TagButtonProps = {
   tag: string;
 };
 
-export const TagButton = ({ tag }: TagButtonProps) => {
+export const TagBadgeButton = ({ tag }: TagButtonProps) => {
   const handleClick: MouseEventHandler<HTMLButtonElement> = (e) => {
     e.preventDefault();
     e.stopPropagation();

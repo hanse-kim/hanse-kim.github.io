@@ -10,22 +10,22 @@ type GithubProfile = {
 };
 
 const useGithubProfileStore = create<StoreValue>((set) => {
-  const fetchData = async () => {
-    try {
-      const profile = await getGithubProfile();
-      set({ isLoading: false, isError: false, data: profile });
-    } catch (e) {
-      set({ isLoading: false, isError: true, data: undefined });
-    }
-  };
-
-  fetchData();
-
-  return {
+  const initialState: StoreValue = {
     isLoading: true,
     isError: false,
     data: undefined,
   };
+
+  (async () => {
+    try {
+      const profile = await getGithubProfile();
+      set({ ...initialState, isLoading: false, data: profile });
+    } catch (e) {
+      set({ ...initialState, isLoading: false, isError: true });
+    }
+  })();
+
+  return initialState;
 });
 
 export const useGithubProfile = () => useGithubProfileStore((state) => state);

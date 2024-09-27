@@ -3,7 +3,7 @@ import { routes } from 'src/_libs/constants/routes';
 import { usePage } from 'src/contexts/page-context';
 import { DarkModeButton } from './dark-mode-button';
 import { Logo } from './logo';
-import { NavButton } from './nav-button';
+import { NavButton } from '../../common/nav-button';
 import { ScrollProgress } from './scroll-progress';
 
 type HeaderProps = {};

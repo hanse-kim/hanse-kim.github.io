@@ -9,9 +9,9 @@ type TagsScreenProps = {
 
 export const TagsScreen = ({ tags }: TagsScreenProps) => {
   return (
-    <>
+    <article>
       <Heading>Tags</Heading>
       <TagListSection tags={tags} />
-    </>
+    </article>
   );
 };
