@@ -16,8 +16,8 @@ const contents = {
     },
   ],
   descriptions: [
-    '3년차 프론트엔드 개발자 김한슬입니다.',
-    '스타트업에 근무하며 3개의 핵심 프로젝트 런칭에 크게 기여하고, 소통을 통해 팀 생산성을 향상시킨 경험이 있습니다.',
+    `I'm a Frontend Developer working at a startup.`,
+    `This blog shares the challenges faced during development and how they were solved 🙂`,
   ],
 } as const;
 
