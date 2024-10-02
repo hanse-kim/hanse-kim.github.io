@@ -104,8 +104,9 @@ export async function createPages({ graphql, actions }) {
   const tags = tagsQuery.data.tagsGroup.tags;
 
   tags.forEach((tag) => {
+    const tagPath = kebabCase(tag.value, false) || tag.value.replaceAll(' ', '-');
     createPage({
-      path: `/tags/${kebabCase(tag.value, false)}/`,
+      path: `/tags/${tagPath}/`,
       component: resolve('src/templates/{tag}.tsx'),
       context: {
         tag: tag.value,
