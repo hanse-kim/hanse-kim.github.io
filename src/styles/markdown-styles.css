@@ -55,7 +55,7 @@
   @apply text-text-muted;
 }
 
-.md a {
+.md a:not(:has(img) ) {
   @apply inline-block underline text-main visited:text-[mediumpurple] after:content-['🔗'] after:text-[0.9em];
 }
 
