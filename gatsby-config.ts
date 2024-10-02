@@ -24,13 +24,6 @@ const config: GatsbyConfig = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-root-import',
     {
-      resolve: `gatsby-plugin-gtag`,
-      options: {
-        trackingId: process.env.GA_TRACKING_ID,
-        head: true,
-      },
-    },
-    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         icon: 'src/images/icon.png',
