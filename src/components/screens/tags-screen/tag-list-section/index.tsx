@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Link } from 'gatsby';
 import React, { useMemo } from 'react';
 import { linkStates } from 'src/_libs/constants/link-states';
@@ -33,7 +33,7 @@ export const TagListSection = ({ tags }: TagListSectionProps) => {
       {tags
         .toSorted((a, b) => b.totalCount - a.totalCount)
         .map((tag) => (
-          <motion.div key={tag.value} whileHover={{ scale: 1.05 }}>
+          <m.div key={tag.value} whileHover={{ scale: 1.05 }}>
             <Link
               to={routes.tag(tag.value)}
               className="text-18-400 underline underline-offset-[0.2em] drop-shadow-transparent transition-shadow desktop:hover:drop-shadow-text"
@@ -42,7 +42,7 @@ export const TagListSection = ({ tags }: TagListSectionProps) => {
             >
               {`${tag.value} (${tag.totalCount})`}
             </Link>
-          </motion.div>
+          </m.div>
         ))}
     </section>
   );

@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, m } from 'framer-motion';
 import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { BackButton } from 'src/components/common/back-button';
@@ -30,7 +30,7 @@ export const ProjectDetailDrawer = ({
     <AnimatePresence>
       {isOpen && (
         <>
-          <motion.div
+          <m.div
             onClick={onClose}
             className="bg-[black] bg-opacity-40 fixed inset-0 z-40"
             initial={'exit'}
@@ -41,7 +41,7 @@ export const ProjectDetailDrawer = ({
               enter: { opacity: 1 },
             }}
           />
-          <motion.section
+          <m.section
             className="bg-bg w-full max-w-[640px] py-36 fixed right-0 top-0 bottom-0 z-50 drop-shadow-drawer"
             initial={'exit'}
             animate={'enter'}
@@ -54,7 +54,7 @@ export const ProjectDetailDrawer = ({
           >
             <BackButton label="돌아가기" />
             <ContentMarkdownSection html={html} />
-          </motion.section>
+          </m.section>
         </>
       )}
     </AnimatePresence>,

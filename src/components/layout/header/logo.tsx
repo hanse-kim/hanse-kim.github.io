@@ -1,8 +1,8 @@
-import { routes } from 'src/_libs/constants/routes';
+import { m } from 'framer-motion';
 import { Link } from 'gatsby';
 import React from 'react';
+import { routes } from 'src/_libs/constants/routes';
 import { useSiteMetadata } from 'src/hooks/use-site-metadata';
-import { motion } from 'framer-motion';
 
 type LogoProps = {};
 
@@ -10,7 +10,7 @@ export const Logo = ({}: LogoProps) => {
   const { title } = useSiteMetadata();
 
   return (
-    <motion.div
+    <m.div
       whileHover={{ scale: 1.1 }}
       transition={{
         type: 'spring',
@@ -21,6 +21,6 @@ export const Logo = ({}: LogoProps) => {
       <Link className="text-24-800" to={routes.blog}>
         {title}
       </Link>
-    </motion.div>
+    </m.div>
   );
 };

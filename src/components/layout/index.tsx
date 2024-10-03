@@ -1,3 +1,4 @@
+import { domAnimation, LazyMotion } from 'framer-motion';
 import { PageProps } from 'gatsby';
 import React from 'react';
 import { PageProvider } from 'src/contexts/page-context';
@@ -14,13 +15,15 @@ type LayoutProps = {
 export const Layout = ({ children, pageProps }: LayoutProps) => {
   return (
     <PageProvider pageProps={pageProps}>
-      <Header />
-      <Main>
-        <PageTransition location={pageProps.location}>
-          {children}
-        </PageTransition>
-      </Main>
-      <Footer />
+      <LazyMotion features={domAnimation}>
+        <Header />
+        <Main>
+          <PageTransition location={pageProps.location}>
+            {children}
+          </PageTransition>
+        </Main>
+        <Footer />
+      </LazyMotion>
     </PageProvider>
   );
 };

@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import React, { MouseEventHandler } from 'react';
 import { linkStates } from 'src/_libs/constants/link-states';
 import { routes } from 'src/_libs/constants/routes';
@@ -16,7 +16,7 @@ export const TagBadgeButton = ({ tag }: TagButtonProps) => {
   };
 
   return (
-    <motion.div
+    <m.div
       whileHover={{ scale: 1.15 }}
       transition={{
         type: 'spring',
@@ -30,6 +30,6 @@ export const TagBadgeButton = ({ tag }: TagButtonProps) => {
       >
         {tag}
       </button>
-    </motion.div>
+    </m.div>
   );
 };

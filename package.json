@@ -15,7 +15,7 @@
     "typecheck": "tsc --noEmit",
     "pull-posts": "rm -rf .posts && git clone https://github.com/hanse-kim/hanse-kim.github.io-posts .posts",
     "remove-hided": "sh .scripts/remove-hided.sh .posts",
-    "deploy": "yarn pull-posts && yarn remove-hided && gatsby build && touch public/.nojekyll && gh-pages -d public -b deploy --dotfiles"
+    "deploy": "yarn clean && yarn pull-posts && yarn remove-hided && gatsby build && touch public/.nojekyll && gh-pages -d public -b deploy --dotfiles"
   },
   "dependencies": {
     "zustand": "^4.5.5"

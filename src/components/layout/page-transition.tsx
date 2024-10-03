@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, m } from 'framer-motion';
 import { PageProps } from 'gatsby';
 import React, { useMemo } from 'react';
 
@@ -33,7 +33,7 @@ export const PageTransition = ({ location, children }: PageTransitionProps) => {
 
   return (
     <AnimatePresence mode="wait" presenceAffectsLayout>
-      <motion.div
+      <m.div
         key={location.pathname}
         initial={'initial'}
         animate={'enter'}
@@ -42,7 +42,7 @@ export const PageTransition = ({ location, children }: PageTransitionProps) => {
         transition={{ duration: pageTransitionDuration }}
       >
         {children}
-      </motion.div>
+      </m.div>
     </AnimatePresence>
   );
 };
