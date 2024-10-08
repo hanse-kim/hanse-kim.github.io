@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkhanse_kim_dev=self.webpackChunkhanse_kim_dev||[]).push([[245],{2783:function(e,n,t){t.r(n),t.d(n,{Head:function(){return a}});var u=t(6540);const a=()=>u.createElement("title",null,"Home Page");n.default=()=>null}}]);
+//# sourceMappingURL=component---src-pages-index-tsx-86972b892d3dcc1d04b9.js.map
