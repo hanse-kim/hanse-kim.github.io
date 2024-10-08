@@ -1,12 +1,12 @@
 import { HeadFC } from 'gatsby';
-import React, { useEffect } from 'react';
-import { RouterUtils } from '../_libs/utils/router-utils';
+import React, { useLayoutEffect } from 'react';
 import { routes } from '../_libs/constants/routes';
+import { RouterUtils } from '../_libs/utils/router-utils';
 
 export const Head: HeadFC = () => <title>Home Page</title>;
 
 const IndexPage = () => {
-  useEffect(() => {
+  useLayoutEffect(() => {
     RouterUtils.replace(routes.blog);
   }, []);
 

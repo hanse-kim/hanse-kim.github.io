@@ -1,11 +1,11 @@
-import { domAnimation, LazyMotion } from 'framer-motion';
 import { PageProps } from 'gatsby';
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { PageProvider } from 'src/contexts/page-context';
-import { Footer } from './footer';
-import { Header } from './header';
-import { Main } from './main';
-import { PageTransition } from './page-transition';
+import { useIsMounted } from 'src/hooks/use-is-mounted';
+import { PlainLayout } from './plain-layout';
+const MotionLayout = lazy(() =>
+  import('./motion-layout').then((module) => ({ default: module.MotionLayout }))
+);
 
 type LayoutProps = {
   pageProps: Omit<PageProps, 'children'>;
@@ -13,17 +13,17 @@ type LayoutProps = {
 };
 
 export const Layout = ({ children, pageProps }: LayoutProps) => {
+  const { isMounted } = useIsMounted();
+
   return (
     <PageProvider pageProps={pageProps}>
-      <LazyMotion features={domAnimation}>
-        <Header />
-        <Main>
-          <PageTransition location={pageProps.location}>
-            {children}
-          </PageTransition>
-        </Main>
-        <Footer />
-      </LazyMotion>
+      {isMounted ? (
+        <Suspense fallback={<PlainLayout>{children}</PlainLayout>}>
+          <MotionLayout>{children}</MotionLayout>
+        </Suspense>
+      ) : (
+        <PlainLayout>{children}</PlainLayout>
+      )}
     </PageProvider>
   );
 };
