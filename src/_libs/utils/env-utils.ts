@@ -1,5 +1,3 @@
-export class EnvUtils {
-  static get isClient() {
-    return typeof window !== 'undefined';
-  }
-}
+export const envUtils = {
+  isClient: typeof window !== 'undefined',
+};

@@ -1,5 +1,5 @@
 import React from 'react';
-import { RouterUtils } from 'src/_libs/utils/router-utils';
+import { routerUtils } from 'src/_libs/utils/router-utils';
 import { usePage } from 'src/contexts/page-context';
 import { useProjects } from 'src/hooks/use-projects';
 import { TitledSection } from '../_common/titled-section';
@@ -34,7 +34,7 @@ export const ProjectSection = ({}: ProjectSectionProps) => {
       </div>
       <ProjectDetailDrawer
         isOpen={isDetailDrawerOpen}
-        onClose={RouterUtils.back}
+        onClose={routerUtils.back}
         html={poppedProject?.html}
       />
     </TitledSection>

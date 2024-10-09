@@ -4,16 +4,14 @@ type Options = {
   state?: any;
 };
 
-export class RouterUtils {
-  static push(url: string, options: Options = {}) {
+export const routerUtils = {
+  push: (url: string, options: Options = {}) => {
     return navigate(url, { ...options });
-  }
-
-  static replace(url: string, options: Options = {}) {
+  },
+  replace: (url: string, options: Options = {}) => {
     return navigate(url, { replace: true, ...options });
-  }
-
-  static back() {
+  },
+  back: () => {
     return navigate(-1);
-  }
-}
+  },
+};

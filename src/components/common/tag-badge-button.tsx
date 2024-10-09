@@ -2,7 +2,7 @@ import { m } from 'framer-motion';
 import React, { MouseEventHandler } from 'react';
 import { linkStates } from 'src/_libs/constants/link-states';
 import { routes } from 'src/_libs/constants/routes';
-import { RouterUtils } from 'src/_libs/utils/router-utils';
+import { routerUtils } from 'src/_libs/utils/router-utils';
 
 type TagButtonProps = {
   tag: string;
@@ -12,7 +12,7 @@ export const TagBadgeButton = ({ tag }: TagButtonProps) => {
   const handleClick: MouseEventHandler<HTMLButtonElement> = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    RouterUtils.push(routes.tag(tag), { state: linkStates.toLower });
+    routerUtils.push(routes.tag(tag), { state: linkStates.toLower });
   };
 
   return (

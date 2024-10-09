@@ -1,7 +1,7 @@
 import kebabCase from 'kebab-case';
 
-export class ConversionUtils {
-  static getDashedString(value: string) {
+export const conversionUtils = {
+  getDashedString: (value: string) => {
     return kebabCase(value, false) || value.replaceAll(' ', '-');
-  }
-}
+  },
+};

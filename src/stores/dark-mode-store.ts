@@ -1,6 +1,6 @@
 import { storageKeys } from 'src/_libs/constants/storage-keys';
-import { EnvUtils } from 'src/_libs/utils/env-utils';
-import { LocalStorageUtils } from 'src/_libs/utils/storage-utils';
+import { envUtils } from 'src/_libs/utils/env-utils';
+import { localStorageUtils } from 'src/_libs/utils/storage-utils';
 import { create } from 'zustand';
 
 type StoreValue = {
@@ -13,7 +13,7 @@ type StoreValue = {
 const useDarkModeStore = create<StoreValue>((set) => {
   let isDarkMode = false;
 
-  if (EnvUtils.isClient) {
+  if (envUtils.isClient) {
     isDarkMode = getInitialIsDarkModeOnBrowser();
     updateIsDarkMode(isDarkMode);
     setupTransitionEndHandler();
@@ -45,7 +45,7 @@ export const useDarkModeActions = () =>
   useDarkModeStore((state) => state.actions);
 
 function getInitialIsDarkModeOnBrowser() {
-  const storedIsDarkMode = LocalStorageUtils.get<boolean | null>(
+  const storedIsDarkMode = localStorageUtils.get<boolean | null>(
     storageKeys.isDarkMode
   );
 
@@ -65,7 +65,7 @@ function getInitialIsDarkModeOnBrowser() {
 
 function updateIsDarkMode(value: boolean) {
   document.documentElement.dataset.transition = 'true';
-  LocalStorageUtils.set(storageKeys.isDarkMode, value);
+  localStorageUtils.set(storageKeys.isDarkMode, value);
   updateDocumentTheme(value);
   updateGiscusTheme(value);
 }

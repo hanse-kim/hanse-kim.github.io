@@ -1,5 +1,5 @@
 import React from 'react';
-import { RouterUtils } from 'src/_libs/utils/router-utils';
+import { routerUtils } from 'src/_libs/utils/router-utils';
 import { NavButton } from './nav-button';
 
 type BackButtonProps = {
@@ -9,7 +9,7 @@ type BackButtonProps = {
 export const BackButton = ({ label = '이전 페이지로' }: BackButtonProps) => {
   return (
     <div className="ml-24 -mb-24 mt-36 w-fit">
-      <NavButton onClick={RouterUtils.back}>{`< ${label}`}</NavButton>
+      <NavButton onClick={routerUtils.back}>{`< ${label}`}</NavButton>
     </div>
   );
 };
