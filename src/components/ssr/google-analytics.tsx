@@ -10,14 +10,18 @@ export const GoogleAnalytics = ({}: GoogleAnalyticsProps) => {
         id="gtag-script"
         strategy="off-main-thread"
         src="https://www.googletagmanager.com/gtag/js?id=G-ELYB3E19X0"
+        forward={['gtag']}
       ></Script>
-      <Script id="gtag-initialize" strategy="off-main-thread">
+      <Script
+        id="gtag-initialize"
+        strategy="off-main-thread"
+        forward={[`dataLayer.push`]}
+      >
         {`
           window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
+          window.gtag = function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-
-          gtag('config', 'G-ELYB3E19X0');
+          gtag('config', 'G-ELYB3E19X0', {send_page_view: false});
         `}
       </Script>
     </>

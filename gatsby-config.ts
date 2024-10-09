@@ -88,6 +88,10 @@ const config: GatsbyConfig = {
       },
     },
   ],
+  partytownProxiedURLs: [
+    'https://www.googletagmanager.com/gtag/js?id=G-ELYB3E19X0',
+    'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7803939437590519',
+  ],
 };
 
 export default config;

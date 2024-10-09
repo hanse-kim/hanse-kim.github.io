@@ -1,5 +1,5 @@
 import { RenderBodyArgs } from 'gatsby';
-import React from 'react';
+import { default as React } from 'react';
 import { FontPreload } from 'src/components/ssr/font-preload';
 import { GoogleAdsense } from 'src/components/ssr/google-adsense';
 import { GoogleAnalytics } from 'src/components/ssr/google-analytics';
@@ -12,9 +12,9 @@ export const onRenderBody = ({
   setHtmlAttributes,
 }: RenderBodyArgs) => {
   setHtmlAttributes({ lang: 'ko' });
-  setHeadComponents(
-    [FontPreload, GoogleAdsense, GoogleAnalytics].map((Component, index) => (
+  setHeadComponents([
+    ...[FontPreload, GoogleAdsense, GoogleAnalytics].map((Component, index) => (
       <Component key={index} />
-    ))
-  );
+    )),
+  ]);
 };
