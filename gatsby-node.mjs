@@ -81,7 +81,6 @@ export async function createPages({ graphql, actions }) {
 
   const posts = postsQuery.data.allMarkdownRemark.nodes;
   const postTemplate = resolve(`./src/templates/{post}.tsx`);
-
   posts.forEach((post) => {
     createPage({
       path: `/blog${post.fields.slug}`,
@@ -102,12 +101,12 @@ export async function createPages({ graphql, actions }) {
   `);
 
   const tags = tagsQuery.data.tagsGroup.tags;
-
+  const tagTemplate = resolve('src/templates/{tag}.tsx');
   tags.forEach((tag) => {
     const tagPath = kebabCase(tag.value, false) || tag.value.replaceAll(' ', '-');
     createPage({
       path: `/tags/${tagPath}/`,
-      component: resolve('src/templates/{tag}.tsx'),
+      component: tagTemplate,
       context: {
         tag: tag.value,
       },

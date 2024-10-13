@@ -4,12 +4,6 @@ import { Tag } from 'src/_libs/types/tag';
 import { Seo } from 'src/components/common/seo';
 import { TagsScreen } from 'src/components/screens/tags-screen';
 
-interface DataType {
-  tagsGroup: {
-    tags: Tag[];
-  };
-}
-
 export const pageQuery = graphql`
   query {
     tagsGroup: allMarkdownRemark(
@@ -23,6 +17,12 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+interface DataType {
+  tagsGroup: {
+    tags: Tag[];
+  };
+}
 
 export const Head = (props: PageProps) => <Seo title="Tags" {...props} />;
 
