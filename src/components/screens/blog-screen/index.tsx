@@ -9,9 +9,9 @@ type BlogScreenProps = {
 
 export const BlogScreen = ({ posts }: BlogScreenProps) => {
   return (
-    <>
+    <article>
       <Heading>{`Blog (${posts.length} posts)`}</Heading>
       <PostListSection posts={posts} />
-    </>
+    </article>
   );
 };
