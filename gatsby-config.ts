@@ -52,8 +52,17 @@ const config: GatsbyConfig = {
       options: {
         name: `posts`,
         path: `./.posts/`,
+        ignore: ['**/shorts/**'],
       },
       __key: 'posts',
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `shorts`,
+        path: `./.posts/shorts/`,
+      },
+      __key: 'shorts',
     },
     {
       resolve: `gatsby-source-filesystem`,
