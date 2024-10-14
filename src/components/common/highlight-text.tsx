@@ -1,3 +1,5 @@
+import { match } from 'assert';
+import { join } from 'path';
 import React from 'react';
 import { CacheService } from 'src/_libs/services/cache-service';
 import { searchUtils } from 'src/_libs/utils/search-utils';
@@ -31,10 +33,16 @@ export const HighlightText = ({
   }
 
   const regex = new RegExp(`(${normalizedSearch})`, 'gi');
-  const highlightedText = text.replace(
-    regex,
-    '<mark className="bg-[yellow]">$1</mark>'
-  );
+  const splitHtml = text.split(/(<[^>]*>)/g);
+
+  const highlightedText = splitHtml
+    .map((part) => {
+      if (part.match(/^<[^>]*>$/)) {
+        return part;
+      }
+      return part.replace(regex, '<mark class="bg-[yellow]">$1</mark>');
+    })
+    .join('');
 
   const element = (
     <span
