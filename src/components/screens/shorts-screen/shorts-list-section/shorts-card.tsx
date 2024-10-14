@@ -54,11 +54,14 @@ export const ShortsCard = ({ shorts }: ShortsCardProps) => {
       >
         <div
           ref={contentRef}
-          className="w-full pt-16 px-[inherit] text-18-400 whitespace-pre-wrap"
+          className="w-full pt-16 px-[inherit] text-18-400"
           onClick={(e) => e.stopPropagation()}
         >
           <hr className="mb-16 border-border" />
-          <div dangerouslySetInnerHTML={{ __html: shorts.html }}></div>
+          <div
+            className="flex flex-col gap-18 md"
+            dangerouslySetInnerHTML={{ __html: shorts.html }}
+          />
         </div>
       </div>
     </div>
