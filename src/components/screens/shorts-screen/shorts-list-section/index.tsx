@@ -4,13 +4,14 @@ import { ShortsCard } from './shorts-card';
 
 type ShortsListSectionProps = {
   shortsList: PostMarkdown[];
+  search: string;
 };
 
-export const ShortsListSection = ({ shortsList }: ShortsListSectionProps) => {
+export const ShortsListSection = ({ shortsList, search }: ShortsListSectionProps) => {
   return (
-    <section className="p-24 flex flex-col items-stretch gap-24">
+    <section className="flex flex-col items-stretch gap-24 p-24">
       {shortsList.map((shorts) => (
-        <ShortsCard shorts={shorts} />
+        <ShortsCard key={shorts.frontmatter.title} shorts={shorts} search={search} />
       ))}
     </section>
   );

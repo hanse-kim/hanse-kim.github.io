@@ -1,11 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { PostMarkdown } from 'src/_libs/types/post-markdown';
+import { HighlightText } from 'src/components/common/highlight-text';
 
 type ShortsCardProps = {
   shorts: PostMarkdown;
+  search: string;
 };
 
-export const ShortsCard = ({ shorts }: ShortsCardProps) => {
+export const ShortsCard = ({ shorts, search }: ShortsCardProps) => {
   const contentRef = useRef<HTMLDivElement | null>(null);
   const contentHeightRef = useRef<number | null>(null);
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -40,11 +42,13 @@ export const ShortsCard = ({ shorts }: ShortsCardProps) => {
     >
       <button className="flex items-start gap-12 text-left" onClick={toggle}>
         <div className="flex-1">
-          <h3 className="text-text text-28-700">{shorts.frontmatter.title}</h3>
+          <h3 className="text-text text-28-700">
+            <HighlightText text={shorts.frontmatter.title} search={search} />
+          </h3>
           <p className="text-text-muted">{shorts.frontmatter.date}</p>
         </div>
-        <div className="w-28 h-28 shrink-0 relative">
-          <div className="w-4 h-24 bg-text absolute rounded-2 left-1/2 -translate-x-1/2 rotate-90" />
+        <div className="relative w-28 h-28 shrink-0">
+          <div className="absolute w-4 h-24 rotate-90 -translate-x-1/2 bg-text rounded-2 left-1/2" />
           <div className="w-4 h-24 bg-text absolute rounded-2 left-1/2 -translate-x-1/2 rotate-0 group-data-[open=true]:rotate-90 group-data-[open=true]:opacity-0 transition-all" />
         </div>
       </button>
@@ -58,9 +62,10 @@ export const ShortsCard = ({ shorts }: ShortsCardProps) => {
           onClick={(e) => e.stopPropagation()}
         >
           <hr className="mb-16 border-border" />
-          <div
+          <HighlightText
             className="flex flex-col gap-18 md"
-            dangerouslySetInnerHTML={{ __html: shorts.html }}
+            text={shorts.html}
+            search={search}
           />
         </div>
       </div>
