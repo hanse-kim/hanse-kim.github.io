@@ -40,7 +40,7 @@ export const HighlightText = ({
       if (part.match(/^<[^>]*>$/)) {
         return part;
       }
-      return part.replace(regex, '<mark class="bg-[yellow]">$1</mark>');
+      return part.replace(regex, '<mark class="bg-search-highlight dark:text-bg">$1</mark>');
     })
     .join('');
 

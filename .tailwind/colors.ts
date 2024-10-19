@@ -6,6 +6,7 @@ export const light = {
   bg: '#FFFFFF',
   'bg-alt': '#F4F5F6',
   border: '#E6E8EA',
+  'search-highlight': '#FFF176',
 };
 
 export const dark = {
@@ -16,4 +17,5 @@ export const dark = {
   bg: '#1A1E21',
   'bg-alt': '#202D3A',
   border: '#2D3A47',
+  'search-highlight': '#FFC107',
 };
