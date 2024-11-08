@@ -141,7 +141,6 @@
 <p><code>post-hydrate</code> 전략과 거의 동일했지만, <code>requestIdleCallback</code> Web API를 사용해 스크립트를 삽입하고 있었습니다. 이를 통해 메인 스레드가 유휴 상태일 때 스크립트를 로드하도록 되어 있었고, 브라우저에서 해당 API를 지원하지 않는 경우 <code>setTimeout</code>으로 대체하는 폴리필 코드가 있었습니다.</p>
 <h3>3. off-main-thread</h3>
 <p>이 전략은 다른 두 방식과는 달리 <code>&#x3C;script></code>를 실제로 리턴합니다. 단, Partytown을 통해 동작하도록 <code>type="text/partytown"</code> 속성을 추가하고 props를 적절히 변환하여 렌더링하고 있었습니다.</p>
-<p>또한 SSR에서 사용하기 위해</p>
 <h2>requestIdleCallback과 Partytown</h2>
 <p>이 과정에서 <code>requestIdleCallback</code>과 <strong>Partytown</strong>이라는 두 가지 새로운 키워드를 알게 되었고, 이에 대해 간단히 정리했습니다.</p>
 <h3>requestIdleCallback</h3>
@@ -161,4 +160,4 @@
           >
             window.___chunkMapping="{\"app\":[\"/app-3e0beedee823b8008bf6.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-5c0fb20805ddb35d8b6e.js\"],\"component---src-pages-about-tsx\":[\"/component---src-pages-about-tsx-db56afc074c62665fa3e.js\"],\"component---src-pages-blog-tsx\":[\"/component---src-pages-blog-tsx-27102d57c333d707d893.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-8025aea5bd3f8bfcc47e.js\"],\"component---src-pages-tags-tsx\":[\"/component---src-pages-tags-tsx-321c9fbe97057ef71b46.js\"],\"component---src-templates-{post}-tsx-content-file-path-null\":[\"/component---src-templates-{post}-tsx-content-file-path-null-a451c0143ff32b1b522e.js\"],\"component---src-templates-{tag}-tsx\":[\"/component---src-templates-{tag}-tsx-f162ca99b07dd13d5ec1.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="cebe36dfd233bfb08c53";</script><script src="/webpack-runtime-af838a079c7b5e581ecb.js" async></script><script src="/framework-9260c5fc4673863b98e8.js" async></script><script src="/app-3e0beedee823b8008bf6.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="772259a2850f9d56f3dd";</script><script src="/webpack-runtime-af838a079c7b5e581ecb.js" async></script><script src="/framework-9260c5fc4673863b98e8.js" async></script><script src="/app-3e0beedee823b8008bf6.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
